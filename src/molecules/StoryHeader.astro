@@ -1,0 +1,81 @@
+---
+import Link from '../atoms/Link.astro';
+---
+
+<header>
+  <Link href="/" text="Politikk" classes="tag" />
+  <h1>Regjeringen og partene i arbeidslivet er enige om at utbygging av mer kraft er løsningen på strømkrisen</h1>
+  <h2>Regjeringen og partene i arbeidslivet møttes onsdag for å finne en løsning på strømkrisen. Mer kraftutbygging er det enstemmige svaret.</h2>
+  <div>
+    <span>1 min</span>
+    <dl>
+      <dt>Publisert:</dt>
+      <dd>18.01.23 — 10.09</dd>
+    </dl>
+    <dl>
+      <dt>Oppdatert:</dt>
+      <dd>30 minutter siden</dd>
+    </dl>
+  </div>
+  <figure>
+    <img src="https://images.dn.no/image/ZXlucWphd1cyMG9ocVphSEdnTlhNaEZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/49897ea91b96bc1721acbeecb11c03bf?image_version=1080" alt="">
+    <figcaption>Olje- og energiminister Terje Aasland møtte LO-leder Peggy Hessen Følsvik og NHO-leder Ole Erik Almlid. (Foto: Ole Berg-Rusten/NTB)</figcaption>
+  </figure>
+</header>
+
+<style>
+  header {
+    align-items: start;
+    background-color: var(--bg-header, hsl(0 0% 100%));
+    display: grid;
+    grid-template-columns: var(--site-padding, 0.9375rem) minmax(0, 814px) var(--site-padding, 0.9375rem);
+    /* grid-template-columns: 15px 814px 15px; */
+    justify-content: center;
+    padding-block-start: 0.75rem;
+    row-gap: 1rem;
+
+    & > :global(*:not(figure)) {
+      grid-column: 2;
+    }
+  }
+
+  h1 {
+    font-family: 'SmBold23', sans-serif;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  div {
+    color: #747e8e;
+    font-family: 'Book21', sans-serif;
+    font-size: 0.625rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  dl {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  figure {
+    display: grid;
+    grid-column: 1 / -1;
+    row-gap: 0.5rem;
+  }
+
+  figcaption {
+    color: #747e8e;
+    font-family: 'Book21', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-inline: var(--site-padding, 0.9375rem);
+  }
+</style>

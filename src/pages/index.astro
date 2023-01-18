@@ -1,15 +1,19 @@
 ---
+import Layout from '../templates/Layout.astro';
+import Header from '../organisms/Header.astro';
+import Story from '../organisms/Story.astro';
+import Footer from '../organisms/Footer.astro';
+import StoryHeader from '../molecules/StoryHeader.astro';
+import StoryContent from '../molecules/StoryContent.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Regjeringen og partene i arbeidslivet er enige om at utbygging av mer kraft er løsningen på strømkrisen | DN">
+  <Header />
+  <main>
+    <Story>
+      <StoryHeader />
+      <StoryContent />
+    </Story>
+  </main>
+  <Footer />
+</Layout>

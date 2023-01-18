@@ -1,0 +1,71 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="nb-NO">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+    <link rel="stylesheet" href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css">
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  @custom-media --medium (width >= 50rem);
+
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  body {
+    -mox-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  img, svg {
+    display: block;
+    max-inline-size: 100%;
+  }
+
+  /* */
+  :root {
+    --bg-header: hsl(0 0% 100%);
+    --site-padding: 1rem;
+  }
+
+  body {
+    color: var(--text-color, hsl(216 7% 15%));
+    font-family: 'TextReg', serif;
+  }
+</style>
+
+<script>
+  const options = document.querySelectorAll('select');
+  options.forEach(option => {
+    document.documentElement.style.setProperty('--bg-header', option.value);
+  })
+
+  function getOption() {
+    options.forEach(option => {
+      document.documentElement.style.setProperty('--bg-header', option.value);
+    })
+  }
+
+  document.addEventListener('change', getOption);
+</script>
