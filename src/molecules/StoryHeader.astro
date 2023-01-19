@@ -6,6 +6,10 @@ import Link from '../atoms/Link.astro';
   <Link href="/" text="Politikk" classes="tag" />
   <h1>Regjeringen og partene i arbeidslivet er enige om at utbygging av mer kraft er løsningen på strømkrisen</h1>
   <h2>Regjeringen og partene i arbeidslivet møttes onsdag for å finne en løsning på strømkrisen. Mer kraftutbygging er det enstemmige svaret.</h2>
+  <figure>
+    <img src="https://images.dn.no/image/ZXlucWphd1cyMG9ocVphSEdnTlhNaEZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/49897ea91b96bc1721acbeecb11c03bf?image_version=1080" alt="">
+    <figcaption>Olje- og energiminister Terje Aasland møtte LO-leder Peggy Hessen Følsvik og NHO-leder Ole Erik Almlid. (Foto: Ole Berg-Rusten/NTB)</figcaption>
+  </figure>
   <div>
     <span>1 min</span>
     <dl>
@@ -17,10 +21,6 @@ import Link from '../atoms/Link.astro';
       <dd>30 minutter siden</dd>
     </dl>
   </div>
-  <figure>
-    <img src="https://images.dn.no/image/ZXlucWphd1cyMG9ocVphSEdnTlhNaEZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/49897ea91b96bc1721acbeecb11c03bf?image_version=1080" alt="">
-    <figcaption>Olje- og energiminister Terje Aasland møtte LO-leder Peggy Hessen Følsvik og NHO-leder Ole Erik Almlid. (Foto: Ole Berg-Rusten/NTB)</figcaption>
-  </figure>
 </header>
 
 <style>
@@ -30,7 +30,6 @@ import Link from '../atoms/Link.astro';
     color: var(--hero-text-clr, currentColor);
     display: grid;
     grid-template-columns: var(--site-padding, 0.9375rem) minmax(0, 814px) var(--site-padding, 0.9375rem);
-    /* grid-template-columns: 15px 814px 15px; */
     justify-content: center;
     padding-block-start: 0.75rem;
     row-gap: 1rem;
@@ -41,8 +40,8 @@ import Link from '../atoms/Link.astro';
   }
 
   h1 {
-    font-family: 'SmBold23', sans-serif;
-    font-size: 1.875rem;
+    font-family: var(--hero-font, 'SmBold23', sans-serif);
+    font-size: var(--hero-font-size, 2rem);
     font-weight: 400;
     line-height: 1.2;
   }

@@ -19,6 +19,7 @@
   --header-bkg: hsl(18 45% 96%);
   --header-separator: hsl(17 21% 87%);
   --logo-color: hsl(18 26% 26%);
+  --hero-font: 'HeadMed', serif;
 }
 
 [data-theme='dark'] {

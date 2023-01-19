@@ -1,5 +1,6 @@
 ---
 import '../styles/color-schemes.css';
+import '../styles/font-sizes.css';
 export interface Props {
   title: string;
 }
@@ -14,7 +15,7 @@ const { title } = Astro.props;
     <title>{title}</title>
     <link rel="stylesheet" href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css">
   </head>
-  <body data-theme="light">
+  <body data-theme="light" data-importance="medium">
     <slot />
   </body>
 </html>
