@@ -1,0 +1,29 @@
+[data-theme='light'] {
+  --header-bkg: hsl(0 0% 100%);
+  --header-separator: hsl(220 13% 87%);
+}
+
+[data-theme='blue'] {
+  --header-bkg: #13264A;
+  --header-separator: hsl(220 28% 32%);
+  --hero-text-clr: #fff;
+  --logo-color: #fff;
+}
+
+[data-theme='yellow'] {
+  --header-bkg: hsl(73 97% 85%);
+  --header-separator: hsl(74 41% 71%);
+}
+
+[data-theme='pink'] {
+  --header-bkg: hsl(18 45% 96%);
+  --header-separator: hsl(17 21% 87%);
+  --logo-color: hsl(18 26% 26%);
+}
+
+[data-theme='dark'] {
+  --header-bkg: hsl(217 20% 13%);
+  --header-separator: hsl(216 6% 30%);
+  --hero-text-clr: hsl(0 0% 100%);
+  --logo-color: hsl(0 0% 100%);
+}

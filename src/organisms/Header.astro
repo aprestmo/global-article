@@ -7,20 +7,19 @@ import { Icon } from 'astro-icon';
       <Icon name="dn" />
     </a>
     <select>
-      <option value="hsl(0 0% 100%)">Hvit</option>
-      <option value="#13264a">Blå</option>
-      <option value="#EDFEB2">Gul</option>
-      <option value="#F9F2EF">Rosa</option>
-      <option value="#1A1F27">Svart</option>
+      <option value="light">Hvit</option>
+      <option value="blue">Blå</option>
+      <option value="yellow">Gul</option>
+      <option value="pink">Rosa</option>
+      <option value="dark">Svart</option>
     </select>
   </div>
 </header>
 
 <style>
   header {
-    background-color: var(--bg-header, hsl(0 0% 100%));
-    border-block-end: 1px solid var(--separator, #d9dce2);
-    
+    background-color: var(--header-bkg, hsl(0 0% 100%));
+    border-block-end: 1px solid var(--header-separator, #d9dce2);
   }
   
   div {
@@ -42,6 +41,6 @@ import { Icon } from 'astro-icon';
   }
 
   svg {
-    block-size: var(--logo-height, 1.5625rem);
+    block-size: var(--logo-height, 1.4688rem);
   }
 </style>
