@@ -9,11 +9,11 @@ import { Icon } from 'astro-icon';
     <nav>
       <select id="size">
         <option value="small">Small</option>
-        <option value="medium">Medium</option>
+        <option value="medium" selected>Medium</option>
         <option value="large">Large</option>
       </select>
       <select id="theme">
-        <option value="light">Light</option>
+        <option value="light" selected>Light</option>
         <option value="blue">Blue</option>
         <option value="yellow">Yellow</option>
         <option value="pink">Pink</option>
@@ -28,7 +28,7 @@ import { Icon } from 'astro-icon';
     background-color: var(--header-bkg, hsl(0 0% 100%));
     border-block-end: 1px solid var(--header-separator, #d9dce2);
   }
-  
+
   div {
     align-items: center;
     block-size: var(--header-height, 3.5rem);
