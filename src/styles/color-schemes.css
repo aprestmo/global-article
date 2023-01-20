@@ -1,3 +1,7 @@
+[data-theme] {
+  --hero-bkg: var(--header-bkg);
+}
+
 [data-theme='light'] {
   --header-bkg: hsl(0 0% 100%);
   --header-separator: hsl(220 13% 87%);
