@@ -9,3 +9,8 @@
   --hero-figure: b;
   --site-bkg: var(--site-bkg);
 }
+
+[data-layout='b'][data-theme='dark'],
+[data-layout='b'][data-theme='blue'] {
+  --hero-text-clr: var(--text-color);
+}
