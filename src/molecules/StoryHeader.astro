@@ -24,22 +24,28 @@ import StoryImage from '../molecules/StoryImage.astro';
     display: grid;
     grid-template-areas: 'a' 'b' 'c';
     padding-block-start: 1.75rem;
-
-    & > * {
-      inline-size: min(640px, 100vw - calc(var(--site-padding) * 2));
-      margin-inline: auto;
-    }
   }
 
   ul[role='list'] {
+    grid-area: a;
+    inline-size: min(var(--body-col-width), 100vw - calc(var(--site-padding) * 2));
+      margin-inline: auto;
     list-style-type: none;
     padding-inline-start: 0;
   }
 
   div {
+    background-color: var(--site-bkg, hsl(0 0% 100%));
+    color: currentColor;
     display: grid;
+    grid-area: var(--hero-text);
     padding-block-start: 1.75rem;
     row-gap: 0.5rem;
+
+    & > * {
+      inline-size: min(var(--body-col-width), 100vw - calc(var(--site-padding) * 2));
+      margin-inline: auto;
+    }
   }
 
   h1 {

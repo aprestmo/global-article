@@ -1,6 +1,7 @@
 ---
 import '../styles/color-schemes.css';
 import '../styles/font-sizes.css';
+import '../styles/hero-layout.css';
 export interface Props {
   title: string;
 }
@@ -15,7 +16,7 @@ const { title } = Astro.props;
     <title>{title}</title>
     <link rel="stylesheet" href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css">
   </head>
-  <body data-theme="light" data-importance="medium">
+  <body data-theme="light" data-importance="medium" data-layout="a">
     <slot />
   </body>
 </html>
@@ -46,7 +47,9 @@ const { title } = Astro.props;
 
   /* */
   :root {
+    --body-col-width: 40rem;
     --header-bkg: hsl(0 0% 100%);
+    --site-bkg: hsl(0 0% 100%);
     --site-padding: 1rem;
   }
 
@@ -64,6 +67,10 @@ const { title } = Astro.props;
 
     if (event.target.matches('#size')) {
       document.body.setAttribute('data-importance', event.target.value);
+    }
+
+    if (event.target.matches('#layout')) {
+      document.body.setAttribute('data-layout', event.target.value);
     }
     // console.log(event.target.value)
   });

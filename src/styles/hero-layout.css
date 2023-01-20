@@ -1,0 +1,11 @@
+[data-layout='a'] {
+  --hero-text: b;
+  --hero-figure: c;
+  --site-bkg: transparent;
+}
+
+[data-layout='b'] {
+  --hero-text: c;
+  --hero-figure: b;
+  --site-bkg: var(--site-bkg);
+}
