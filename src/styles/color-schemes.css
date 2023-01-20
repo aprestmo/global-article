@@ -12,6 +12,7 @@
   --header-separator: hsl(220 28% 32%);
   --hero-text-clr: #fff;
   --logo-color: #fff;
+  --tag-clr: #fff;
 }
 
 [data-theme='yellow'] {
@@ -31,4 +32,5 @@
   --header-separator: hsl(216 6% 30%);
   --hero-text-clr: hsl(0 0% 100%);
   --logo-color: hsl(0 0% 100%);
+  --tag-clr: #fff;
 }

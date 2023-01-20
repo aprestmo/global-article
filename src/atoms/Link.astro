@@ -12,7 +12,7 @@ const { text, href, classes } = Astro.props;
 
 <style>
   a {
-    color: var(--hero-text-clr);
+    color: var(--tag-clr, currentColor);
     text-decoration: none;
   }
 
