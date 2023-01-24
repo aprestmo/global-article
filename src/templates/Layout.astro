@@ -66,12 +66,8 @@ const { title } = Astro.props;
 
 <script>
 
-  /* Set params to URL on load */
+  /* Get URL on load */
   const url = new URL(window.location.href);
-  // url.searchParams.set('theme', selectTheme.value);
-  // url.searchParams.set('size', selectSize.value);
-  // url.searchParams.set('layout', selectLayout.value);
-  // window.history.pushState({}, '', url);
 
   /* Set data-attributes from params on URL on load */
   const theme = url.searchParams.get('theme');
@@ -81,16 +77,19 @@ const { title } = Astro.props;
   document.body.setAttribute('data-size', size);
   document.body.setAttribute('data-layout', layout);
 
-  const selectThemes = document.querySelectorAll('#theme option');
-  // console.log('log: ', theme);
-  selectThemes.forEach(option => {
-    if (option.value === theme) {
-      option.setAttribute('checked', true);
-    }
-  })
+  const setChecked = function(el: string, attr: string) {
+    const options = document.querySelectorAll(el);
+    options.forEach(option => {
+      console.dir(option)
+      if (option.value === attr) {
+        option.setAttribute('selected', '');
+      }
+    });
+  }
 
-  // const selectSize = document.querySelector('#size');
-  // const selectLayout = document.querySelector('#layout');
+  setChecked('#theme option', theme);
+  setChecked('#size option', size);
+  setChecked('#layout option', layout);
 
 
   /* Update URL and data-attrbutes on select change */
