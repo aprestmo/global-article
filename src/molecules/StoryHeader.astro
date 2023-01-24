@@ -27,7 +27,7 @@ import StoryImage from '../molecules/StoryImage.astro';
   }
 
   ul[role='list'] {
-    grid-area: a;
+    grid-area: var(--hero-tag, a);
     inline-size: min(var(--body-col-width), 100vw - calc(var(--site-padding) * 2));
       margin-inline: auto;
     list-style-type: none;
@@ -38,7 +38,7 @@ import StoryImage from '../molecules/StoryImage.astro';
     background-color: var(--site-bkg, hsl(0 0% 100%));
     color: currentColor;
     display: grid;
-    grid-area: var(--hero-text);
+    grid-area: var(--hero-text, b);
     padding-block-start: 1.75rem;
     row-gap: 0.5rem;
 

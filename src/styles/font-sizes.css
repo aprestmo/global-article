@@ -1,11 +1,11 @@
-[data-importance='small'] {
+[data-size='small'] {
   --hero-font-size: 1.5rem;
 }
 
-[data-importance='medium'] {
+[data-size='medium'] {
   --hero-font-size: 2.5rem;
 }
 
-[data-importance='large'] {
+[data-size='large'] {
   --hero-font-size: 3.5rem;
 }

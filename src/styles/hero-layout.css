@@ -10,6 +10,12 @@
   --site-bkg: var(--site-bkg);
 }
 
+[data-layout='c'] {
+  --hero-figure: a;
+  --hero-tag: b;
+  --hero-text: c;
+}
+
 [data-layout='b'][data-theme='dark'],
 [data-layout='b'][data-theme='blue'] {
   --hero-text-clr: var(--text-color);
