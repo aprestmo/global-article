@@ -80,7 +80,6 @@ const { title } = Astro.props;
   const setChecked = function(el: string, attr: string) {
     const options = document.querySelectorAll(el);
     options.forEach(option => {
-      console.dir(option)
       if (option.value === attr) {
         option.setAttribute('selected', '');
       }
@@ -98,12 +97,6 @@ const { title } = Astro.props;
       updateURL('theme');
       let theme = url.searchParams.get('theme');
       document.body.setAttribute('data-theme', theme);
-
-      // selectThemes.forEach(option => {
-      //   if (option.value === theme) {
-      //     option.setAttribute('checked', true);
-      //   }
-      // })
     }
 
     if (event.target.matches('#size')) {

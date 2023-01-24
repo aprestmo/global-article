@@ -3,7 +3,7 @@ import Link from '../atoms/Link.astro';
 import StoryImage from '../molecules/StoryImage.astro';
 ---
 
-<header>
+<header class="flow">
   <ul role="list">
     <li>
       <Link href="/" text="Politikk" classes="tag" />
@@ -19,11 +19,11 @@ import StoryImage from '../molecules/StoryImage.astro';
 <style>
   header {
     align-items: start;
-    background-color: var(--header-bkg, hsl(0 0% 100%));
+    background-color: var(--hero-bkg, hsl(0 0% 100%));
     color: var(--hero-text-clr, currentColor);
     display: grid;
     grid-template-areas: 'a' 'b' 'c';
-    padding-block-start: 1.75rem;
+    padding-block-start: var(--hero-top-space, 1.75rem);
   }
 
   ul[role='list'] {
@@ -39,7 +39,7 @@ import StoryImage from '../molecules/StoryImage.astro';
     color: currentColor;
     display: grid;
     grid-area: var(--hero-text, b);
-    padding-block-start: 1.75rem;
+    padding-block-start: var(--hero-text-space, 1.75rem);
     row-gap: 0.5rem;
 
     & > * {

@@ -10,7 +10,8 @@
     background-color: var(--body-bkg, hsl(0 0% 100%));
     display: grid;
     grid-area: var(--hero-figure, c);
-    margin-block-start: 2rem;
+    margin-block-end: var(--hero-figure-space-end, 0);
+    margin-block-start: var(--hero-figure-space-start, 2rem);
     row-gap: 0.25rem;
   }
 
@@ -21,7 +22,7 @@
   }
 
   img {
-    inline-size: min(50em, 100vw);
+    inline-size: min(var(--hero-img-width, 50em), 100vw);
   }
 
   figcaption {
