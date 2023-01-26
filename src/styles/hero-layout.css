@@ -8,7 +8,7 @@
   --hero-text: b;
   --hero-figure: a;
   --site-bkg: var(--site-bkg);
-  --hero-figure-space-start: 6rem;
+  --hero-figure-space-start: 4rem;
 }
 
 [data-layout="c"] {
