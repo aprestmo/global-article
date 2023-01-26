@@ -1,17 +1,23 @@
 ---
-import Link from '../atoms/Link.astro';
-import StoryImage from '../molecules/StoryImage.astro';
+import Link from "../atoms/Link.astro";
+import StoryImage from "../molecules/StoryImage.astro";
 ---
 
 <header class="flow">
-  <ul role="list">
-    <li>
-      <Link href="/" text="Politikk" classes="tag" />
-    </li>
-  </ul>
   <div>
-    <h1>Regjeringen og partene i arbeidslivet er enige om at utbygging av mer kraft er løsningen på strømkrisen</h1>
-    <h2>Regjeringen og partene i arbeidslivet møttes onsdag for å finne en løsning på strømkrisen. Mer kraftutbygging er det enstemmige svaret.</h2>
+    <ul role="list">
+      <li>
+        <Link href="/" text="Politikk" classes="tag" />
+      </li>
+    </ul>
+    <h1>
+      Regjeringen og partene i arbeidslivet er enige om at utbygging av mer
+      kraft er løsningen på strømkrisen
+    </h1>
+    <h2>
+      Regjeringen og partene i arbeidslivet møttes onsdag for å finne en løsning
+      på strømkrisen. Mer kraftutbygging er det enstemmige svaret.
+    </h2>
   </div>
   <StoryImage />
 </header>
@@ -22,14 +28,16 @@ import StoryImage from '../molecules/StoryImage.astro';
     background-color: var(--hero-bkg, hsl(0 0% 100%));
     color: var(--hero-text-clr, currentColor);
     display: grid;
-    grid-template-areas: 'a' 'b' 'c';
+    grid-template-areas: "a" "b";
     padding-block-start: var(--hero-top-space, 1.75rem);
   }
 
-  ul[role='list'] {
-    grid-area: var(--hero-tag, a);
-    inline-size: min(var(--body-col-width), 100vw - calc(var(--site-padding) * 2));
-      margin-inline: auto;
+  ul[role="list"] {
+    inline-size: min(
+      var(--body-col-width),
+      100vw - calc(var(--site-padding) * 2)
+    );
+    margin-inline: auto;
     list-style-type: none;
     padding-inline-start: 0;
   }
@@ -38,18 +46,21 @@ import StoryImage from '../molecules/StoryImage.astro';
     background-color: var(--site-bkg, hsl(0 0% 100%));
     color: currentColor;
     display: grid;
-    grid-area: var(--hero-text, b);
+    grid-area: var(--hero-text, a);
     padding-block-start: var(--hero-text-space, 1.75rem);
     row-gap: 0.5rem;
 
     & > * {
-      inline-size: min(var(--body-col-width), 100vw - calc(var(--site-padding) * 2));
+      inline-size: min(
+        var(--body-col-width),
+        100vw - calc(var(--site-padding) * 2)
+      );
       margin-inline: auto;
     }
   }
 
   h1 {
-    font-family: var(--hero-font, 'SmBold23', sans-serif);
+    font-family: var(--hero-font, "SmBold23", sans-serif);
     font-size: var(--hero-font-size, 2rem);
     font-weight: 400;
     line-height: 1.2;
