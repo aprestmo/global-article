@@ -1,0 +1,35 @@
+[data-publication="dn"] {
+  background-color: navy;
+}
+
+[data-publication="intrafish"] {
+  background-color: yellow;
+}
+
+[data-publication="fiskeribladet"] {
+  background-color: blue;
+}
+
+[data-publication="recharge"] {
+  background-color: limegreen;
+}
+
+[data-publication="upstream"] {
+  background-color: lightblue;
+}
+
+[data-publication="tradewinds"] {
+  background-color: tomato;
+}
+
+[data-publication="europower"] {
+  background-color: lime;
+}
+
+[data-publication="hydrogen"] {
+  background-color: salmon;
+}
+
+[data-publication="kystens"] {
+  background-color: pink;
+}

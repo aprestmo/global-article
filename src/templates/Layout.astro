@@ -1,20 +1,25 @@
 ---
-import '../styles/color-schemes.css';
-import '../styles/font-sizes.css';
-import '../styles/hero-layout.css';
+import "../styles/color-schemes.css";
+import "../styles/font-sizes.css";
+import "../styles/hero-layout.css";
+import "../styles/publications.css";
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="nb-NO">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    <link rel="stylesheet" href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"
+    />
   </head>
   <body>
     <slot />
@@ -40,12 +45,16 @@ const { title } = Astro.props;
     line-height: 1.5;
   }
 
-  img, svg {
+  img,
+  svg {
     display: block;
     max-inline-size: 100%;
   }
 
-  p, h1, h2, h3 {
+  p,
+  h1,
+  h2,
+  h3 {
     hyphens: auto;
     overflow-wrap: break-word;
   }
@@ -60,61 +69,70 @@ const { title } = Astro.props;
 
   body {
     color: var(--text-color, hsl(216 7% 15%));
-    font-family: 'TextReg', serif;
+    font-family: "TextReg", serif;
   }
 </style>
 
 <script>
-
   /* Get URL on load */
   const url = new URL(window.location.href);
 
-  /* Set data-attributes from params on URL on load */
-  const theme = url.searchParams.get('theme');
-  const size = url.searchParams.get('size');
-  const layout = url.searchParams.get('layout');
-  document.body.setAttribute('data-theme', theme);
-  document.body.setAttribute('data-size', size);
-  document.body.setAttribute('data-layout', layout);
+  /* TODO: Set params on load */
 
-  const setChecked = function(el: string, attr: string) {
+  /* Set data-attributes from params on URL on load */
+  const theme = url.searchParams.get("theme");
+  const size = url.searchParams.get("size");
+  const layout = url.searchParams.get("layout");
+  const publication = url.searchParams.get("publication");
+  document.body.setAttribute("data-theme", theme);
+  document.body.setAttribute("data-size", size);
+  document.body.setAttribute("data-layout", layout);
+  document.body.setAttribute("data-publication", publication);
+
+  const setChecked = function (el: string, attr: string) {
     const options = document.querySelectorAll(el);
-    options.forEach(option => {
+    options.forEach((option) => {
       if (option.value === attr) {
-        option.setAttribute('selected', '');
+        option.setAttribute("selected", "");
       }
     });
-  }
+  };
 
-  setChecked('#theme option', theme);
-  setChecked('#size option', size);
-  setChecked('#layout option', layout);
-
+  setChecked("#theme option", theme);
+  setChecked("#size option", size);
+  setChecked("#layout option", layout);
+  setChecked("#publication option", publication);
 
   /* Update URL and data-attrbutes on select change */
-  document.addEventListener('change', (event: any) => {
-    if (event.target.matches('#theme')) {
-      updateURL('theme');
-      let theme = url.searchParams.get('theme');
-      document.body.setAttribute('data-theme', theme);
+  document.addEventListener("change", (event: any) => {
+    if (event.target.matches("#theme")) {
+      updateURL("theme");
+      let theme = url.searchParams.get("theme");
+      document.body.setAttribute("data-theme", theme);
     }
 
-    if (event.target.matches('#size')) {
-      updateURL('size');
-      let size = url.searchParams.get('size');
-      document.body.setAttribute('data-size', size);
+    if (event.target.matches("#size")) {
+      updateURL("size");
+      let size = url.searchParams.get("size");
+      document.body.setAttribute("data-size", size);
     }
 
-    if (event.target.matches('#layout')) {
-      updateURL('layout');
-      let layout = url.searchParams.get('layout');
-      document.body.setAttribute('data-layout', layout);
+    if (event.target.matches("#layout")) {
+      updateURL("layout");
+      let layout = url.searchParams.get("layout");
+      document.body.setAttribute("data-layout", layout);
+    }
+
+    if (event.target.matches("#publication")) {
+      updateURL("publication");
+      let publication = url.searchParams.get("publication");
+      document.body.setAttribute("data-publication", publication);
     }
   });
 
   /* Function to update URL on select change */
-  const updateURL = function(key: any) {
+  const updateURL = function (key: any) {
     url.searchParams.set(key, event.target.value);
-    window.history.pushState({}, '', url);
-  }
+    window.history.pushState({}, "", url);
+  };
 </script>
