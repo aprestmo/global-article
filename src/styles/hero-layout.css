@@ -1,7 +1,7 @@
 [data-layout="a"] {
   --hero-text: a;
   --hero-figure: b;
-  --site-bkg: transparent;
+  --site-bkg: var(--hero-bkg);
 }
 
 [data-layout="b"] {
