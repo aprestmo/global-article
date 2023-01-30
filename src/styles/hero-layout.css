@@ -1,13 +1,13 @@
 [data-layout="a"] {
   --hero-text: a;
   --hero-figure: b;
-  --site-bkg: var(--header-bkg);
+  --hero-text-bkg: var(--header-bkg);
 }
 
 [data-layout="b"] {
   --hero-text: b;
   --hero-figure: a;
-  --site-bkg: var(--site-bkg);
+  --hero-text-clr: currentColor;
   --hero-figure-space-start: 4rem;
 }
 
@@ -21,12 +21,11 @@
   --hero-bkg: transparent;
   --hero-text-clr: currentColor;
   --hero-top-space: 0;
-  --hero-figure-space-end: 2rem;
   --hero-figure-space-start: 0;
   --tag-clr: revert;
 }
 
-[data-layout="b"][data-theme="dark"],
-[data-layout="b"][data-theme="blue"] {
-  --hero-text-clr: var(--text-color);
+[data-layout="a"][data-theme="dark"],
+[data-layout="a"][data-theme="blue"] {
+  --hero-text-clr: #fff;
 }
