@@ -78,10 +78,14 @@ const { title } = Astro.props;
   /* TODO: Set params on load */
 
   /* Set data-attributes from params on URL on load */
-  const theme = url.searchParams.get("theme");
-  const size = url.searchParams.get("size");
-  const layout = url.searchParams.get("layout");
-  const publication = url.searchParams.get("publication");
+  // const theme = url.searchParams.get("theme");
+  // const size = url.searchParams.get("size");
+  // const layout = url.searchParams.get("layout");
+  // const publication = url.searchParams.get("publication");
+  const theme = 'light';
+  const size = 'medium';
+  const layout = 'a';
+  const publication = 'dn';
   document.body.setAttribute("data-theme", theme);
   document.body.setAttribute("data-size", size);
   document.body.setAttribute("data-layout", layout);
