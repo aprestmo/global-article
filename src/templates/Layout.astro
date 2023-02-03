@@ -75,17 +75,24 @@ const { title } = Astro.props;
   /* Get URL on load */
   const url = new URL(window.location.href);
 
-  /* TODO: Set params on load */
+  /* Get defaults, set params and update URL on load */
+  const defaultTheme = document.querySelector("#theme");
+  const defaultSize = document.querySelector("#size");
+  const defaultLayout = document.querySelector("#layout");
+  const defaultPublication = document.querySelector("#publication");
+
+  url.searchParams.append('theme', defaultTheme.value);
+  url.searchParams.append('size', defaultSize.value);
+  url.searchParams.append('layout', defaultLayout.value);
+  url.searchParams.append('publication', defaultPublication.value);
+  window.history.pushState({}, "", url);
 
   /* Set data-attributes from params on URL on load */
-  // const theme = url.searchParams.get("theme");
-  // const size = url.searchParams.get("size");
-  // const layout = url.searchParams.get("layout");
-  // const publication = url.searchParams.get("publication");
-  const theme = 'light';
-  const size = 'medium';
-  const layout = 'a';
-  const publication = 'dn';
+  const theme = url.searchParams.get("theme");
+  const size = url.searchParams.get("size");
+  const layout = url.searchParams.get("layout");
+  const publication = url.searchParams.get("publication");
+
   document.body.setAttribute("data-theme", theme);
   document.body.setAttribute("data-size", size);
   document.body.setAttribute("data-layout", layout);
