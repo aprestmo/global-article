@@ -11,15 +11,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.15.2",
+    "@astrojs/mdx": "^0.17.0",
     "@astrojs/vue": "^2.0.1",
     "@nhst/red-components-dn-core": "^3.0.18",
-    "astro": "^2.0.4",
+    "astro": "^2.0.13",
     "astro-icon": "^0.8.0",
-    "netlify-cli": "^12.10.0",
+    "netlify-cli": "^12.13.0",
     "postcss": "^8.4.21",
     "postcss-preset-env": "^8.0.1",
     "rome": "^11.0.0",
-    "vue": "^3.2.45"
+    "vue": "^3.2.47"
   }
 }
