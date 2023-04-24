@@ -1,9 +1,12 @@
 ---
 import Layout from '../templates/Layout.astro';
 
+import Header from '../organisms/Header.astro';
+
 const publication = 'White Label'
 ---
 
 <Layout title={publication}>
+  <Header theme="White Label" />
   <h1>{publication}</h1>
 </Layout>

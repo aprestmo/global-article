@@ -1,11 +1,18 @@
 ---
+// library imports
 import { Icon } from "astro-icon";
+
+export interface Props {
+  theme: string;
+}
+
+const { theme } = Astro.props as Props;
 ---
 
 <header>
   <div>
     <a href="/">
-      <Icon name="dn" />
+      {theme ? <Icon name={theme} /> : <span>{theme}</span>}
     </a>
     <nav>
       <select id="layout">

@@ -1,9 +1,15 @@
 ---
-import Layout from '../templates/Layout.astro';
+const publication = 'Kystens Næringsliv';
 
-const publication = 'Kystens Næringsliv'
+import Layout from '../templates/Layout.astro';
+import Header from '../organisms/Header.astro';
+
+import Story from '../content/kystens.md';
+
 ---
 
 <Layout title={publication}>
+  <Header theme="kystens" />
   <h1>{publication}</h1>
+  <Story/>
 </Layout>

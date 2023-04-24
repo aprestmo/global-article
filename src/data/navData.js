@@ -4,8 +4,8 @@ const navData = [
     path: '/dn/',
   },
   {
-    publication: 'D2',
-    path: '/d2/',
+    publication: 'White Label',
+    path: '/white-label/',
   },
   {
     publication: 'Fiskeribladet',
@@ -44,8 +44,8 @@ const navData = [
     path: '/kystens/',
   },
   {
-    publication: 'White Label',
-    path: '/white-label/',
+    publication: 'D2',
+    path: '/d2/',
   },
 ]
 

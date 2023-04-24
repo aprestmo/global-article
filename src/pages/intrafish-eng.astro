@@ -1,9 +1,12 @@
 ---
 import Layout from '../templates/Layout.astro';
 
+import Header from '../organisms/Header.astro';
+
 const publication = 'IntraFish (eng)'
 ---
 
-<Layout title={publication}>
+<Layout title={publication} language="en">
+  <Header theme="intrafish" />
   <h1>{publication}</h1>
 </Layout>

@@ -1,9 +1,12 @@
 ---
 import Layout from '../templates/Layout.astro';
 
+import Header from '../organisms/Header.astro';
+
 const publication = 'Europower'
 ---
 
 <Layout title={publication}>
+  <Header theme="europower" />
   <h1>{publication}</h1>
 </Layout>

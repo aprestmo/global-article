@@ -22,20 +22,35 @@ export default defineConfig({
     collections: [
       {
         name: "post",
-        label: "Posts",
+        label: "Articles",
         path: "src/content",
         fields: [
           {
             type: "string",
             name: "title",
-            label: "Title",
+            label: "Tittel",
             isTitle: true,
             required: true,
           },
           {
+            type: "string",
+            name: "lead",
+            label: "Ingress",
+            required: true,
+          },
+          {
+            type: "datetime",
+            name: "posted",
+            label: "Publisert",
+            required: true,
+            ui: {
+              timeFormat: "HH:mm"
+            },
+          },
+          {
             type: "rich-text",
             name: "body",
-            label: "Body",
+            label: "Brødtekst",
             isBody: true,
           },
         ],
