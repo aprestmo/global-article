@@ -12,7 +12,7 @@ const { theme } = Astro.props as Props;
 <header>
   <div>
     <a href="/">
-      {theme ? <Icon name={theme} /> : <span>{theme}</span>}
+      <Icon name={theme} />
     </a>
     <nav>
       <select id="layout">
