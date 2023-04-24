@@ -4,9 +4,11 @@ import Header from '../organisms/Header.astro';
 import Story from '../organisms/Story.astro';
 import StoryHeader from '../molecules/StoryHeader.astro';
 import StoryContent from '../molecules/StoryContent.astro';
+
+const publication = 'DN';
 ---
 
-<Layout title="Ny konkursbølge under oppseiling: – Nå blir det verre | DN">
+<Layout title={`Ny konkursbølge under oppseiling: – Nå blir det verre | ${publication}`}>
   <Header />
   <main>
     <Story>
@@ -15,3 +17,19 @@ import StoryContent from '../molecules/StoryContent.astro';
     </Story>
   </main>
 </Layout>
+
+<style>
+    /* */
+    :root {
+    --body-col-width: 40rem;
+    --header-bkg: hsl(0 0% 100%);
+    --site-bkg: hsl(0 0% 100%);
+    --site-padding: 1rem;
+    --text-color: hsl(216 7% 15%);
+  }
+
+  body {
+    color: var(--text-color, hsl(216 7% 15%));
+    font-family: "TextReg", serif;
+  }
+</style>

@@ -1,6 +1,41 @@
 ---
 import Layout from '../templates/Layout.astro';
+
+// data imports
+import navData from '../data/navData';
 ---
 
 <Layout title="Oversikt">
+  <nav>
+    <ul role='list'>
+    {
+      navData.map(item => (
+        <li>
+          <a href={item.path}>{item.publication}</a>
+        </li>
+      ))
+    }
+    </ul>
+  </nav>
 </Layout>
+
+<style>
+  nav {
+    padding: 2rem;
+  }
+  ul[role='list'] {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  li {
+    padding: 1rem;
+    border: 1px solid grey;
+  }
+</style>
