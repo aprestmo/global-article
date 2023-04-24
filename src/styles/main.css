@@ -1,5 +1,6 @@
-@layer article, publication, layout, font-size, color-scheme;
+@layer resets, article, publication, layout, font-size, color-scheme;
 
+@import url("resets.css") layer(resets);
 @import url("article.css") layer(article);
 @import url("publications.css") layer(publication);
 @import url("hero-layout.css") layer(layout);
