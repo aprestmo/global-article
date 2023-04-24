@@ -11,9 +11,10 @@ const { title, language } = Astro.props as Props;
 <!DOCTYPE html>
 <html lang={language ? language : 'nb-NO'}>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>{title}</title>
+    <meta name="color-scheme" content="light dark">
     <link
       rel="stylesheet"
       href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"

@@ -39,6 +39,23 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "hero",
+            label: "Hovedbilde",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "caption",
+            label: "Bildetekst",
+            required: true,
+          },
+          {
+            type: "string",
+            name: "tag",
+            label: "Tag",
+          },
+          {
             type: "datetime",
             name: "posted",
             label: "Publisert",
