@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "dev:tina": "tinacms dev -c 'astro dev'",
+    "fetch:tokens": "yarn figma-token-engine",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -22,5 +23,8 @@
     "rome": "^12.0.0",
     "the-new-css-reset": "^1.8.4",
     "tinacms": "^1.4.6"
+  },
+  "devDependencies": {
+    "figma-token-engine": "^0.1.0"
   }
 }

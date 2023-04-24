@@ -30,12 +30,21 @@ import navData from '../data/navData';
 
   ul {
     display: grid;
-    gap: 0.5rem;
+    gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
   }
 
   li {
-    padding: 1rem;
-    border: 1px solid grey;
+    border: 1px solid hsl(0 0% 50%);
+    border-radius: 0.5rem;
+  }
+
+  li:hover {
+    background-color: hsl(0 0% 95%);
+  }
+
+  a {
+    display: flex;
+    padding: 2rem;
   }
 </style>

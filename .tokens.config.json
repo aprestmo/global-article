@@ -1,7 +1,7 @@
 {
   "tokenFormat": "TokensStudio",
   "figmaFileId": "",
-  "inputFile": "./tokens-studio.json",
+  "inputFile": "./tokens/tokens-studio.json",
   "outputDir": "./src/styles/tokens",
   "platforms": [
     "css",

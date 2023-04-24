@@ -1,0 +1,45 @@
+{
+  "core": {
+    "typo": {
+      "black": {
+        "value": "#2d2d2d",
+        "type": "color",
+        "description": "used as black for typo"
+      }
+    },
+    "brand": {
+      "dn": {
+        "value": "#15307a",
+        "type": "color"
+      },
+      "dntest": {
+        "value": "#39415b",
+        "type": "color"
+      }
+    },
+    "gray": {
+      "80": {
+        "value": "#ccc",
+        "type": "color"
+      },
+      "90": {
+        "value": "#e6e6e6",
+        "type": "color"
+      },
+      "95": {
+        "value": "#f2f2f2",
+        "type": "color"
+      }
+    }
+  },
+  "DN": {},
+  "Kystens": {},
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "core",
+      "DN",
+      "Kystens"
+    ]
+  }
+}
