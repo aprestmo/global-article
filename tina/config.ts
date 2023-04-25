@@ -51,9 +51,37 @@ export default defineConfig({
             required: true,
           },
           {
+            label: "Page Blocks",
+            name: "pageBlocks",
+            type: "object",
+            list: true,
+            templates: [
+              {
+                label: "Byline",
+                name: "byline",
+                fields: [
+                  {
+                    label: "Navn",
+                    name: "name",
+                    type: "string"
+                  },
+                  {
+                    label: "E-postadresse",
+                    name: "email",
+                    type: "string"
+                  },
+                ]
+              },
+            ]
+          },
+          {
             type: "string",
-            name: "tag",
-            label: "Tag",
+            name: "tags",
+            label: "Tags",
+            list: true,
+            ui: {
+              component: "tags"
+            },
           },
           {
             type: "datetime",
@@ -65,10 +93,24 @@ export default defineConfig({
             },
           },
           {
+            type: "datetime",
+            name: "updated",
+            label: "Oppdatert",
+            ui: {
+              timeFormat: "HH:mm"
+            },
+          },
+          {
             type: "rich-text",
             name: "body",
             label: "Brødtekst",
             isBody: true,
+          },
+          {
+            type: "string",
+            name: "url",
+            label: "Referanse URL",
+            required: true,
           },
         ],
       },

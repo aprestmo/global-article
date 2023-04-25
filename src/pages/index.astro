@@ -5,7 +5,7 @@ import Layout from '../templates/Layout.astro';
 import navData from '../data/navData';
 ---
 
-<Layout title="Publikasjoner">
+<Layout title="Publikasjoner" publication="">
   <nav>
     <ul role='list'>
     {
@@ -31,7 +31,7 @@ import navData from '../data/navData';
   ul {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
   }
 
   li {
@@ -40,7 +40,7 @@ import navData from '../data/navData';
   }
 
   li:hover {
-    background-color: hsl(0 0% 95%);
+    background-color: hsl(0 0% 50% / 0.5);
   }
 
   a {

@@ -1,4 +1,54 @@
 ---
-title: Europower
+title: 'Ny strømpris-kollaps – men denne gangen blir det billigere også i Norge '
+lead: >-
+  Siden torsdag forrige uke har strømprisene i Europa kollapset hele tre ganger.
+  Til i morgen, lørdag, kollapser de igjen. Denne gangen får det konsekvenser
+  også for norske strømpriser.
+hero: >-
+  https://images-global.nhst.tech/image/WjVHdXY4R0dxWDd0YXJpNEx5VFVNd1Vja2FvQ1hTU3dlcVZadmlGSm9BMD0=/nhst/binary/393e9c697da77143c2355c52bdb1f0b0
+caption: >-
+  Når det produseres for mye strøm fra solceller og vindkraftverk, kollapser
+  strømprisen. Det er har nå skjedd fire ganger siden torsdag forrige uke. Foto:
+  Øyvind Haug
+posted: 2023-04-20T22:00:00.000Z
+url: >-
+  https://www.europower.no/kraftmarked/ny-strompris-kollaps-men-denne-gangen-blir-det-billigere-ogsa-i-norge/2-1-1438894
+tags:
+  - Nyheter
+  - Spotpriser
+  - solenergi
+  - Vindkraft
+  - Utenlandskabel
+updated: 2023-04-20T22:00:00.000Z
+pageBlocks:
+  - name: Magnus Lingjærde
+    email: '#'
+    _template: byline
 ---
 
+Siden torsdag forrige uke har strømprisene på forskjellige steder i Nord-Europa kollapset tre ganger. Nå skjer det igjen.
+
+Den største [kollapsen var i de nederlandske prisene for onsdag](https://www.europower.no/kraftmarked/na-kan-vi-importere-nesten-gratis-nederlandsk-strom-rsaken-er-for-mye-sol-og-vind/2-1-1434832 "kollapsen var i de nederlandske prisene for onsdag") denne uken. På grunn av for høy strømproduksjon fra vind og sol, havnet prisene på minus 195 euro/MWh (-2,25 kr/kWh) i noen timer midt på dagen.
+
+I tillegg har vi sett priskollaps i både Finland og [Tyskland](https://www.europower.no/kraftmarked/stromprisen-kollapser-i-europa-sol-og-vind-dekker-nesten-hele-forbruket/2-1-1438161 "Tyskland") denne uken.
+
+Konsekvensene av disse priskollapsene har vært små for Sør-Norge sin del, men Midt- og Nord-Norge fikk [de laveste spotprisene så langt i år, etter nullpriser i Finland](https://www.europower.no/kraftmarked/gratis-strom-fra-finland-sorger-for-arets-laveste-strompriser/2-1-1433116 "de laveste spotprisene så langt i år, etter nullpriser i Finland") torsdag forrige uke.
+
+Til i morgen er det Litauen, som får tre timer med null i pris. Det får også de norske strømprisene til å falle.
+
+### For mye strøm
+
+Helgen starter med høyere temperaturer enn normalt og forventninger om mer strømproduksjon fra både sol- og vindkraft enn normalt i Nord-Europa i morgen. Det viser tall fra analyseselskapet Energy Quantified.[
+](https://www.europower.no/news/2-1-1438161)
+
+Resultatet av lavt helgeforbruk og høy produksjon fra uregulerbar strømproduksjon, gjør at strømprisene igjen kollapser.
+
+De tidligere priskollapsene vi har sett den siste uken har ikke i særlig stor grad blitt priset inn i Sør-Norge, men til i morgen vil sørlendingene kunne kjøpe strøm til 43 øre/kWh, før alle skatter, nettleie og strømstøtte.
+
+Det gjelder imidlertid ikke hele Sør-Norge. Strømprodusentene i Bergensregionen ser ut til å ha mer kontroll på vannkraftproduksjonen. Ved å stanse så mye strømproduksjon som mulig, vil prisfallet stoppe på 69 øre/kWh, som laveste for morgendagen.
+
+I Midt- og Nord-Norge faller prisene helt ned til 20 øre/kWh på det laveste i morgen.
+
+Mens Litauen får noen timer med nullpriser, vil de øvrige baltiske landene få priser helt ned i 6,5 øre/kWh. Det samme gjelder strømprisen i Tyskland.
+
+Det er i timene mellom klokken 10 og 15 hvor prisene blir på det laveste i morgen. Fra klokken 14 – 15 vil i tillegg de øvrige Nordiske landene, utenom Norge, få 6,5 øre/kWh.

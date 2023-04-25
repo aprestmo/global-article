@@ -4,7 +4,27 @@ lead: >-
   Milliardærparet Arne og Marianne Blystads konglomerat vil ikke bruke
   advokatfirmaet Schjødt – og krever at motparter heller ikke gjør det. Også
   Klaveness Marine boikotter Schjødt.
-posted: 2023-04-23T22:00:00.000Z
+hero: >-
+  https://images.dn.no/image/ZXlucWphd1cyMG9ocVphSEdnTlhNaEZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/47183e619f38994fdc233af3f7fb19dd
+caption: >-
+  Blystad-konsernet forvalter Blystad-familiens formue, og eies fullt ut av
+  familien. På toppen sitter Arne og Marianne Blystad (bildet) med bestemmende
+  innflytelse. Bildet er fra 2015. (Foto: Fredrik Bjerknes)
+url: >-
+  https://www.dn.no/jus/schjodt/advokatfirmaet-schjodt/arne-blystad/derfor-boikotter-de-schjodt-ikke-forenlig-med-blystad-gruppens-verdier/2-1-1438547
+tags:
+  - Schjødt
+  - Advokatfirmaet Schjødt
+  - Arne Blystad
+  - Marianne Blystad
+  - Blystad-gruppen
+  - Jus
+posted: 2023-04-23T22:04:02.000Z
+updated: 2023-04-28T11:13:59.000Z
+pageBlocks:
+  - name: Agnete Klevstrand
+    email: agnete.klevstrand@dn.no
+    _template: byline
 ---
 
 I september 2022 fikk advokatfirmaet Schjødt en tydelig beskjed fra Blystad Group, det norske milliardkonsernet som forvalter familieformuen til investorene Arne og Marianne Blystad og deres døtre.

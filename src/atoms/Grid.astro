@@ -1,0 +1,14 @@
+<div>
+  <slot/>
+</div>
+
+<style>
+  div {
+    --_body-col-width: var(--body-col-width, 40rem);
+    --_site-padding: var(--site-padding, 1rem);
+
+    inline-size: min(var(--_body-col-width), 100vw - calc(var(--_site-padding) * 2));
+    /* margin-block-start: 3rem; */
+    margin-inline: auto;
+  }
+</style>

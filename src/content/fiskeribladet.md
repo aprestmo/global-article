@@ -1,5 +1,0 @@
----
-title: Fiskeribladet
----
-
-Fiskeribladet-sak
