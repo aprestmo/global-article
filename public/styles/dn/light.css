@@ -1,0 +1,5 @@
+:root {
+  color-scheme: light;
+
+  --logo-fill-color: var(--brand-500);
+}

@@ -1,0 +1,6 @@
+:root {
+  color-scheme: dark;
+
+  --logo-fill-color: var(--neutral-100);
+  --line-height: 1.6;
+}
