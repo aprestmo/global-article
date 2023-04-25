@@ -2,7 +2,7 @@
 export interface Props {
   title: string;
   language: string;
-  publication: string;
+  publication?: string;
 }
 
 const { title, language, publication } = Astro.props as Props;
@@ -25,9 +25,12 @@ const { title, language, publication } = Astro.props as Props;
     <link rel="manifest" href="/manifest.webmanifest">
 
     <link rel="stylesheet" href="/styles/shared-globals.css">
+
+    {publication &&
     <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/brand.css`}>
     <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/light.css`} media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/dark.css`} media="(prefers-color-scheme: dark)">
+    }
     <link rel="stylesheet" href="/styles/main.css">
   </head>
   <body>
