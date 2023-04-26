@@ -1,16 +1,20 @@
 const navData = [
   {
-    publication: 'DN',
-    path: '/dn/',
-  },
-  {
-    publication: 'Europower',
-    path: '/europower/',
-  },
-  {
     publication: 'White Label',
     path: '/white-label/',
   },
+  {
+    publication: 'Recharge',
+    path: '/recharge/',
+  },
+  {
+    publication: 'DN',
+    path: '/dn/',
+  },
+  // {
+  //   publication: 'Europower',
+  //   path: '/europower/',
+  // },
   // {
   //   publication: 'Fiskeribladet',
   //   path: '/fiskeribladet/',

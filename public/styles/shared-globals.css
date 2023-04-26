@@ -1,34 +1,37 @@
-/* Raw values / Core level */
+/*
+  1. Choices (Globals) - raw values
+*/
+
 :root {
-  /* color-scheme: light; */
+  /* Colors */
+  --dnmg-core-color-neutral-0: hsl(210 8% 5%);
+  --dnmg-core-color-neutral-50: hsl(216 6% 15%);
+  --dnmg-core-color-neutral-100: hsl(217 6% 25%);
+  --dnmg-core-color-neutral-200: hsl(215 7% 35%);
+  --dnmg-core-color-neutral-300: hsl(216 7% 45%);
+  --dnmg-core-color-neutral-400: hsl(216 7% 55%);
+  --dnmg-core-color-neutral-500: hsl(215 7% 65%);
+  --dnmg-core-color-neutral-600: hsl(217 6% 75%);
+  --dnmg-core-color-neutral-700: hsl(216 6% 85%);
+  --dnmg-core-color-neutral-800: hsl(210 8% 95%);
+  --dnmg-core-color-neutral-900: hsl(0 0% 0%);
+  --dnmg-core-color-neutral-1000: hsl(0 0% 100%);
 
-  --neutral-0: hsl(0 0% 0%);
-  --neutral-100: hsl(0 0% 100%);
-
-  --line-height: 1.5;
-
-  --logo-fill-color: var(--brand-500);
+  --link-hover: hsl(240 41% 10%); /* Link:hover */
+  --link: hsl(241 42% 50%); /* Link */
+  --link-active: hsl(241 41% 70%); /* Link:active */
+  --link-disabled: hsl(218 33% 80%); /* Link:disabled */
 }
 
 /*
-  Semantic level
-
-  TODO: Split this into separate files.
+  2. Semantic
 */
 :root {
-  color-scheme: light;
+  --dnmg-global-color-error: #AF3333; /* Error */
+  --dnmg-global-color-success: #4A9864; /* Success */
+  --dnmg-global-color-live: #FFCC33; /* Warning Yellow */
+  --dnmg-global-color-warning: #DE3956; /* Warning Red */
 
-  --background-color: var(--neutral-100);
-  --typography-color: var(--neutral-0);
-
-  --font-body: var(--primary-font);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-
-    --background-color: var(--neutral-0);
-    --typography-color: var(--neutral-100);
-  }
+  --dnmg-global-color-type-dark: hsl(216 7% 15%); /* Typography dark */
+  --dnmg-global-color-type-light: hsl(0 0% 100%); /* Typography light */
 }

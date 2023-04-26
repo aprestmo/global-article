@@ -15,89 +15,104 @@ const { title, language, publication } = Astro.props as Props;
     <meta name="viewport" content="width=device-width">
     <title>{title}</title>
     <meta name="color-scheme" content="light dark">
-    <link
-      rel="stylesheet"
-      href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {publication === 'DN' &&
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+      <link
+        rel="stylesheet"
+        href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"
+      />
+    }
+
+    {publication !== 'DN' &&
+       <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    }
     <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
     <link rel="manifest" href="/manifest.webmanifest">
 
     <link rel="stylesheet" href="/styles/shared-globals.css">
+    <link rel="stylesheet" href="/styles/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)">
 
-    {publication &&
-    <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/brand.css`}>
-    <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/light.css`} media="(prefers-color-scheme: light)">
-    <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/dark.css`} media="(prefers-color-scheme: dark)">
-    }
-    <link rel="stylesheet" href="/styles/main.css">
+    <!--
+      {publication &&
+      <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/brand.css`}>
+      <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/light.css`} media="(prefers-color-scheme: light)">
+      <link rel="stylesheet" href={`/styles/${publication.toLowerCase()}/dark.css`} media="(prefers-color-scheme: dark)">
+      }
+       -->
+    <link rel="stylesheet" href="/styles/_main.css">
   </head>
   <body>
     <slot />
   </body>
 </html>
 
+<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+
 <script>
-  /* Get URL on load */
-  const url = new URL(window.location.href);
+  // /* Get URL on load */
+  // const url = new URL(window.location.href);
 
-  /* Get defaults, set params and update URL on load */
-  const defaultTheme = document.querySelector("#theme");
-  const defaultSize = document.querySelector("#size");
-  const defaultLayout = document.querySelector("#layout");
+  // /* Get defaults, set params and update URL on load */
+  // const defaultTheme = document.querySelector("#theme");
+  // const defaultSize = document.querySelector("#size");
+  // const defaultLayout = document.querySelector("#layout");
 
-  url.searchParams.append('theme', defaultTheme.value);
-  url.searchParams.append('size', defaultSize.value);
-  url.searchParams.append('layout', defaultLayout.value);
-  window.history.pushState({}, "", url);
+  // url.searchParams.append('theme', defaultTheme.value);
+  // url.searchParams.append('size', defaultSize.value);
+  // url.searchParams.append('layout', defaultLayout.value);
+  // window.history.pushState({}, "", url);
 
-  /* Set data-attributes from params on URL on load */
-  const theme = url.searchParams.get("theme");
-  const size = url.searchParams.get("size");
-  const layout = url.searchParams.get("layout");
+  // /* Set data-attributes from params on URL on load */
+  // const theme = url.searchParams.get("theme");
+  // const size = url.searchParams.get("size");
+  // const layout = url.searchParams.get("layout");
 
-  document.body.setAttribute("data-theme", theme);
-  document.body.setAttribute("data-size", size);
-  document.body.setAttribute("data-layout", layout);
+  // document.body.setAttribute("data-theme", theme);
+  // document.body.setAttribute("data-size", size);
+  // document.body.setAttribute("data-layout", layout);
 
-  const setChecked = function (el: string, attr: string) {
-    const options = document.querySelectorAll(el);
-    options.forEach((option) => {
-      if (option.value === attr) {
-        option.setAttribute("selected", "");
-      }
-    });
-  };
+  // const setChecked = function (el: string, attr: string) {
+  //   const options = document.querySelectorAll(el);
+  //   options.forEach((option) => {
+  //     if (option.value === attr) {
+  //       option.setAttribute("selected", "");
+  //     }
+  //   });
+  // };
 
-  setChecked("#theme option", theme);
-  setChecked("#size option", size);
-  setChecked("#layout option", layout);
+  // setChecked("#theme option", theme);
+  // setChecked("#size option", size);
+  // setChecked("#layout option", layout);
 
-  /* Update URL and data-attrbutes on select change */
-  document.addEventListener("change", (event: any) => {
-    if (event.target.matches("#theme")) {
-      updateURL("theme");
-      let theme = url.searchParams.get("theme");
-      document.body.setAttribute("data-theme", theme);
-    }
+  // /* Update URL and data-attrbutes on select change */
+  // document.addEventListener("change", (event: any) => {
+  //   if (event.target.matches("#theme")) {
+  //     updateURL("theme");
+  //     let theme = url.searchParams.get("theme");
+  //     document.body.setAttribute("data-theme", theme);
+  //   }
 
-    if (event.target.matches("#size")) {
-      updateURL("size");
-      let size = url.searchParams.get("size");
-      document.body.setAttribute("data-size", size);
-    }
+  //   if (event.target.matches("#size")) {
+  //     updateURL("size");
+  //     let size = url.searchParams.get("size");
+  //     document.body.setAttribute("data-size", size);
+  //   }
 
-    if (event.target.matches("#layout")) {
-      updateURL("layout");
-      let layout = url.searchParams.get("layout");
-      document.body.setAttribute("data-layout", layout);
-    }
-  });
+  //   if (event.target.matches("#layout")) {
+  //     updateURL("layout");
+  //     let layout = url.searchParams.get("layout");
+  //     document.body.setAttribute("data-layout", layout);
+  //   }
+  // });
 
-  /* Function to update URL on select change */
-  const updateURL = function (key: any) {
-    url.searchParams.set(key, event.target.value);
-    window.history.pushState({}, "", url);
-  };
+  // /* Function to update URL on select change */
+  // const updateURL = function (key: any) {
+  //   url.searchParams.set(key, event.target.value);
+  //   window.history.pushState({}, "", url);
+  // };
 </script>

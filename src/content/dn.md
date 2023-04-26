@@ -29,7 +29,7 @@ pageBlocks:
 
 I september 2022 fikk advokatfirmaet Schjødt en tydelig beskjed fra Blystad Group, det norske milliardkonsernet som forvalter familieformuen til investorene Arne og Marianne Blystad og deres døtre.
 
-Ingen av selskapene i Blystad-gruppen ville lenger kjøpe advokattjenester fra Schjødt, skrev Blystad-gruppens toppsjef, Fredrik Platou, i en epost til ledelsen i Schjødt.
+Ingen av selskapene i [Blystad-gruppen](#) ville lenger kjøpe advokattjenester fra Schjødt, skrev Blystad-gruppens toppsjef, Fredrik Platou, i en epost til ledelsen i Schjødt.
 
 Og boikotten stoppet ikke der: Ifølge eposten, som DN kjenner innholdet av, ville selskapet helt la være å investere i selskaper som brukte advokattjenester fra Schjødt, eller anmode om at selskapene byttet advokatfirma. Blystad-gruppen ville også forsøksvis unngå å involvere seg i oppkjøpsprosjekter der Schjødt bisto motparter.
 

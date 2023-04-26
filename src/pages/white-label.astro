@@ -1,18 +1,20 @@
 ---
 import Layout from '../templates/Layout.astro';
+
+import Header from '../organisms/Header.astro';
+import Story from '../organisms/Story.astro';
+import StoryHeader from '../molecules/StoryHeader.astro';
+import Grid from '../atoms/Grid.astro';
+import Article from '../content/recharge.md';
+
+const publication = 'White Label';
 ---
-
-<Layout title="White Label" language="en">
-  <main>
-    <h1>White Label page</h1>
-    <a href="/">&larr; Back to index</a>
-  </main>
+<Layout title={publication} publication={publication}>
+  <Header theme="dngroup" />
+  <Story>
+    <!-- <StoryHeader /> -->
+    <Grid>
+      <Article />
+    </Grid>
+  </Story>
 </Layout>
-
-<style>
-  main {
-    inline-size: min(40rem, 100vw - 2rem);
-    margin-inline: auto;
-    padding-block: 4rem;
-  }
-</style>
