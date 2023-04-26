@@ -19,6 +19,12 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+## Design System
+
+Global shared first level variables live in `/public/styles/shared-global.css` at the moment. Corresponding `light.css` and `dark.css` are present at the same level. Brands have their own folder which gets conditionally loaded based on what page you are looking at.
+
+To test variables, use `/public/styles/_main.css` at the moment.
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:

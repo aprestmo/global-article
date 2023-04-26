@@ -1,7 +1,7 @@
 @layer reset, base, utilities;
 
 /* This is just a reset for testing purposes */
-/* @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset); */
+@import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
 /*
   TODO: Move to components?
