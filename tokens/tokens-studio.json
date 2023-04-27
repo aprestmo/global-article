@@ -1,45 +1,316 @@
 {
   "core": {
-    "typo": {
-      "black": {
-        "value": "#2d2d2d",
+    "neutral": {
+      "0": {
+        "value": "hsl(210, 8%, 5%)",
+        "type": "color"
+      },
+      "50": {
+        "value": "hsl(216, 6%, 15%)",
+        "type": "color"
+      },
+      "100": {
+        "value": "hsl(217, 6%, 25%)",
+        "type": "color"
+      },
+      "200": {
+        "value": "hsl(215, 7%, 35%)",
+        "type": "color"
+      },
+      "300": {
+        "value": "hsl(215, 7%, 35%)",
+        "type": "color"
+      },
+      "400": {
+        "value": "hsl(216, 7%, 45%)",
+        "type": "color"
+      },
+      "500": {
+        "value": "hsl(216, 7%, 55%)",
+        "type": "color"
+      },
+      "600": {
+        "value": "hsl(215, 7%, 65%)",
+        "type": "color"
+      },
+      "700": {
+        "value": "hsl(217, 6%, 75%)",
+        "type": "color"
+      },
+      "800": {
+        "value": "hsl(216, 6%, 85%)",
+        "type": "color"
+      },
+      "900": {
+        "value": "hsl(210, 8%, 95%)",
+        "type": "color"
+      },
+      "1000": {
+        "value": "hsl(0, 0%, 98%)",
+        "type": "color"
+      }
+    },
+    "typography": {
+      "dark": {
+        "value": "hsl(216, 7%, 15%)",
         "type": "color",
-        "description": "used as black for typo"
+        "description": "Used for dark text on light background"
+      },
+      "light": {
+        "value": "hsl(0, 0%, 100%)",
+        "type": "color",
+        "description": "Used for light text on dark background"
       }
     },
+    "links": {
+      "default": {
+        "value": "hsl(241, 42%, 50%)",
+        "type": "color",
+        "description": "Default link color in light mode"
+      },
+      "active": {
+        "value": "hsl(241, 41%, 70%)",
+        "type": "color",
+        "description": "Default active link color in light mode"
+      },
+      "hover": {
+        "value": "hsl(241, 41%, 10%)",
+        "type": "color",
+        "description": "Default hover link color in light mode"
+      },
+      "disabled": {
+        "value": "hsl(218, 33%, 80%)",
+        "type": "color",
+        "description": "Default disabled link color in light mode"
+      }
+    },
+    "ui": {
+      "error": {
+        "value": "hsl(0, 55%, 44%)",
+        "type": "color",
+        "description": "Default error color"
+      },
+      "success": {
+        "value": "hsl(140, 35%, 44%)",
+        "type": "color",
+        "description": "Default success color"
+      },
+      "warning": {
+        "value": "hsl(45, 100%, 60%)",
+        "type": "color",
+        "description": "Default warning color"
+      },
+      "live": {
+        "value": "hsl(349, 71%, 55%)",
+        "type": "color",
+        "description": "Default live color"
+      }
+    }
+  },
+  "core.dark": {
+    "links": {
+      "default": {
+        "value": "hsl(73, 97%, 85%)",
+        "type": "color",
+        "description": "Default link color in dark mode"
+      },
+      "active": {
+        "value": "hsl(76, 85%, 86%, 0.7)",
+        "type": "color",
+        "description": "Default active link color in dark mode"
+      },
+      "hover": {
+        "value": "hsl(76, 98%, 77%)",
+        "type": "color",
+        "description": "Default hover link color in dark mode"
+      }
+    }
+  },
+  "DN": {
     "brand": {
-      "dn": {
-        "value": "#15307a",
+      "50": {
+        "value": "hsl(220, 14%, 92%)",
         "type": "color"
       },
-      "dntest": {
-        "value": "#39415b",
-        "type": "color"
-      }
-    },
-    "gray": {
-      "80": {
-        "value": "#ccc",
+      "100": {
+        "value": "hsl(219, 13%, 75%)",
         "type": "color"
       },
-      "90": {
-        "value": "#e6e6e6",
+      "200": {
+        "value": "hsl(219, 14%, 62%)",
         "type": "color"
       },
-      "95": {
-        "value": "#f2f2f2",
+      "300": {
+        "value": "hsl(219, 16%, 45%)",
+        "type": "color"
+      },
+      "400": {
+        "value": "hsl(220, 25%, 35%)",
+        "type": "color"
+      },
+      "500": {
+        "value": "hsl(219, 59%, 18%)",
+        "type": "color"
+      },
+      "600": {
+        "value": "hsl(218, 60%, 17%)",
+        "type": "color"
+      },
+      "700": {
+        "value": "hsl(219, 61%, 13%)",
+        "type": "color"
+      },
+      "800": {
+        "value": "hsl(219, 61%, 10%)",
+        "type": "color"
+      },
+      "900": {
+        "value": "hsl(219, 59%, 8%)",
         "type": "color"
       }
     }
   },
-  "DN": {},
-  "Kystens": {},
+  "Hydrogen Insight": {
+    "brand": {
+      "50": {
+        "value": "hsl(153, 52%, 96%)",
+        "type": "color"
+      },
+      "100": {
+        "value": "hsl(151, 51%, 87%)",
+        "type": "color"
+      },
+      "200": {
+        "value": "hsl(151, 52%, 81%)",
+        "type": "color"
+      },
+      "300": {
+        "value": "hsl(151, 51%, 73%)",
+        "type": "color"
+      },
+      "400": {
+        "value": "hsl(151, 51%, 67%)",
+        "type": "color"
+      },
+      "500": {
+        "value": "hsl(151, 51%, 59%)",
+        "type": "color"
+      },
+      "600": {
+        "value": "hsl(151, 42%, 54%)",
+        "type": "color"
+      },
+      "700": {
+        "value": "hsl(151, 36%, 42%)",
+        "type": "color"
+      },
+      "800": {
+        "value": "hsl(152, 36%, 32%)",
+        "type": "color"
+      },
+      "900": {
+        "value": "hsl(151, 35%, 25%)",
+        "type": "color"
+      }
+    }
+  },
+  "Kystens Næringsliv": {
+    "brand": {
+      "50": {
+        "value": "hsl(0, 67%, 98%)",
+        "type": "color"
+      },
+      "100": {
+        "value": "hsl(0, 67%, 93%)",
+        "type": "color"
+      },
+      "200": {
+        "value": "hsl(0, 67%, 89%)",
+        "type": "color"
+      },
+      "300": {
+        "value": "hsl(0, 67%, 85%)",
+        "type": "color"
+      },
+      "400": {
+        "value": "hsl(0, 68%, 82%)",
+        "type": "color"
+      },
+      "500": {
+        "value": "hsl(0, 67%, 77%)",
+        "type": "color"
+      },
+      "600": {
+        "value": "hsl(0, 47%, 70%)",
+        "type": "color"
+      },
+      "700": {
+        "value": "hsl(0, 24%, 55%)",
+        "type": "color"
+      },
+      "800": {
+        "value": "hsl(0, 20%, 43%)",
+        "type": "color"
+      },
+      "900": {
+        "value": "hsl(0, 20%, 32%)",
+        "type": "color"
+      }
+    }
+  },
+  "Europower": {
+    "brand": {
+      "50": {
+        "value": "hsl(86, 19%, 93%)",
+        "type": "color"
+      },
+      "100": {
+        "value": "hsl(90, 18%, 78%)",
+        "type": "color"
+      },
+      "200": {
+        "value": "hsl(91, 18%, 67%)",
+        "type": "color"
+      },
+      "300": {
+        "value": "hsl(90, 18%, 52%)",
+        "type": "color"
+      },
+      "400": {
+        "value": "hsl(89, 25%, 42%)",
+        "type": "color"
+      },
+      "500": {
+        "value": "hsl(90, 47%, 28%)",
+        "type": "color"
+      },
+      "600": {
+        "value": "hsl(90, 46%, 26%)",
+        "type": "color"
+      },
+      "700": {
+        "value": "hsl(91, 47%, 20%)",
+        "type": "color"
+      },
+      "800": {
+        "value": "hsl(90, 46%, 15%)",
+        "type": "color"
+      },
+      "900": {
+        "value": "hsl(90, 47%, 12%)",
+        "type": "color"
+      }
+    }
+  },
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
       "core",
+      "core.dark",
       "DN",
-      "Kystens"
+      "Hydrogen Insight",
+      "Kystens Næringsliv",
+      "Europower"
     ]
   }
 }
