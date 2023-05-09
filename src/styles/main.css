@@ -3,6 +3,7 @@
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
+
 /*
   TODO: Move to components?
 */
@@ -10,18 +11,11 @@
   body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--background-app);
+  }
 
-    /* --_surface-background: var(--background-color);
-    --_surface-text-color: var(--typography-color);
-    --_font-family-body: var(--font-body, monospace);
-    --_line-height: var(--line-height);
-
-    background-color: var(--_surface-background);
-    color: var(--_surface-text-color);
-    font-family: var(--_font-family-body);
-    line-height: var(--_line-height); */
-
-    background-color: yellow;
+  .header{
+    background: var(--background-header)
   }
 
   a {
