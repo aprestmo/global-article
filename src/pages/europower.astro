@@ -5,13 +5,12 @@ import Header from '../organisms/Header.astro';
 import Story from '../organisms/Story.astro';
 import StoryHeader from '../molecules/StoryHeader.astro';
 import Grid from '../atoms/Grid.astro';
-import Article from '../content/recharge/recharge.mdx';
+import Article from '../content/europower/europower.mdx';
 
-const publication = 'Recharge';
+const publication = 'Europower';
 ---
-
-<Layout title={publication} publication={publication} language="en">
-  <Header theme="recharge" />
+<Layout title={publication} {publication}>
+  <Header theme="europower" />
   <Story>
     <!-- <StoryHeader /> -->
     <Grid>
