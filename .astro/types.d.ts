@@ -121,22 +121,22 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "dn": {
-"dn.md": {
-  id: "dn.md",
+"dn.mdx": {
+  id: "dn.mdx",
   slug: "dn",
   body: string,
   collection: "dn",
   data: any
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "europower": {
-"europower.md": {
-  id: "europower.md",
+"europower.mdx": {
+  id: "europower.mdx",
   slug: "europower",
   body: string,
   collection: "europower",
   data: any
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "fiskeribladet": {
 "fiskeribladet.mdx": {
@@ -184,13 +184,13 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "recharge": {
-"recharge.md": {
-  id: "recharge.md",
+"recharge.mdx": {
+  id: "recharge.mdx",
   slug: "recharge",
   body: string,
   collection: "recharge",
   data: any
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "tradewinds": {
 "tradewinds.mdx": {

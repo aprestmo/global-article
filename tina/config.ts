@@ -37,19 +37,16 @@ export default defineConfig({
             type: "string",
             name: "lead",
             label: "Ingress",
-            required: true,
           },
           {
             type: "string",
             name: "hero",
             label: "Hovedbilde",
-            required: true,
           },
           {
             type: "string",
             name: "caption",
             label: "Bildetekst",
-            required: true,
           },
           {
             label: "Page Blocks",
@@ -88,7 +85,6 @@ export default defineConfig({
             type: "datetime",
             name: "posted",
             label: "Publisert",
-            required: true,
             ui: {
               timeFormat: "HH:mm"
             },
@@ -111,7 +107,6 @@ export default defineConfig({
             type: "string",
             name: "url",
             label: "Referanse URL",
-            required: true,
           },
         ],
       },
