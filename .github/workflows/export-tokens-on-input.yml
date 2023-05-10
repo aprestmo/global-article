@@ -2,7 +2,7 @@ name: Transform Design Tokens On Update
 on:
   push:
     paths:
-      - tokens/*.tokens.json
+      - tokens/tokens-studio.json
 jobs:
   generate_tokens:
     runs-on: macos-latest
