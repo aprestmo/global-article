@@ -3,7 +3,7 @@
 import { Icon } from "astro-icon";
 
 // component imports
-import ToggleSwitch from '../molecules/ToggleSwitch.astro';
+import Link from "../atoms/Link.astro";
 
 export interface Props {
   theme: string;
@@ -14,38 +14,9 @@ const { theme } = Astro.props as Props;
 
 <header class="header">
   <div>
-    <a href="/">
+    <Link href="/" text="">
       <Icon name={theme} />
-    </a>
-    <!-- <nav>
-      <dark-mode-toggle
-        id="dark-mode-toggle-1"
-        legend="Theme Switcher"
-        appearance="toggle"
-        dark="Dark"
-        light="Light"
-        remember="Remember this"
-      ></dark-mode-toggle>
-    </nav> -->
-    <!-- <nav>
-      <select id="layout">
-        <option value="a" selected>A</option>
-        <option value="b">B</option>
-        <option value="c">C</option>
-      </select>
-      <select id="size">
-        <option value="small">Small</option>
-        <option value="medium" selected>Medium</option>
-        <option value="large">Large</option>
-      </select>
-      <select id="theme">
-        <option value="light" selected>Light</option>
-        <option value="blue">Blue</option>
-        <option value="yellow">Yellow</option>
-        <option value="pink">Pink</option>
-        <option value="dark">Dark</option>
-      </select>
-    </nav> -->
+    </Link>
   </div>
 </header>
 
@@ -87,13 +58,4 @@ const { theme } = Astro.props as Props;
     column-gap: 1rem;
     display: flex;
   }
-
-  /*
-  select {
-    border: 1px solid hsl(0 0% 0% / 0.25);
-    border-radius: 0.25rem;
-    font-family: "Book20", sans-serif;
-    font-size: 12px;
-    padding: 0.25rem;
-  } */
 </style>
