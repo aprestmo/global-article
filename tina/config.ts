@@ -24,6 +24,7 @@ export default defineConfig({
         name: "post",
         label: "Articles",
         path: "src/content",
+        format: "mdx",
         fields: [
           {
             type: "string",
