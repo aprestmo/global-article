@@ -38,8 +38,10 @@ import Interaction from "../molecules/Interaction.astro";
   header {
     align-items: start;
     color: var(--color-text-typo, currentColor);
-    display: grid;
-    grid-template-areas: "a" "b";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-block-start: var(--hero-top-space, 1.75rem);
     max-width: var(--page-width);
     margin: 0 auto;

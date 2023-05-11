@@ -19,8 +19,8 @@
   --body-width: 680px;
 
   --site-padding: var(--spacing-row-gap-max);
-  --header-height: 5rem;
-  --logo-height: 1.8rem;
+  --header-height: 6rem;
+  --logo-height: 2rem;
   --background-app: var(--color-neutral-900)
 }
 
