@@ -5,6 +5,7 @@
 
 @import url("./tokens/tokens.css") layer(tokens);
 
+
 /*
   TODO: Move to components?
 */
@@ -14,9 +15,8 @@
   --background-navigation: var(--color-neutral-800);
   --background-footer: var(--color-neutral-800);
   --background-ads: var(--color-neutral-700);
-  --background-footer: var(--color-brand-primary-main);
+  --background-footer:  var(--color-primary);
   --background-app: var(--color-neutral-900);
-
 
   --page-width: 1280px;
   --grid-width: 980px;
@@ -25,11 +25,14 @@
   --color-typography: var(--color-typography-inverted);
   --color-typography-secondary: #3e3e3e;
   --color-link: var(--color-link-default);
+  --color-primary: var(--color-brand-primary-main);
 
   --site-padding: var(--spacing-row-gap-max);
   --header-height: 6rem;
   --logo-height: 2rem;
-}
+  --radius: 5px;
+  }
+
 
 @layer base {
   body {
@@ -74,3 +77,10 @@
   }
 
 }
+
+@layer tokens {
+
+
+}
+
+

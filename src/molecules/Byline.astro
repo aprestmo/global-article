@@ -12,10 +12,12 @@ import Link from "../atoms/Link.astro";
             alt="Byline-img"
             />
         </picture>
-
         </figure>
-        <p><a href="mailto:harald.berglihn@dn.no">Harald Berglihn</a></p>
-          <span>Journalist | Oslo</span></p>
+
+        <li class="author">
+            <p><a href="mailto:harald.berglihn@dn.no">Harald Berglihn</a></p>
+            <span>Journalist | Oslo</span></p>
+        </li>
         <li><Link href="/" text="Follow" classes="button" /></li>
     </ul>
 
@@ -39,11 +41,17 @@ import Link from "../atoms/Link.astro";
     align-items: center;
   }
 
-figure{
+  .author{
+    display: flex;
+    flex-direction: column;
+  }
+
+    figure{
         border-radius: 50%;
         border: 1px solid tomato;
         overflow: hidden;
-        border: 1px solid var(--color-neutral-800)
+        border: 1px solid var(--color-neutral-800);
+        width: 50px;
     }
 
     picture img{

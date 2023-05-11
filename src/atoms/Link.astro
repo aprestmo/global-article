@@ -22,7 +22,7 @@ const { text, href, classes } = Astro.props;
   .tag {
     /* border: 1px solid currentColor; */
     border: 1px solid #d8d8d8;
-    border-radius: 5px;
+    border-radius:  var(--radius);
     display: inline-flex;
     font-size: 0.75rem;
     inline-size: max-content;
@@ -41,9 +41,9 @@ const { text, href, classes } = Astro.props;
 
     .button {
     /* border: 1px solid currentColor; */
-    border: 1px solid #d8d8d8;
-    border-radius: 5px;
-    background-color: var(--colors-brand-50);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius);
+    background-color: var(--color-primary) !important ;
     display: inline-flex;
     font-size: 0.75rem;
     inline-size: max-content;
@@ -53,6 +53,7 @@ const { text, href, classes } = Astro.props;
     padding-inline: 20px;
     transition: background-color 200ms ease-in-out;
     text-decoration: none !important;
+    color: var(--color-brand-utility-50) !important;
 
     &:focus-visible,
     &:hover {
