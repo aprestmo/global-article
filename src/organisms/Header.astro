@@ -17,15 +17,25 @@ const { theme } = Astro.props as Props;
     <Link href="/" text="">
       <Icon name={theme} />
     </Link>
+      <div>
+    <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.121094" y="10.52" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
+<rect x="0.121094" y="0.839996" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
+</svg>
   </div>
+
+  <Link />
+  </div>
+  <div class="header-lower">
+    
+  </div>
+
 </header>
 
 <style>
   header {
-    --_header-background-color: var(--header-background-color);
-
-    background-color: var(--_header-background-color);
-    /* border-block-end: 1px solid var(--header-separator, #d9dce2); */
+    background-color: var(--header-background-color);
+    border-block-end: 1px solid #d9dce2; 
   }
 
   div {
@@ -33,7 +43,7 @@ const { theme } = Astro.props as Props;
     block-size: var(--header-height, 3.5rem);
     display: flex;
     inline-size: min(
-      var(--header-width, 1660px),
+      var(--grid-width, 1280px),
       100vw - calc(var(--site-padding, 1rem) * 2)
     );
     justify-content: space-between;
@@ -43,6 +53,11 @@ const { theme } = Astro.props as Props;
       --header-height: 6rem;
       --logo-height: 2rem;
     }
+  }
+
+  .lower-header{
+    background: var(--color-neutral-900);
+    min-height: 30px;
   }
 
   a {

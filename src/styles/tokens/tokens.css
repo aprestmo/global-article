@@ -124,7 +124,16 @@
   --color-neutral-800: #d6d8db;
   --color-neutral-900: #fafafa;
   --color-neutral-1000: #ffffff;
-  --color-neutral-1000-1: #0c0d0e;
+  --color-brand-utilitys-50: #081120;
+  --color-brand-utilitys-100: #0A1529;
+  --color-brand-utilitys-200: #112445;
+  --color-brand-utilitys-300: #13264A;
+  --color-brand-utilitys-400: #435270;
+  --color-brand-utilitys-500: #606D85;
+  --color-brand-utilitys-600: #919AAC;
+  --color-brand-utilitys-700: #B7BDC8;
+  --color-brand-utilitys-800: #E8EAED;
+  --color-brand-utilitys-900: #fafafa;
   --color-typography-base: #FFFFFF;
   --color-typography-inverted: #232528;
   --color-background-page: #242629;

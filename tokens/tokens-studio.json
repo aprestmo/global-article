@@ -1,5 +1,5 @@
 {
-  "Theme / DN (Core)": {
+  "DN (Core)": {
     "color": {
       "neutral": {
         "0": {
@@ -46,7 +46,7 @@
           "value": "hsl(216, 6%, 15%)",
           "type": "color"
         },
-        "1000-1": {
+        "1000": {
           "value": "hsl(210, 8%, 5%)",
           "type": "color"
         }
@@ -257,7 +257,7 @@
       }
     }
   },
-  "Theme / DN - Dark": {
+  "DN - Dark": {
     "color": {
       "neutral": {
         "0": {
@@ -309,6 +309,48 @@
           "type": "color"
         }
       },
+      "brand-utilitys": {
+        "50": {
+          "value": "#081120",
+          "type": "color"
+        },
+        "100": {
+          "value": "#0A1529",
+          "type": "color"
+        },
+        "200": {
+          "value": "#112445",
+          "type": "color"
+        },
+        "300": {
+          "value": "#13264A",
+          "type": "color"
+        },
+        "400": {
+          "value": "#435270",
+          "type": "color"
+        },
+        "500": {
+          "value": "#606D85",
+          "type": "color"
+        },
+        "600": {
+          "value": "#919AAC",
+          "type": "color"
+        },
+        "700": {
+          "value": "#B7BDC8",
+          "type": "color"
+        },
+        "800": {
+          "value": "#E8EAED",
+          "type": "color"
+        },
+        "900": {
+          "value": "hsl(0, 0%, 98%)",
+          "type": "color"
+        }
+      },
       "typography": {
         "base": {
           "value": "#FFFFFF",
@@ -327,7 +369,7 @@
       }
     }
   },
-  "Theme / Global": {
+  "Global": {
     "typography": {
       "editorial": {
         "titlepiece": {
@@ -433,7 +475,7 @@
       }
     }
   },
-  "Brand / Tradewinds": {
+  "tradewinds_02": {
     "color": {
       "brand-utility": {
         "50": {
@@ -479,8 +521,7 @@
       }
     }
   },
-  "Brand / D2": {},
-  "Brand / Upstream": {
+  "upstream_02": {
     "color": {
       "brand-utility": {
         "50": {
@@ -1289,12 +1330,11 @@
   "$themes": [],
   "$metadata": {
     "tokenSetOrder": [
-      "Theme / DN (Core)",
-      "Theme / DN - Dark",
-      "Theme / Global",
-      "Brand / Tradewinds",
-      "Brand / D2",
-      "Brand / Upstream",
+      "DN (Core)",
+      "DN - Dark",
+      "Global",
+      "tradewinds_02",
+      "upstream_02",
       "Core/core",
       "Core/dark",
       "Brand/dn",

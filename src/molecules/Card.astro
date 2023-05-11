@@ -1,0 +1,16 @@
+---
+interface Props {
+  text: string,
+  url: string,
+}
+
+const { slug, url, title, date, excerpt } = Astro.props as Props;
+---
+
+<div class="articleCard">
+      <h2 class="title">
+        <Link href={slug}>{title}</Link>
+      </h2>
+    <p class="date">{date}</p>
+    <p class="excerpt">{excerpt}</p>
+</div>

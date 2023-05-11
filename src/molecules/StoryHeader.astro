@@ -3,7 +3,7 @@ import Link from "../atoms/Link.astro";
 import StoryImage from "../molecules/StoryImage.astro";
 ---
 
-<header class="flow">
+<header class="flow article-top">
   <div>
     <ul role="list">
       <li>
@@ -23,11 +23,12 @@ import StoryImage from "../molecules/StoryImage.astro";
 <style>
   header {
     align-items: start;
-    background-color: var(--hero-bkg, hsl(0 0% 100%));
-    color: var(--hero-text-clr, currentColor);
+    color: var(--color-text-typo, currentColor);
     display: grid;
     grid-template-areas: "a" "b";
     padding-block-start: var(--hero-top-space, 1.75rem);
+    max-width: var(--grid-width);
+    margin: 0 auto;
   }
 
   ul[role="list"] {
@@ -42,8 +43,6 @@ import StoryImage from "../molecules/StoryImage.astro";
   }
 
   div {
-    background-color: var(--hero-text-bkg, hsl(0 0% 100%));
-    /* color: currentColor; */
     display: grid;
     grid-area: var(--hero-text, a);
     padding-block-start: var(--hero-text-space, 1.75rem);
@@ -63,6 +62,7 @@ import StoryImage from "../molecules/StoryImage.astro";
     font-size: var(--hero-font-size, 2rem);
     font-weight: 400;
     line-height: 1.2;
+    text-align: left;  
   }
 
   h2 {

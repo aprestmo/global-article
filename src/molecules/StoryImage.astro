@@ -12,11 +12,11 @@
 
 <style>
   figure {
-    background-color: var(--body-bkg, hsl(0 0% 100%));
     display: grid;
     grid-area: var(--hero-figure, b);
     margin-block-start: var(--hero-figure-space-start, 2rem);
     row-gap: 0.25rem;
+    padding-block-end: var(--hero-text-space, 1.75rem);
   }
 
   picture {
@@ -31,7 +31,7 @@
   }
 
   img {
-    inline-size: min(var(--hero-img-width, 50em), 100vw);
+    inline-size: min(var(--hero-img-width), 100vw);
   }
 
   figcaption {

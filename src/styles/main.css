@@ -8,6 +8,18 @@
 /*
   TODO: Move to components?
 */
+
+:root {
+  --background-header: var(--color-neutral-800);
+  --background-footer: var(--color-neutral-800);
+  --grid-width: 1280px;
+  --site-padding: 1rem;
+  --body-col-width: 680px;
+  --header-height: 5rem;
+  --logo-height: 1.8rem;
+  --background-app: var(--color-neutral-900)
+}
+
 @layer base {
   body {
     -moz-osx-font-smoothing: grayscale;
@@ -20,9 +32,19 @@
   }
 
   a {
-    --_dnmg-link-text-color: var(--link);
-    color: var(--_dnmg-link-text-color);
+    color: var(--color-link-base);
     text-decoration: underline;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  h2{
+    font-size: 1.8rem;
+  }  
+  h2{
+    font-size: 1.6rem;
   }
 }
 
