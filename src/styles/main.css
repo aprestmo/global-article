@@ -27,10 +27,22 @@
   --color-link: var(--color-link-default);
   --color-primary: var(--color-brand-primary-main);
 
-  --site-padding: var(--spacing-row-gap-max);
   --header-height: 6rem;
   --logo-height: 2rem;
   --radius: 5px;
+
+  --site-padding: var(--row-gap);
+
+  --row-gap: var(--spacing-row-gap-min);
+  --column-gap: var(--spacing-column-gap-min);
+
+      @media only screen and (min-width: 768px) {
+        --row-gap: var(--spacing-row-gap-max);
+        --column-gap: var(--spacing-column-gap-max);
+      }
+    
+
+    
   }
 
 
@@ -74,6 +86,7 @@
   h3{
     font-size: 1.65rem;
     font-weight: bold;
+
   }
 }
 
