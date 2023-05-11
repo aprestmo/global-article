@@ -44,7 +44,7 @@ const { theme } = Astro.props as Props;
 <style>
   header {
     background-color: var(--header-background-color);
-    border-block-end: 1px solid #d9dce2; 
+    border-block-end: 1px solid var(--color-neutral-900); 
   }
 
   .header-flow {
@@ -77,7 +77,7 @@ const { theme } = Astro.props as Props;
   .navigation{
     background: var(--background-navigation);
     min-height: 20px;
-    border-bottom: 1px solid var(--color-neutral-700);
+    border-block-end:var(--color-neutral-900);
   }
 
   .top-tasks{

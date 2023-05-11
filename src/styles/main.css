@@ -11,14 +11,14 @@
 
 :root {
   --background-header: var(--color-neutral-1000);
-  --background-navigation: var(--color-neutral-800);
+  --background-navigation: var(--color-brand-utility-50);
   --background-footer: var(--color-neutral-800);
 
   --page-width: 1280px;
   --grid-width: 980px;
-  --body-text-width: 680px;
+  --body-width: 680px;
 
-  --site-padding: 1rem;
+  --site-padding: var(--spacing-row-gap-max);
   --header-height: 5rem;
   --logo-height: 1.8rem;
   --background-app: var(--color-neutral-900)
@@ -46,18 +46,19 @@
   }
 
   p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 140%;
   }
 
   h1{
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   h2{
-    font-size: 1.8rem;
+    font-size: 2rem;
   }  
-  h2{
-    font-size: 1.6rem;
+  h3{
+    font-size: 1.45rem;
   }
 }
 
@@ -65,4 +66,5 @@
   .flow > * + * {
     margin-block-start: 1em;
   }
+
 }

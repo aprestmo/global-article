@@ -6,6 +6,7 @@ import StoryHeader from '../molecules/StoryHeader.astro';
 import Grid from '../atoms/Grid.astro';
 import Article from '../content/dn/dn.mdx';
 import Footer from '../organisms/Footer.astro';
+import Ad980 from "../molecules/Ad980.astro";
 
 const publication = 'DN';
 
@@ -14,12 +15,14 @@ import '../styles/dn-tokens.css';
 
 <Layout title={`Ny konkursbølge under oppseiling: – Nå blir det verre | ${publication}`} publication={publication}>
   <Header theme="dn" />
+  <Ad980 />
   <main>
     <Story>
         <StoryHeader />
       <Grid>
         <Article />
       </Grid>
+    <Ad980 />
     </Story>
   </main>
     <Footer />
