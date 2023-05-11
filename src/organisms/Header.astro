@@ -79,10 +79,8 @@ const { theme } = Astro.props as Props;
   }
 
   .header-right li{
-    margin-left: var(--spacing-row-gap-max);
+    margin-left: var(--row-gap);
   }
-
-  
 
   .navigation{
     background: var(--background-navigation);
@@ -107,8 +105,11 @@ const { theme } = Astro.props as Props;
   }
 
   .top-tasks li{
-      margin-right: var(--spacing-row-gap-max);
+      margin-right: var(--row-gap);
       font-size: 1.2rem;
+      @media only screen and (min-width: 768px) {
+        overflow-x: hidden;
+      }
   }
 
   a {
