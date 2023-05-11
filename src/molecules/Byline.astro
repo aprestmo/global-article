@@ -25,11 +25,12 @@ import Link from "../atoms/Link.astro";
   div {
     border-block-end: 1px solid #d9dce2;
     display: grid;
-    margin-block-end: 2.5rem;
+    margin-block-end: .5rem;
     padding-block-end: 0.75rem;
-    row-gap: 0.35rem;
-    width: var(--grid-width);
-    margin: 0 auto;
+    inline-size: min(
+      var(--grid-width),
+      100vw - calc(var(--site-padding) * 2)
+    );
   }
 
   ul{
@@ -51,7 +52,7 @@ figure{
 
 
   a {
-    color: currentColor;
+    color: var(--link-color);
     font-family:var(--typography-ui-font-family), sans-serif;
     font-weight: bold;
     font-size: 1rem;
@@ -64,7 +65,7 @@ figure{
     }
   }
   span {
-    color: #53585F;
+    color: var(--color-typography-secondary);
     font-family: var(--typography-ui-font-family), sans-serif;
     font-size: 0.75rem;
   }

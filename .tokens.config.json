@@ -1,10 +1,9 @@
 {
   "tokenFormat": "TokensStudio",
   "figmaFileId": "",
-  "inputFile": "./tokens/tokens-studio.json",
-  "outputDir": "./src/styles/tokens",
+  "inputFile": "https://github.com/nhst/dngroup-designtokens/blob/master/tokens/Core/core.json",
+  "outputDir": "./src/styles/tokens/",
   "platforms": [
-    "css",
-    "json"
+    "css"
   ]
 }

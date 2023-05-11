@@ -1,3 +1,13 @@
 :root {
-  --dn-brand: blue;
+  --color-brand-utility-0: #edf4ff;
+  --color-brand-utility-50: #411c1c;
+  --color-brand-utility-100: #381683;
+  --color-brand-utility-200: #f6d0d0;
+  --color-brand-utility-300: #f2bfbf;
+  --color-brand-utility-400: #f0b2b2;
+  --color-brand-utility-500: #ec9d9d;
+  --color-brand-utility-600: #d68f8f;
+  --color-brand-utility-700: #a87171;
+  --color-brand-utility-800: #675e5e;
+  --color-brand-utility-900: #624141;
 }

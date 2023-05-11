@@ -10,18 +10,25 @@
 */
 
 :root {
-  --background-header: var(--color-neutral-1000);
-  --background-navigation: var(--color-brand-utility-50);
+  --background-header: var(--color-neutral-900);
+  --background-navigation: var(--color-neutral-800);
   --background-footer: var(--color-neutral-800);
+  --background-ads: var(--color-neutral-700);
+  --background-footer: var(--color-brand-primary-main);
+  --background-app: var(--color-neutral-900);
+
 
   --page-width: 1280px;
   --grid-width: 980px;
   --body-width: 680px;
 
+  --color-typography: var(--color-typography-inverted);
+  --color-typography-secondary: #3e3e3e;
+  --color-link: var(--color-link-default);
+
   --site-padding: var(--spacing-row-gap-max);
   --header-height: 6rem;
   --logo-height: 2rem;
-  --background-app: var(--color-neutral-900)
 }
 
 @layer base {
@@ -30,14 +37,12 @@
     -webkit-font-smoothing: antialiased;
     background-color: var(--background-app);
     font-size: 16px;
+    color: var(--color-typography);
   }
 
-  .header{
-    background: var(--background-header)
-  }
 
   a {
-    color: var(--color-link-base);
+    color: var(--color-link-default);
     text-decoration: underline;
   }
 
@@ -58,7 +63,8 @@
     font-size: 2rem;
   }  
   h3{
-    font-size: 1.45rem;
+    font-size: 1.65rem;
+    font-weight: bold;
   }
 }
 

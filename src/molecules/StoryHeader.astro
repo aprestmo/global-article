@@ -7,21 +7,18 @@ import Interaction from "../molecules/Interaction.astro";
 
 <header class="flow article-top">
   <div>
-    <ul role="list">
-      <li>
-        <Link href="/" text="Finans" classes="category" />
-      </li>
-      <li>
-      <ul role="list" class="info">
-      <li>01. mars 2023</li>
-      <li>|</li>
-       <li>2 min</li>
-      <li>|</li>
+    <div class="flex-row">
+      <Link href="/" text="Finans" classes="category" />
 
-      <li><Link href="/" text="Paid" classes="tag" /></li>
+      <ul role="list" class="info">
+        <li>01. mars 2023</li>
+        <li>|</li>
+        <li>2 min</li>
+        <li>|</li>
+        <li><Link href="/" text="Paid" classes="tag" /></li>
       </ul>
-      </li>
-    </ul>
+</div>
+  </div>
     <h1>
       Ny konkursbølge under oppseiling: – Nå blir det verre
     </h1>
@@ -43,8 +40,13 @@ import Interaction from "../molecules/Interaction.astro";
     justify-content: center;
     align-items: center;
     padding-block-start: var(--hero-top-space, 1.75rem);
-    max-width: var(--page-width);
+    max-width: var(--grid-width);
     margin: 0 auto;
+  }
+
+  .flex-row{
+    display: flex;
+
   }
 
   ul[role="list"] {
@@ -52,13 +54,13 @@ import Interaction from "../molecules/Interaction.astro";
       var(--grid-width),
       100vw - calc(var(--site-padding) * 2)
     );
-    margin-inline: auto;
-    list-style-type: none;
-    margin-block-end: 1rem;
+    margin-block-end: .7rem;
     padding-inline-start: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-family: var(--typography-ui-font-family);
+
     &.info{
       display: flex;
       align-items: center;
@@ -70,8 +72,8 @@ import Interaction from "../molecules/Interaction.astro";
 
   div {
     display: grid;
-    grid-area: var(--hero-text, a);
-    padding-block-start: var(--hero-text-space, 1.75rem);
+    grid-area: a;
+    padding-block-start:1.75rem;
     row-gap: 0.5rem;
 
     & > * {

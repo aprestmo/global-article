@@ -33,10 +33,12 @@ const { theme } = Astro.props as Props;
 </header>
 <nav class="navigation">
   <ul class="top-tasks">
-    <li>Investor</li>
-    <li>D2</li>
-    <li>Smak</li>
-    <li>Vinsøk</li>
+    <li><a href="#">Investor</a></li>
+    <li><a href="#">D2</a></li>
+    <li><a href="#">Smak</a></li>
+    <li><a href="#">Magasinet</a></li>
+    <li><a href="#">Motor</a></li>
+    <li><a href="#">Vinsøk</a></li>
   </ul>
     
 </nav>
@@ -45,6 +47,14 @@ const { theme } = Astro.props as Props;
   header {
     background-color: var(--header-background-color);
     border-block-end: 1px solid var(--color-neutral-900); 
+  }
+
+  a{
+    color: #2d2d2d !important;
+    font-size: 1.3rem;
+    text-underline-offset: .4rem;
+    color: var(--color-link);
+    text-decoration: none !important;
   }
 
   .header-flow {
