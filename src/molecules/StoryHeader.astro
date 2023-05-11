@@ -53,7 +53,6 @@ import Interaction from "../molecules/Interaction.astro";
       var(--grid-width),
       100vw - calc(var(--site-padding) * 2)
     );
-    margin-block-end: .7rem;
     padding-inline-start: 0;
     display: flex;
     justify-content: space-between;
@@ -61,6 +60,7 @@ import Interaction from "../molecules/Interaction.astro";
     font-family: var(--typography-ui-font-family);
 
     &.info{
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -75,8 +75,6 @@ import Interaction from "../molecules/Interaction.astro";
   div {
     display: grid;
     grid-area: a;
-    padding-block-start:1.75rem;
-    row-gap: 0.5rem;
 
     & > * {
       inline-size: min(
