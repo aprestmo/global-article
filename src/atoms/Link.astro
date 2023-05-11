@@ -19,14 +19,35 @@ const { text, href, classes } = Astro.props;
   .tag {
     /* border: 1px solid currentColor; */
     border: 1px solid #d8d8d8;
-    border-radius: 99em;
+    border-radius: var(--radius);
     display: inline-flex;
-    font-family: "Book21", sans-serif;
+    font-family: var(--typography-ui-font-family), sans-serif;
     font-size: 0.75rem;
     inline-size: max-content;
     letter-spacing: 0.04em;
     line-height: 1;
-    padding-block: 9px;
+    padding-block: 9px 10px;
+    padding-inline: 20px;
+    transition: background-color 200ms ease-in-out;
+
+    &:focus-visible,
+    &:hover {
+      background-color: #f6f7f9;
+    }
+  }
+
+    .button {
+    /* border: 1px solid currentColor; */
+    border: 1px solid #d8d8d8;
+    border-radius: var(--radius);
+    background-color: var(--colors-brand-50);
+    display: inline-flex;
+    font-family: var(--typography-ui-font-family), sans-serif;
+    font-size: 0.75rem;
+    inline-size: max-content;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    padding-block: 9px 10px;
     padding-inline: 20px;
     transition: background-color 200ms ease-in-out;
 

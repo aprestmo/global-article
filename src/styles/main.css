@@ -10,11 +10,15 @@
 */
 
 :root {
-  --background-header: var(--color-neutral-800);
+  --background-header: var(--color-neutral-1000);
+  --background-navigation: var(--color-neutral-800);
   --background-footer: var(--color-neutral-800);
-  --grid-width: 1280px;
+
+  --page-width: 1280px;
+  --grid-width: 980px;
+  --body-text-width: 680px;
+
   --site-padding: 1rem;
-  --body-col-width: 680px;
   --header-height: 5rem;
   --logo-height: 1.8rem;
   --background-app: var(--color-neutral-900)
@@ -25,6 +29,7 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: var(--background-app);
+    font-size: 16px;
   }
 
   .header{
@@ -34,6 +39,14 @@
   a {
     color: var(--color-link-base);
     text-decoration: underline;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  p{
+    font-size: 1.2rem;
   }
 
   h1{

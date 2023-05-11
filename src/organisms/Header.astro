@@ -13,24 +13,33 @@ const { theme } = Astro.props as Props;
 ---
 
 <header class="header">
-  <div>
+  <div class="header-flow">
     <Link href="/" text="">
       <Icon name={theme} />
     </Link>
-      <div>
-    <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.121094" y="10.52" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
-<rect x="0.121094" y="0.839996" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
-</svg>
-  </div>
+    <ul class="header-right">
+     <li><Link href="/" text="Subsribe" classes="button" /></li>
+     <li><Link href="/" text="Login" classes="tag" /></li>
 
-  <Link />
-  </div>
-  <div class="header-lower">
-    
+     <li>
+      <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.121094" y="10.52" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
+        <rect x="0.121094" y="0.839996" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
+      </svg>
+    </li>
+  </ul>
   </div>
 
 </header>
+<nav class="navigation">
+  <ul class="top-tasks">
+    <li>Investor</li>
+    <li>D2</li>
+    <li>Smak</li>
+    <li>Vinsøk</li>
+  </ul>
+    
+</nav>
 
 <style>
   header {
@@ -38,12 +47,12 @@ const { theme } = Astro.props as Props;
     border-block-end: 1px solid #d9dce2; 
   }
 
-  div {
+  .header-flow {
     align-items: center;
     block-size: var(--header-height, 3.5rem);
     display: flex;
     inline-size: min(
-      var(--grid-width, 1280px),
+      var(--page-width, 1280px),
       100vw - calc(var(--site-padding, 1rem) * 2)
     );
     justify-content: space-between;
@@ -55,9 +64,37 @@ const { theme } = Astro.props as Props;
     }
   }
 
-  .lower-header{
-    background: var(--color-neutral-900);
-    min-height: 30px;
+  .header-right{
+    display: flex;
+  }
+
+  .header-right li{
+    margin-left: var(--spacing-row-gap-max);
+  }
+
+  
+
+  .navigation{
+    background: var(--background-navigation);
+    min-height: 20px;
+    border-bottom: 1px solid var(--color-neutral-700);
+  }
+
+  .top-tasks{
+    align-items: center;
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    inline-size: min(
+      var(--page-width, 1280px),
+      100vw - calc(var(--site-padding, 1rem) * 2)
+    );
+    justify-content: flex-start;
+    margin-inline: auto;
+  }
+
+  .top-tasks li{
+      margin-right: var(--spacing-row-gap-max);
+      font-size: 1.2rem;
   }
 
   a {

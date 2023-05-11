@@ -1,0 +1,48 @@
+<figure>
+  <picture>
+    <img
+      src="https://images.dn.no/image/ZXlucWphd1cyMG9ocVphSEdnTlhNaEZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/5d708bafc2b055cbe5f488bc7e995af4?image_version=1080"
+      alt=""
+    />
+  </picture>
+  <figcaption>
+    Analytiker Brit Elise Melhus i Dun & Bradstreet blir ikke overrasket dersom antall konkurser i år vil havne på samme nivå som i rekordårene 2018 og 2019. Da gikk rundt 5000 selskaper konkurs hvert år. (Foto: Javad Parsa)
+  </figcaption>
+</figure>
+
+<style>
+  figure {
+    display: grid;
+    grid-area: var(--hero-figure, b);
+    margin-block-start: var(--hero-figure-space-start, 2rem);
+    row-gap: 0.25rem;
+    padding-block-end: var(--hero-text-space, 1.75rem);
+  }
+
+  picture {
+    background: linear-gradient(
+      to bottom,
+      var(--hero-bkg),
+      var(--hero-bkg) calc(100% - 6rem),
+      #fff calc(100% - 6rem)
+    );
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    inline-size: min(var(--hero-img-width), 100vw);
+  }
+
+  figcaption {
+    color: #747e8e;
+    font-family: "Book21", sans-serif;
+    font-size: 0.75rem;
+    inline-size: min(
+      var(--figure-width, 50rem),
+      100vw - calc(var(--site-padding) * 2)
+    );
+    line-height: 1.5;
+    margin-inline: auto;
+  }
+</style>

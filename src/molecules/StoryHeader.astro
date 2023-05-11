@@ -7,8 +7,9 @@ import StoryImage from "../molecules/StoryImage.astro";
   <div>
     <ul role="list">
       <li>
-        <Link href="/" text="Finans" classes="tag" />
+        <Link href="/" text="Finans" classes="category" />
       </li>
+      <li>Publisert: 19. september 2023 | Oslo</li>
     </ul>
     <h1>
       Ny konkursbølge under oppseiling: – Nå blir det verre
@@ -33,13 +34,15 @@ import StoryImage from "../molecules/StoryImage.astro";
 
   ul[role="list"] {
     inline-size: min(
-      var(--body-col-width),
+      var(--grid-width),
       100vw - calc(var(--site-padding) * 2)
     );
     margin-inline: auto;
     list-style-type: none;
     margin-block-end: 1.5rem;
     padding-inline-start: 0;
+    display: flex;
+    justify-content: space-between;
   }
 
   div {
@@ -50,7 +53,7 @@ import StoryImage from "../molecules/StoryImage.astro";
 
     & > * {
       inline-size: min(
-        var(--body-col-width),
+        var(--grid-width),
         100vw - calc(var(--site-padding) * 2)
       );
       margin-inline: auto;
