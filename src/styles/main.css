@@ -27,18 +27,29 @@
   --color-link: var(--color-link-default);
   --color-primary: var(--color-brand-primary-main);
 
-  --header-height: 6rem;
-  --logo-height: 2rem;
+  --header-height: 4rem;
+  --logo-height: 1.8rem;
   --radius: 5px;
 
+
+
   --site-padding: var(--row-gap);
+   --title-size: 1.7rem;
+   --copy-size: 1.2rem;
+   --lead-size: 1.4rem;
 
   --row-gap: var(--spacing-row-gap-min);
-  --column-gap: var(--spacing-column-gap-min);
+  --column-gap: var(--spacing-row-gap-min);
 
       @media only screen and (min-width: 768px) {
         --row-gap: var(--spacing-row-gap-max);
-        --column-gap: var(--spacing-column-gap-max);
+        --column-gap: var(--spacing-row-gap-max);
+
+          --header-height: 5rem;
+          --logo-height: 2rem;
+          --title-size: 3rem;
+           --copy-size: 1.35rem;
+          --lead-size: 1.6rem;
       }
     
 
@@ -51,7 +62,6 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: var(--background-app);
-    font-size: 16px;
     color: var(--color-typography);
   }
 
@@ -63,18 +73,15 @@
 
   img{
     width: 100%;
-  }
-
+  }  
+  
   p{
-    font-size: 1.3rem;
+    font-size: var(--copy-size);
     line-height: 140%;
   }
 
   h1{
-    font-size: 2rem;
-    @media only screen and (min-width: 768px) {
-      font-size: 3rem;
-    }
+    font-size: var(--title-size);
   }
 
   h2{

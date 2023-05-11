@@ -39,7 +39,7 @@ import Interaction from "../molecules/Interaction.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block-start: var(--hero-top-space, 1.75rem);
+    padding-block-start: var(--row-gap);
     max-width: var(--grid-width);
     margin: 0 auto;
   }
@@ -58,6 +58,7 @@ import Interaction from "../molecules/Interaction.astro";
     justify-content: space-between;
     align-items: center;
     font-family: var(--typography-ui-font-family);
+    
 
     &.info{
       padding: 0;
@@ -88,7 +89,7 @@ import Interaction from "../molecules/Interaction.astro";
   h1 {
     font-family: var(--hero-font, "SmBold23", sans-serif);
     font-weight: 400;
-    font-size: 1rem;
+    font-size: var(--tile-size);
     line-height: 1.3;
         inline-size: min(
       var(--grid-width),
@@ -102,11 +103,11 @@ import Interaction from "../molecules/Interaction.astro";
   }
 
   p.lead {
-    font-size: 1.6rem !important;
+    font-size: var(--lead-size) !important;
     font-weight: 400;
     line-height: 1.2;
-    padding-block-start: 1rem;
-    padding-block-end: 1rem;
+    padding-block-start: var(--row-gap);
+    padding-block-end: var(--row-gap);
         inline-size: min(
       var(--grid-width),
       100vw - calc(var(--site-padding) * 2)
