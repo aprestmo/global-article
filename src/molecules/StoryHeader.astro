@@ -14,7 +14,7 @@ import Interaction from "../molecules/Interaction.astro";
         <li>01. mars 2023</li>
         <li>|</li>
         <li>2 min</li>
-        <li>|</li>
+        <li></li>
         <li><Link href="/" text="Paid" classes="tag" /></li>
       </ul>
 </div>
@@ -46,7 +46,6 @@ import Interaction from "../molecules/Interaction.astro";
 
   .flex-row{
     display: flex;
-
   }
 
   ul[role="list"] {
@@ -65,8 +64,11 @@ import Interaction from "../molecules/Interaction.astro";
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      column-gap: 1rem;
+      column-gap: .3rem;
       color: #53585F;
+      @media only screen and (min-width: 768px) {
+        column-gap: 1rem;
+      }
     }
   }
 
