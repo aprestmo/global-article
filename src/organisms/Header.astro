@@ -4,6 +4,7 @@ import { Icon } from "astro-icon";
 
 // component imports
 import Link from "../atoms/Link.astro";
+import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
 export interface Props {
   theme: string;
@@ -12,6 +13,7 @@ export interface Props {
 const { theme } = Astro.props as Props;
 ---
 
+<TemplateDropdown />
 <header class="header">
   <div class="header-flow">
     <Link href="/" text="">
@@ -40,8 +42,8 @@ const { theme } = Astro.props as Props;
     <li><a href="#">Motor</a></li>
     <li><a href="#">Vinsøk</a></li>
   </ul>
-    
 </nav>
+
 
 <style>
   header {

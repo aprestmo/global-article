@@ -9,6 +9,34 @@
 /*
   TODO: Move to components?
 */
+[data-layout='text-first'] {
+  --hero-text: 1;
+  --lead-text: 2;
+  --hero-figure: 3;
+  --hero-info: 1;
+  --hero-byline: 5;
+  --figure-width: var(--grid-width);
+}
+
+[data-layout='image-first'] {
+  --hero-text: 3;
+  --lead-text: 4;
+  --hero-figure: 2;
+  --hero-info: 1;
+  --hero-byline: 5;
+  --figure-width: var(--grid-width);
+}
+
+[data-layout='feature'] {
+  --hero-text: 3;
+  --lead-text: 3;
+  --hero-figure: 2;
+  --hero-info: 5;
+  --hero-byline: 4;
+  --figure-width: 100vw;
+}
+
+
 
 :root {
   --background-header: var(--color-neutral-900);
@@ -31,12 +59,10 @@
   --logo-height: 1.8rem;
   --radius: 5px;
 
-
-
   --site-padding: var(--row-gap);
-   --title-size: 1.7rem;
-   --copy-size: 1.2rem;
-   --lead-size: 1.4rem;
+  --title-size: 1.7rem;
+  --copy-size: 1.2rem;
+  --lead-size: 1.4rem;
 
   --row-gap: var(--spacing-row-gap-min);
   --column-gap: var(--spacing-row-gap-min);
@@ -48,12 +74,9 @@
           --header-height: 5rem;
           --logo-height: 2rem;
           --title-size: 3rem;
-           --copy-size: 1.35rem;
+          --copy-size: 1.35rem;
           --lead-size: 1.6rem;
       }
-    
-
-    
   }
 
 
@@ -95,6 +118,7 @@
     font-weight: bold;
 
   }
+
 }
 
 @layer utilities {

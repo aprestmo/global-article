@@ -12,37 +12,35 @@
 
 <style>
   figure {
-    display: grid;
-    grid-area: var(--hero-figure, b);
-    margin-block-start: var(--hero-figure-space-start, 2rem);
-    row-gap: 0.25rem;
-    padding-block-end: var(--hero-text-space, 1.75rem);
+    order: var(--hero-figure);
+    padding-block-end: var(--row-gap);
+    inline-size: min(
+      var(--figure-width),
+      100vw - calc(var(--site-padding) * 0)
+    );
+    @media only screen and (min-width: 768px) {
+      inline-size: min(
+        var(--figure-width),
+        100vw - calc(var(--site-padding) * 2)
+    );
+    }
   }
 
   picture {
-    background: linear-gradient(
-      to bottom,
-      var(--hero-bkg),
-      var(--hero-bkg) calc(100% - 6rem),
-      #fff calc(100% - 6rem)
-    );
     display: flex;
     justify-content: center;
   }
 
   img {
-    inline-size: min(var(--page-width), 100vw);
+    inline-size: var(--figure-width);
   }
 
   figcaption {
     color: var(--color-typography-secondary);
     font-family: var(--typography-ui-font-family), sans-serif;
     font-size: 1rem;
-    inline-size: min(
-      var(--page-width, 50rem),
-      100vw - calc(var(--site-padding) * 2)
-    );
     line-height: 1.5;
     margin-inline: auto;
+    padding-block-start: .6rem;
   }
 </style>

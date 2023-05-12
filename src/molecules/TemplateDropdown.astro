@@ -1,0 +1,40 @@
+    <nav class="select">
+      <select id="layout">
+        <option value="text-first">Text First</option>
+        <option value="image-first">Image First</option>
+        <option value="feature">Feature</option>
+      </select>
+
+
+      <select id="theme">
+        <option value="DN">DN</option>
+        <option value="Rehcarge">Recharge</option>
+        <option value="D2">D2</option>
+        <option value="Hydrogen">Hydrogen</option>
+        <option value="Intrafish">Intrafish</option>
+      </select>
+    </nav>
+  
+    <style>
+
+.select{
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  display: flex;
+  flex-direction: row;
+  padding: 0 1em;
+  color: var(--color-neutral-100);
+  background-color: var(--color-neutral-800);
+  background-image: none;
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+
+</style>
