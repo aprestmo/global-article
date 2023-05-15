@@ -3,8 +3,6 @@
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
-@import url("./tokens/tokens.css") layer(tokens);
-
 
 /*
   TODO: Move to components?
