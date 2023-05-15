@@ -1,0 +1,16 @@
+<div class="grid">
+  <slot/>
+</div>
+
+<style>
+  .grid {
+    display: grid;
+    inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
+    margin-inline: auto;
+    padding: var(--row-gap) 0;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: var(--row-gap);
+    row-gap: var(--row-gap)
+  }
+
+</style>

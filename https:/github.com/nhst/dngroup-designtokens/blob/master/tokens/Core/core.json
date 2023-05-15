@@ -394,6 +394,53 @@
           "type": "color"
         }
       },
+      "brand-utility": {
+        "0": {
+          "value": "#e6eeff",
+          "type": "color"
+        },
+        "50": {
+          "value": "#b6c6e5",
+          "type": "color"
+        },
+        "100": {
+          "value": "#8aa1cb",
+          "type": "color"
+        },
+        "200": {
+          "value": "#657fb1",
+          "type": "color"
+        },
+        "300": {
+          "value": "#476398",
+          "type": "color"
+        },
+        "400": {
+          "value": "#304b7e",
+          "type": "color"
+        },
+        "500": {
+          "value": "#1f3764",
+          "type": "color"
+        },
+        "600": {
+          "value": "#13264a",
+          "type": "color",
+          "description": "Test"
+        },
+        "700": {
+          "value": "#0c1931",
+          "type": "color"
+        },
+        "800": {
+          "value": "#070d19",
+          "type": "color"
+        },
+        "900": {
+          "value": "#04070c",
+          "type": "color"
+        }
+      },
       "typography": {
         "default": {
           "value": "#F2F2F2",

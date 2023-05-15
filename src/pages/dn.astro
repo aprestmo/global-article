@@ -3,14 +3,20 @@ import Layout from '../templates/Layout.astro';
 import Header from '../organisms/Header.astro';
 import Story from '../organisms/Story.astro';
 import StoryHeader from '../molecules/StoryHeader.astro';
+import Card from '../molecules/Card.astro';
 import Grid from '../atoms/Grid.astro';
+import StreamsGrid from '../atoms/StreamsGrid.astro';
 import Article from '../content/dn/dn.mdx';
 import Footer from '../organisms/Footer.astro';
 import Ad980 from "../molecules/Ad980.astro";
+import Interaction from "../molecules/Interaction.astro";
+import TagGroup from "../molecules/TagGroup.astro";
 
 const publication = 'DN';
 
+
 ---
+
 
 <Layout title={`Ny konkursbølge under oppseiling: – Nå blir det verre | ${publication}`} publication={publication}>
   <Header theme="dn" />
@@ -20,9 +26,20 @@ const publication = 'DN';
         <StoryHeader />
       <Grid>
         <Article />
+        <Interaction />
+        <TagGroup />
       </Grid>
     <Ad980 />
+    <StreamsGrid>
+      <Card title="Renten settes opp igjen" excerpt="Du ville ikke tro det" date="16.februar" img="../img/skip.jpg" />
+      <Card title="Renten settes opp igjen" excerpt="Du ville ikke tro det" date="16.februar" img="../img/musk.jpg"/>
+      <Card title="Renten settes opp igjen" excerpt="Du ville ikke tro det" date="16.februar" img="../img/musk.jpg"/>
+      <Card title="Renten settes opp igjen" excerpt="Du ville ikke tro det" date="16.februar" img="../img/musk.jpg"/>
+      <Card title="Renten settes opp igjen" excerpt="Du ville ikke tro det" date="16.februar" img="../img/musk.jpg"/>
+    </StreamsGrid>
     </Story>
+
   </main>
     <Footer />
 </Layout>
+

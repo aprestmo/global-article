@@ -11,8 +11,8 @@
   --hero-text: 1;
   --lead-text: 2;
   --hero-figure: 3;
-  --hero-info: 1;
-  --hero-byline: 5;
+  --hero-info: 5;
+  --hero-byline: 4;
   --figure-width: var(--grid-width);
 }
 
@@ -38,9 +38,9 @@
 
 :root {
   --background-header: var(--color-neutral-900);
-  --background-navigation: var(--color-neutral-800);
+  --background-navigation: var(--color-brand-utility-200);
   --background-footer: var(--color-neutral-800);
-  --background-ads: var(--color-neutral-700);
+  --background-ads: var(--color-neutral-800);
   --background-footer:  var(--color-primary);
   --background-app: var(--color-neutral-900);
 
@@ -59,8 +59,8 @@
 
   --site-padding: var(--row-gap);
   --title-size: 1.7rem;
-  --copy-size: 1.2rem;
-  --lead-size: 1.4rem;
+  --copy-size: 1.1rem;
+  --lead-size: 1.3rem;
 
   --row-gap: var(--spacing-row-gap-min);
   --column-gap: var(--spacing-row-gap-min);
@@ -121,7 +121,7 @@
 
 @layer utilities {
   .flow > * + * {
-    margin-block-start: 1em;
+    margin-block-start: var(--row-gap);
   }
 
 }

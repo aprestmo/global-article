@@ -1,16 +1,52 @@
 ---
+import Link from "../atoms/Link.astro";
+
+
 interface Props {
-  text: string,
+  title: string,
+  excerpt: string,
   url: string,
+  category: string,
+  img: string,
+  slug: string,
 }
 
-const { slug, url, title, date, excerpt } = Astro.props as Props;
+const { slug, img,  url, title, excerpt, category } = Astro.props as Props;
 ---
 
-<div class="articleCard">
-      <h2 class="title">
-        <Link href={slug}>{title}</Link>
-      </h2>
-    <p class="date">{date}</p>
-    <p class="excerpt">{excerpt}</p>
+<div class="card">
+    <figure>
+      <picture>
+      <img src={img}/>
+      </picture>
+    </figure>
+    <div class="card-info">
+    <h3 class="title">
+      {title}
+    </h3>
+    <p class="date">{category}</p>
+    </div>
 </div>
+
+<style>
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: var(--color-neutral-800);
+    border-radius: var(--radius);
+    grid-column: span 4;
+    overflow: hidden;
+
+    &:first-child {
+      grid-column: span 12;
+    }
+  }
+
+
+  .card-info{
+    padding: 0.5rem 1rem 2rem 1rem;
+  }
+
+
+</style>
