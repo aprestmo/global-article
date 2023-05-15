@@ -40,17 +40,17 @@ const navData = [
       "https://www.dngroup.com/wp-content/uploads/2023/02/upstream-cover-855x1024.png",
   },
   {
-    publication: "IntraFish (no)",
-    path: "/intrafish-no/",
+    publication: "IntraFish",
+    path: "/intrafish/",
     background:
       "https://www.dngroup.com/wp-content/uploads/2023/02/intrafish-cover-855x1024.png",
   },
-  {
-    publication: "IntraFish (eng)",
-    path: "/intrafish-eng/",
-    background:
-      "https://www.dngroup.com/wp-content/uploads/2023/02/intrafish-cover-.com_-855x1024.png",
-  },
+  // {
+  //   publication: "IntraFish (eng)",
+  //   path: "/intrafish-eng/",
+  //   background:
+  //     "https://www.dngroup.com/wp-content/uploads/2023/02/intrafish-cover-.com_-855x1024.png",
+  // },
   {
     publication: "Hydrogen Insight",
     path: "/hydrogen-insight/",
