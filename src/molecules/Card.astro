@@ -1,35 +1,34 @@
 ---
 import Link from "../atoms/Link.astro";
 
-
 interface Props {
-  title: string,
-  excerpt: string,
-  url: string,
-  category: string,
-  img: string,
-  slug: string,
+  title: string;
+  excerpt: string;
+  url: string;
+  category: string;
+  img: string;
+  slug: string;
 }
 
-const { slug, img,  url, title, excerpt, category } = Astro.props as Props;
+const { slug, img, url, title, excerpt, category } = Astro.props as Props;
 ---
 
 <div class="card">
-    <figure>
-      <picture>
-      <img src={img}/>
-      </picture>
-    </figure>
-    <div class="card-info">
+  <figure>
+    <picture>
+      <img src={img} />
+    </picture>
+  </figure>
+  <div class="card-info">
     <h3 class="title">
       {title}
     </h3>
     <p class="date">{category}</p>
-    </div>
+  </div>
 </div>
 
 <style>
-  .card{
+  .card {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -43,10 +42,7 @@ const { slug, img,  url, title, excerpt, category } = Astro.props as Props;
     }
   }
 
-
-  .card-info{
+  .card-info {
     padding: 0.5rem 1rem 2rem 1rem;
   }
-
-
 </style>

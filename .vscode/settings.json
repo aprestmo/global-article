@@ -11,5 +11,10 @@
   },
   "search.exclude": {
     "**/dist": true,
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "rome.rome"
   }
 }

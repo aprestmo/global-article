@@ -1,44 +1,41 @@
-    <nav class="select">
-      <select id="layout">
-        <option value="text-first">Text First</option>
-        <option value="image-first">Image First</option>
-        <option value="feature">Feature</option>
-      </select>
+<nav class="select">
+  <select id="layout">
+    <option value="text-first">Text First</option>
+    <option value="image-first">Image First</option>
+    <option value="feature">Feature</option>
+  </select>
 
-      <select id="brands">
-        <option value="/white-label/">White Label</option>
-        <option value="/recharge/">Recharge</option>
-        <option value="/dn/">DN</option>
-        <option value="/europower/">Europower</option>
-        <option value="/fiskeribladet/">Fiskeribladet</option>
-        <option value="/tradewinds/">TradeWinds</option>
-        <option value="/upstream/">Upstream</option>
-        <option value="/intrafish/">Intrafish</option>
-        <option value="/hydrogen-insight/">Hydrogen Insight</option>
-        <option value="/d2/">D2</option>
-      </select>
-    </nav>
+  <select id="brands">
+    <option value="/white-label/">White Label</option>
+    <option value="/recharge/">Recharge</option>
+    <option value="/dn/">DN</option>
+    <option value="/europower/">Europower</option>
+    <option value="/fiskeribladet/">Fiskeribladet</option>
+    <option value="/tradewinds/">TradeWinds</option>
+    <option value="/upstream/">Upstream</option>
+    <option value="/intrafish/">Intrafish</option>
+    <option value="/hydrogen-insight/">Hydrogen Insight</option>
+    <option value="/d2/">D2</option>
+  </select>
+</nav>
 
-    <style>
+<style>
+  .select {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    display: flex;
+    flex-direction: row;
+    padding: 0 1em;
+    color: var(--color-neutral-100);
+    background-color: var(--color-neutral-800);
+    background-image: none;
+    cursor: pointer;
+  }
 
-.select{
-  appearance: none;
-  outline: 0;
-  border: 0;
-  box-shadow: none;
-  /* Personalize */
-  display: flex;
-  flex-direction: row;
-  padding: 0 1em;
-  color: var(--color-neutral-100);
-  background-color: var(--color-neutral-800);
-  background-image: none;
-  cursor: pointer;
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-
+  select::-ms-expand {
+    display: none;
+  }
 </style>

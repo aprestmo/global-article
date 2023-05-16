@@ -1,5 +1,5 @@
 ---
-import '../styles/main.css'
+import "../styles/main.css";
 
 export interface Props {
   title: string;
@@ -13,33 +13,49 @@ const { title, language, publication } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang={language ? language : 'nb-NO'}>
+<html lang={language ? language : "nb-NO"}>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {publication === 'DN' &&
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-      <link
-        rel="stylesheet"
-        href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"
-      />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {
+      publication === "DN" && (
+        <>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"
+          />
+        </>
+      )
     }
 
-    {publication !== 'DN' &&
-       <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    {
+      publication !== "DN" && (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;700;800&display=swap"
+          rel="stylesheet"
+        />
+      )
     }
-    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
-    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="icon" href="/favicon.ico" sizes="any" /><!-- 32×32 -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest" />
 
-    {publication &&
-      <link rel="stylesheet" href={`https://dngroup.blob.core.windows.net/design-tokens/${publication.toLowerCase()}.css`}>
+    {
+      publication && (
+        <link
+          rel="stylesheet"
+          href={`https://dngroup.blob.core.windows.net/design-tokens/${publication.toLowerCase()}.css`}
+        />
+      )
     }
-
   </head>
   <body>
     <slot />
@@ -47,6 +63,6 @@ const { title, language, publication } = Astro.props as Props;
 </html>
 
 <script>
-  import '../js/layoutSwitcher';
-  import '../js/pageNavigation';
+  import "../js/layoutSwitcher";
+  import "../js/pageNavigation";
 </script>

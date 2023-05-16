@@ -1,7 +1,7 @@
 ---
-interface Props {
-  text: string,
-  url: string,
+export interface Props {
+  text: string;
+  url: string;
 }
 
 const { text, url } = Astro.props as Props;
@@ -11,7 +11,10 @@ const { text, url } = Astro.props as Props;
   <strong>Les også:</strong>
   <div>
     <a href={url}>{text}</a>
-    <img src="https://static1.dn.no/dn/static/assets/images/icons/badges/dnPlus.svg" alt="dnPlus">
+    <img
+      src="https://static1.dn.no/dn/static/assets/images/icons/badges/dnPlus.svg"
+      alt="dnPlus"
+    />
   </div>
 </div>
 
@@ -24,7 +27,7 @@ const { text, url } = Astro.props as Props;
   }
 
   strong {
-    font-family: 'Book21', sans-serif;
+    font-family: "Book21", sans-serif;
     font-size: 1rem;
   }
 

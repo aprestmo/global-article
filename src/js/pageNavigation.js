@@ -1,6 +1,6 @@
-document.addEventListener('change', event => {
-  if (event.target.matches('#brands')) {
+document.addEventListener("change", (event) => {
+  if (event.target.matches("#brands")) {
     window.location.href = event.target.value;
-    console.dir(event.target.setAttribute('checked', true));
+    console.dir(event.target.setAttribute("checked", true));
   }
 });

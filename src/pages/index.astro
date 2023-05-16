@@ -1,26 +1,26 @@
 ---
 // component imports
-import Layout from '../templates/Layout.astro';
+import Layout from "../templates/Layout.astro";
 
 // data imports
-import navData from '../data/navData';
+import navData from "../data/navData";
 ---
 
 <Layout title="Publikasjoner">
   <nav>
-    <ul role='list'>
-    {
-      navData.map(item => (
-        <div>
-        <li >
-          <a href={item.path}>
-            <img src={item.background} />
-            </a>
-        </li>
-        {item.publication}
-        </div>
-      ))
-    }
+    <ul role="list">
+      {
+        navData.map((item) => (
+          <div>
+            <li>
+              <a href={item.path}>
+                <img src={item.background} />
+              </a>
+            </li>
+            {item.publication}
+          </div>
+        ))
+      }
     </ul>
   </nav>
 </Layout>
@@ -29,7 +29,7 @@ import navData from '../data/navData';
   nav {
     padding: 2rem;
   }
-  ul[role='list'] {
+  ul[role="list"] {
     list-style-type: none;
     padding-inline-start: 0;
   }
@@ -40,8 +40,7 @@ import navData from '../data/navData';
     grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
   }
 
-  div{
-
+  div {
   }
 
   li {
@@ -50,16 +49,16 @@ import navData from '../data/navData';
     transition: all 0.5s ease;
   }
 
-  img{
+  img {
     border-radius: 5px;
   }
 
   li:hover {
-        background-color: hsl(0 0% 50% / 1);
+    background-color: hsl(0 0% 50% / 1);
   }
 
   a {
     display: flex;
-    padding: .4rem;
+    padding: 0.4rem;
   }
 </style>

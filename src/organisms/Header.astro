@@ -20,18 +20,35 @@ const { theme } = Astro.props as Props;
       <Icon name={theme} />
     </Link>
     <ul class="header-right">
-     <li><Link href="/" text="Subscribe" classes="button" /></li>
-     <li><Link href="/" text="Login" classes="tag" /></li>
+      <li><Link href="/" text="Subscribe" classes="button" /></li>
+      <li><Link href="/" text="Login" classes="tag" /></li>
 
-     <li>
-      <svg width="36" height="14" viewBox="0 0 36 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.121094" y="10.52" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
-        <rect x="0.121094" y="0.839996" width="35.8799" height="2.64" rx="1.32" fill="#242629"/>
-      </svg>
-    </li>
-  </ul>
+      <li>
+        <svg
+          width="36"
+          height="14"
+          viewBox="0 0 36 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0.121094"
+            y="10.52"
+            width="35.8799"
+            height="2.64"
+            rx="1.32"
+            fill="#242629"></rect>
+          <rect
+            x="0.121094"
+            y="0.839996"
+            width="35.8799"
+            height="2.64"
+            rx="1.32"
+            fill="#242629"></rect>
+        </svg>
+      </li>
+    </ul>
   </div>
-
 </header>
 <nav class="navigation">
   <ul class="top-tasks">
@@ -42,17 +59,16 @@ const { theme } = Astro.props as Props;
   </ul>
 </nav>
 
-
 <style>
   header {
     background-color: var(--header-background-color);
-    border-block-end: 1px solid var(--color-neutral-900); 
+    border-block-end: 1px solid var(--color-neutral-900);
   }
 
-  a{
+  a {
     color: #2d2d2d !important;
     font-size: 1.2rem;
-    text-underline-offset: .4rem;
+    text-underline-offset: 0.4rem;
     color: var(--color-link);
     text-decoration: none !important;
   }
@@ -74,25 +90,25 @@ const { theme } = Astro.props as Props;
     }
   }
 
-  .header-right{
+  .header-right {
     display: flex;
   }
 
-  .header-right li{
+  .header-right li {
     margin-left: var(--row-gap);
   }
 
-  .navigation{
+  .navigation {
     background: var(--background-navigation);
     min-height: 20px;
-    border-block-end:var(--color-neutral-900);
+    border-block-end: var(--color-neutral-900);
     overflow-x: scroll;
     @media only screen and (min-width: 768px) {
-        overflow-x: hidden;
+      overflow-x: hidden;
     }
   }
 
-  .top-tasks{
+  .top-tasks {
     align-items: center;
     padding: 1rem 1rem 1rem 0;
     display: flex;
@@ -104,11 +120,11 @@ const { theme } = Astro.props as Props;
     margin-inline: auto;
   }
 
-  .top-tasks li{
-      margin-right: var(--row-gap);
-      @media only screen and (min-width: 768px) {
-        overflow-x: hidden;
-      }
+  .top-tasks li {
+    margin-right: var(--row-gap);
+    @media only screen and (min-width: 768px) {
+      overflow-x: hidden;
+    }
   }
 
   a {

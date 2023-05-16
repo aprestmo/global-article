@@ -1,26 +1,21 @@
 ---
 import Link from "../atoms/Link.astro";
-
 ---
 
 <div>
-    <ul>
-        <figure>
-        <picture>
-            <img
-            src="../img/profile.png"
-            alt="Byline-img"
-            />
-        </picture>
-        </figure>
+  <ul>
+    <figure>
+      <picture>
+        <img src="../img/profile.png" alt="Byline-img" />
+      </picture>
+    </figure>
 
-        <li class="author">
-            <p><a href="mailto:harald.berglihn@dn.no">Ola Magnussen Rydje</a></p>
-            <span>Journalist | Oslo</span></p>
-        </li>
-        <li><Link href="/" text="Follow" classes="tag" /></li>
-    </ul>
-
+    <li class="author">
+      <p><a href="mailto:harald.berglihn@dn.no">Harald Berglihn</a></p>
+      <span>Journalist | Oslo</span>
+    </li>
+  </ul>
+  <li><Link href="/" text="Follow" classes="tag" /></li>
 </div>
 
 <style>
@@ -28,36 +23,35 @@ import Link from "../atoms/Link.astro";
     display: grid;
   }
 
-  ul{
+  ul {
     display: flex;
     column-gap: 1rem;
     align-items: center;
   }
 
-  .author{
+  .author {
     display: flex;
     flex-direction: column;
   }
 
-    figure{
-        border-radius: 50%;
-        border: 1px solid tomato;
-        overflow: hidden;
-        border: 1px solid var(--color-neutral-800);
-        width: 50px;
-    }
+  figure {
+    border-radius: 50%;
+    border: 1px solid tomato;
+    overflow: hidden;
+    border: 1px solid var(--color-neutral-800);
+    width: 50px;
+  }
 
-    picture img{
-        transform: scale(1.2);
-    }
-
+  picture img {
+    transform: scale(1.2);
+  }
 
   a {
     color: var(--link-color);
-    font-family:var(--typography-ui-font-family), sans-serif;
+    font-family: var(--typography-ui-font-family), sans-serif;
     font-weight: bold;
     font-size: 1rem;
-    text-underline-offset: .4rem;
+    text-underline-offset: 0.4rem;
     line-height: 1;
     text-decoration: none;
 
