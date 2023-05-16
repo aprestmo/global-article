@@ -3,45 +3,41 @@
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
+@import url("./tokens/tokens.css") layer(tokens);
 
 /*
   TODO: Move to components?
 */
-[data-layout='text-first'] {
+[data-layout="text-first"] {
   --hero-text: 1;
   --lead-text: 2;
   --hero-figure: 3;
-  --hero-info: 5;
-  --hero-byline: 4;
+  --story-meta: 4;
   --figure-width: var(--grid-width);
 }
 
-[data-layout='image-first'] {
+[data-layout="image-first"] {
   --hero-text: 3;
   --lead-text: 4;
-  --hero-figure: 2;
-  --hero-info: 1;
-  --hero-byline: 5;
+  --hero-figure: 1;
+  --story-meta: 1;
   --figure-width: var(--grid-width);
 }
 
-[data-layout='feature'] {
+[data-layout="feature"] {
   --hero-text: 3;
   --lead-text: 3;
   --hero-figure: 2;
-  --hero-info: 5;
-  --hero-byline: 4;
-  --figure-width: 100vw;
+  --story-meta: 5;
+  --figure-width: 1280px;
 }
-
-
 
 :root {
   --background-header: var(--color-neutral-900);
   --background-navigation: var(--color-brand-utility-200);
   --background-footer: var(--color-neutral-800);
   --background-ads: var(--color-neutral-800);
-  --background-footer:  var(--color-primary);
+  --background-footer: var(--color-primary);
   --background-app: var(--color-neutral-900);
 
   --page-width: 1280px;
@@ -59,24 +55,23 @@
 
   --site-padding: var(--row-gap);
   --title-size: 1.7rem;
-  --copy-size: 1.1rem;
-  --lead-size: 1.3rem;
+  --copy-size: 1.2rem;
+  --lead-size: 1.4rem;
 
   --row-gap: var(--spacing-row-gap-min);
   --column-gap: var(--spacing-row-gap-min);
 
-      @media only screen and (min-width: 768px) {
-        --row-gap: var(--spacing-row-gap-max);
-        --column-gap: var(--spacing-row-gap-max);
+  @media only screen and (min-width: 768px) {
+    --row-gap: var(--spacing-row-gap-max);
+    --column-gap: var(--spacing-row-gap-max);
 
-          --header-height: 5rem;
-          --logo-height: 2rem;
-          --title-size: 3rem;
-          --copy-size: 1.35rem;
-          --lead-size: 1.6rem;
-      }
+    --header-height: 5rem;
+    --logo-height: 2rem;
+    --title-size: 3rem;
+    --copy-size: 1.35rem;
+    --lead-size: 1.6rem;
   }
-
+}
 
 @layer base {
   body {
@@ -86,49 +81,41 @@
     color: var(--color-typography);
   }
 
-
   a {
     color: var(--color-link-default);
     text-decoration: underline;
   }
 
-  img{
+  img {
     width: 100%;
   }
 
-  p{
+  p {
     font-size: var(--copy-size);
     line-height: 140%;
   }
 
-  h1{
+  h1 {
     font-size: var(--title-size);
   }
 
-  h2{
+  h2 {
     font-size: 1.5rem;
     @media only screen and (min-width: 768px) {
       font-size: 2rem;
     }
   }
-  h3{
+  h3 {
     font-size: 1.65rem;
     font-weight: bold;
-
   }
-
 }
 
 @layer utilities {
   .flow > * + * {
     margin-block-start: var(--row-gap);
   }
-
 }
 
 @layer tokens {
-
-
 }
-
-

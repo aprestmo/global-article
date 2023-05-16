@@ -2,7 +2,7 @@
 import Link from "../atoms/Link.astro";
 ---
 
-<div>
+<div class="byline">
   <ul>
     <figure>
       <picture>
@@ -11,22 +11,33 @@ import Link from "../atoms/Link.astro";
     </figure>
 
     <li class="author">
-      <p><a href="mailto:harald.berglihn@dn.no">Harald Berglihn</a></p>
+      <p><a href="mailto:harald.berglihn@dn.no">Ola Magnussen Rydje</a></p>
       <span>Journalist | Oslo</span>
     </li>
+    <li><Link href="/" text="Follow" classes="tag" /></li>
   </ul>
-  <li><Link href="/" text="Follow" classes="tag" /></li>
 </div>
 
 <style>
-  div {
-    display: grid;
+  .byline {
+    display: flex;
+    column-gap: var(--row-gap);
+    justify-content: flex-start;
+    align-items: center;
+
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+    }
   }
 
   ul {
     display: flex;
     column-gap: 1rem;
     align-items: center;
+  }
+
+  li {
+    list-style: none;
   }
 
   .author {
@@ -36,9 +47,8 @@ import Link from "../atoms/Link.astro";
 
   figure {
     border-radius: 50%;
-    border: 1px solid tomato;
     overflow: hidden;
-    border: 1px solid var(--color-neutral-800);
+    border: 1px solid var(--color-neutral-600);
     width: 50px;
   }
 

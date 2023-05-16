@@ -15,7 +15,8 @@
 <style>
   figure {
     order: var(--hero-figure);
-    padding-block-end: var(--row-gap);
+
+    margin: 0 auto;
     inline-size: min(
       var(--figure-width),
       100vw - calc(var(--site-padding) * 0)
@@ -40,6 +41,7 @@
   figcaption {
     color: var(--color-typography-secondary);
     font-family: var(--typography-ui-font-family), sans-serif;
+    inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
     font-size: 1rem;
     line-height: 1.5;
     margin-inline: auto;
