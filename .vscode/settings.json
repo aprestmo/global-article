@@ -3,18 +3,21 @@
     "titleBar.activeForeground": "#ffffff",
     "titleBar.inactiveForeground": "#ffffffcc",
     "titleBar.activeBackground": "#042825",
-    "titleBar.inactiveBackground": "#042825cc",
+    "titleBar.inactiveBackground": "#042825cc"
   },
   "files.associations": {
     "*.md": "markdown",
-    "*.mdx": "markdown",
+    "*.mdx": "markdown"
   },
   "search.exclude": {
-    "**/dist": true,
+    "**/dist": true
   },
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.documentSelectors": ["**/*.astro"],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "rome.rome"
-  }
+  },
+  "editor.formatOnSave": true
 }

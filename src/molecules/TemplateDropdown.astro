@@ -26,16 +26,23 @@
     border: 0;
     box-shadow: none;
     /* Personalize */
+    column-gap: 0.5rem;
     display: flex;
     flex-direction: row;
     padding: 0 1em;
     color: var(--color-neutral-100);
-    background-color: var(--color-neutral-800);
+    background-color: var(--color-neutral-800, #efefef);
     background-image: none;
     cursor: pointer;
+    padding: 1em;
   }
 
   select::-ms-expand {
     display: none;
   }
 </style>
+
+<script>
+  import "../js/layoutSwitcher";
+  import "../js/pageNavigation";
+</script>
