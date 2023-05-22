@@ -7,8 +7,6 @@ export interface Props {
   publication?: string;
 }
 
-
-
 const { title, language, publication } = Astro.props as Props;
 ---
 
@@ -61,8 +59,3 @@ const { title, language, publication } = Astro.props as Props;
     <slot />
   </body>
 </html>
-
-<script>
-  import "../js/layoutSwitcher";
-  import "../js/pageNavigation";
-</script>
