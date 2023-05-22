@@ -1,36 +1,58 @@
-<div>
-  <p><a href="mailto:harald.berglihn@dn.no">Harald Berglihn</a></p>
-  <span>01. mars 2023 | Oppdatert: 6 dager siden</span>
+---
+import Byline from "../molecules/Byline.astro";
+import Link from "../atoms/Link.astro";
+---
+
+<div class="flex-row">
+  <Byline />
+  <div>
+    <ul role="list" class="info">
+      <li>
+        <li>01. mars 2023</li>
+        <li class="divider">|</li>
+        <li>Lesetid: 2 min</li>
+        <li class="divider">|</li>
+        <li>Abonnent</li>
+        <li class="divider">|</li>
+        <Link href="/" text="Les mer om Finans " classes="tag" />
+      </li>
+    </ul>
+  </div>
 </div>
 
 <style>
-  div {
-    border-block-end: 1px solid #d9dce2;
-    display: grid;
-    margin-block-end: 2.5rem;
-    padding-block-end: 0.75rem;
-    row-gap: 0.25rem;
-  }
-  p {
-    color: currentColor;
-    font-family: "Book21", sans-serif;
-    font-size: 0.875rem;
-  }
-
-  a {
-    color: currentColor;
-    font-family: "Med21", sans-serif;
-    font-size: 0.875rem;
-    line-height: 1;
-    text-decoration: none;
-
-    @media (--medium) {
-      font-size: 1rem;
+  /* Article info Category and Date */
+  .flex-row {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: var(--story-meta);
+    justify-content: space-between;
+    row-gap: 6px;
+    inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
     }
   }
-  span {
-    color: #747e8e;
-    font-family: "Book20", sans-serif;
-    font-size: 0.75rem;
+
+  ul[role="list"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--typography-ui-font-family);
+    color: var(--color-neutral-100);
+    column-gap: 0.3rem;
+    font-size: 0.8rem;
+
+    & .divider {
+      color: var(--color-neutral-600);
+    }
+
+    @media only screen and (min-width: 768px) {
+      column-gap: 0.6rem;
+      font-size: 1rem;
+    }
   }
 </style>
