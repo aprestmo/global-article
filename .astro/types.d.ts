@@ -112,28 +112,112 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"d2": {
+"d2.mdx": {
+  id: "d2.mdx",
+  slug: "d2",
+  body: string,
+  collection: "d2",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "dn": {
+"dn.mdx": {
+  id: "dn.mdx",
+  slug: "dn",
+  body: string,
+  collection: "dn",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "europower": {
+"europower.mdx": {
+  id: "europower.mdx",
+  slug: "europower",
+  body: string,
+  collection: "europower",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "fiskeribladet": {
+"fiskeribladet.mdx": {
+  id: "fiskeribladet.mdx",
+  slug: "fiskeribladet",
+  body: string,
+  collection: "fiskeribladet",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "hydrogen-insight": {
+"hydrogen-insight.mdx": {
+  id: "hydrogen-insight.mdx",
+  slug: "hydrogen-insight",
+  body: string,
+  collection: "hydrogen-insight",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "intrafish-eng": {
+"intrafish-eng.mdx": {
+  id: "intrafish-eng.mdx",
+  slug: "intrafish-eng",
+  body: string,
+  collection: "intrafish-eng",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "intrafish-no": {
+"intrafish-no.mdx": {
+  id: "intrafish-no.mdx",
+  slug: "intrafish-no",
+  body: string,
+  collection: "intrafish-no",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "kystens-naeringsliv": {
+"kystens-naeringsliv.mdx": {
+  id: "kystens-naeringsliv.mdx",
+  slug: "kystens-naeringsliv",
+  body: string,
+  collection: "kystens-naeringsliv",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "recharge": {
+"recharge.mdx": {
+  id: "recharge.mdx",
+  slug: "recharge",
+  body: string,
+  collection: "recharge",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "tradewinds": {
+"tradewinds.mdx": {
+  id: "tradewinds.mdx",
+  slug: "tradewinds",
+  body: string,
+  collection: "tradewinds",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "upstream": {
+"upstream.mdx": {
+  id: "upstream.mdx",
+  slug: "upstream",
+  body: string,
+  collection: "upstream",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 "white-label": {
+"white-label.mdx": {
+  id: "white-label.mdx",
+  slug: "white-label",
+  body: string,
+  collection: "white-label",
+  data: any
+} & { render(): Render[".mdx"] },
 },
 
 	};
