@@ -48,6 +48,7 @@
   --color-typography-secondary: #3e3e3e;
   --color-link: var(--color-link-default);
   --color-primary: var(--color-brand-primary-main);
+  --color-divider: var(--color-neutral-700);
 
   --header-height: 4rem;
   --logo-height: 1.8rem;
@@ -65,8 +66,8 @@
     --row-gap: var(--spacing-row-gap-max);
     --column-gap: var(--spacing-row-gap-max);
 
-    --header-height: 5rem;
-    --logo-height: 2rem;
+    --header-height: 7rem;
+    --logo-height: 2.5rem;
     --title-size: 3rem;
     --copy-size: 1.35rem;
     --lead-size: 1.6rem;
@@ -114,6 +115,16 @@
 @layer utilities {
   .flow > * + * {
     margin-block-start: var(--row-gap);
+  }
+  .divider{
+    color: var(--color-divider);
+  }
+
+  .desktop-only{
+    display: none;
+        @media only screen and (min-width: 768px) {
+          display: block;
+    }
   }
 }
 

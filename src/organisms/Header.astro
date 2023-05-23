@@ -5,6 +5,7 @@ import { Icon } from "astro-icon";
 // component imports
 import Link from "../atoms/Link.astro";
 import TemplateDropdown from "../molecules/TemplateDropdown.astro";
+import Ad980 from "../molecules/Ad980.astro";
 
 export interface Props {
   theme: string;
@@ -14,13 +15,13 @@ const { theme } = Astro.props as Props;
 ---
 
 <TemplateDropdown />
-
 <header class="header">
   <div class="header-flow">
     <Link href="/" text="">
       <Icon name={theme} />
     </Link>
     <ul class="header-right">
+      <li><p>50% off this week</p></li>
       <li><Link href="/" text="Subscribe" classes="button" /></li>
       <li><Link href="/" text="Login" classes="tag" /></li>
 
@@ -54,11 +55,19 @@ const { theme } = Astro.props as Props;
 <nav class="navigation">
   <ul class="top-tasks">
     <li><a href="#">Investor</a></li>
+    <li class="divider">|</li>
     <li><a href="#">D2</a></li>
+    <li class="divider">|</li>
     <li><a href="#">Smak</a></li>
+    <li class="divider">|</li>
     <li><a href="#">Magasinet</a></li>
   </ul>
+  <ul class="my-alerts">
+    <li class="divider">|</li>
+    <li>My alerts</li>
+  </ul>
 </nav>
+<Ad980 />
 
 <style>
   header {
@@ -100,12 +109,19 @@ const { theme } = Astro.props as Props;
   }
 
   .navigation {
-    background: var(--background-navigation);
+    display: flex;
+    align-items: center;
+    background: var(--background-header);
     min-height: 20px;
     border-block-end: var(--color-neutral-900);
     overflow-x: scroll;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--color-divider);
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
+      max-width: var(--page-width);
+      margin: 0 auto;
     }
   }
 
@@ -113,6 +129,7 @@ const { theme } = Astro.props as Props;
     align-items: center;
     padding: 1rem 1rem 1rem 0;
     display: flex;
+
     inline-size: min(
       var(--page-width, 1280px),
       100vw - calc(var(--site-padding, 1rem) * 2)
@@ -126,6 +143,12 @@ const { theme } = Astro.props as Props;
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
     }
+  }
+
+  .my-alerts {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
   }
 
   a {
