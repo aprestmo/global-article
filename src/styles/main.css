@@ -86,7 +86,7 @@
 
   a {
     color: var(--color-link-default);
-    text-decoration: underline;
+    text-decoration: var(--text-decoration-style, underline);
   }
 
   img {
