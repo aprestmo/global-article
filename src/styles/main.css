@@ -17,10 +17,10 @@
 }
 
 [data-layout="image-first"] {
-  --hero-text: 3;
-  --lead-text: 4;
+  --hero-text: 2;
+  --lead-text: 3;
   --hero-figure: 1;
-  --story-meta: 1;
+  --story-meta: 4;
   --figure-width: var(--grid-width);
 }
 
@@ -100,6 +100,7 @@
 
   h1 {
     font-size: var(--title-size);
+    font-family: var(--font-sharp-smbold)
   }
 
   h2 {
