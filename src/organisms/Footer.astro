@@ -4,17 +4,45 @@ import { Icon } from "astro-icon";
 
 // component imports
 import Link from "../atoms/Link.astro";
+
+export interface Props {
+  theme: string;
+}
+
+const { theme } = Astro.props as Props;
 ---
 
-<footer></footer>
+<footer>
+  <div><Icon name={theme} /></div>
+</footer>
 
 <style>
   footer {
-    min-height: 30vh;
-    background-color: var(--background-footer);
+    --logo-fill-color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--colors-brand-700);
+    min-height: 10rem;
   }
 
-  svg {
-    max-height: 2rem;
+  footer svg {
+    max-width: 4rem;
+    padding: 2rem 0;
+  }
+  div {
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    order: var(--story-meta);
+    justify-content: space-between;
+    row-gap: 6px;
+    inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
   }
 </style>

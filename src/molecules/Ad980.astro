@@ -1,4 +1,5 @@
 <figure>
+  <span>Annonsørinnhold:</span>
   <picture>
     <a href="https://nor-shipping.com/" target="_blank">
       <img src="../img/980.png" alt="980ad" />
@@ -9,15 +10,23 @@
 <style>
   figure {
     background-color: var(--background-ads);
-    padding: var(--row-gap);
+    padding: 0 var(--row-gap) var(--row-gap) var(--row-gap);
     overflow: hidden;
     box-sizing: border-box;
+    text-align: center;
+    font-family: var(--font-family-ui);
+  }
+
+  span {
+    display: block;
+    margin: calc(var(--row-gap) / 2) 0;
+    font-size: 0.9rem;
   }
 
   picture {
     width: auto;
     max-width: 980px;
-    margin: 0 auto;
+    margin-inline: auto;
     display: flex;
     justify-content: center;
   }
