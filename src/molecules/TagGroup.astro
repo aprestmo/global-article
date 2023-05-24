@@ -3,17 +3,19 @@ import Link from "../atoms/Link.astro";
 ---
 
 <div>
-<Link href="/" text="Politikk" classes="tag" />
-<Link href="/" text="Renter" classes="tag" />
-<Link href="/" text="Finans" classes="tag" />
-<Link href="/" text="Stortinget" classes="tag" />
+  <Link href="/" text="Politikk" classes="tag" />
+  <Link href="/" text="Renter" classes="tag" />
+  <Link href="/" text="Finans" classes="tag" />
+  <Link href="/" text="Stortinget" classes="tag" />
 </div>
 
 <style>
-    div{
-        display: flex;
-        margin-block-end: 2.5rem;
-        column-gap: var(--row-gap);
-
-    }
+  div {
+    display: flex;
+    flex-direction: row;
+    margin-block-end: 2.5rem;
+    column-gap: var(--row-gap);
+    row-gap: var(--row-gap);
+    flex-wrap: wrap;
+  }
 </style>

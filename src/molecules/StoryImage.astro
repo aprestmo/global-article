@@ -1,9 +1,15 @@
+---
+interface Props {
+  alt: string;
+  src: string;
+}
+
+const { src, alt } = Astro.props as Props;
+---
+
 <figure>
   <picture>
-    <img
-      src="https://images.dn.no/image/ZXlucWphd1cyMG9ocVphSEdnTlhNaEZqenpZalNOdnY0U2VKL0RFamdIbz0=/nhst/binary/5d708bafc2b055cbe5f488bc7e995af4?image_version=1080"
-      alt=""
-    />
+    <img src={src} alt={alt} />
   </picture>
   <figcaption>
     Analytiker Brit Elise Melhus i Dun & Bradstreet blir ikke overrasket dersom
@@ -15,8 +21,7 @@
 <style>
   figure {
     order: var(--hero-figure);
-
-    margin: 0 auto;
+    margin-inline: auto;
     inline-size: min(
       var(--figure-width),
       100vw - calc(var(--site-padding) * 0)

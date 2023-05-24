@@ -1,6 +1,7 @@
 ---
 import Byline from "../molecules/Byline.astro";
 import Link from "../atoms/Link.astro";
+import Interaction from "../molecules/Interaction.astro";
 ---
 
 <div class="flex-row">
@@ -12,18 +13,22 @@ import Link from "../atoms/Link.astro";
         <li class="divider">|</li>
         <li>Lesetid: 2 min</li>
         <li class="divider">|</li>
-        <li>Abonnent</li>
+        <li>For abonnenter</li>
         <li class="divider">|</li>
-        <Link href="/" text="Finans " classes="tag" />
+        <li>Posted in <a href="#">Finans</a></li>
       </li>
     </ul>
   </div>
 </div>
 
+<div class="flex-row">
+  <Interaction />
+</div>
+
 <style>
   /* Article info Category and Date */
   .flex-row {
-    margin: 0 auto;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -40,19 +45,21 @@ import Link from "../atoms/Link.astro";
   ul[role="list"] {
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
     align-items: center;
     font-family: var(--typography-ui-font-family);
     color: var(--color-neutral-100);
     column-gap: 0.3rem;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 
-    & .divider {
+    &.divider {
       color: var(--color-divider);
     }
 
     @media only screen and (min-width: 768px) {
       column-gap: 0.6rem;
-      font-size: 1rem;
+      font-size: 0.9rem;
+      flex-direction: row;
     }
   }
 </style>

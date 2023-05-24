@@ -4,8 +4,8 @@ import { Icon } from "astro-icon";
 
 // component imports
 import Link from "../atoms/Link.astro";
-import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 import Ad980 from "../molecules/Ad980.astro";
+import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
 export interface Props {
   theme: string;
@@ -15,13 +15,15 @@ const { theme } = Astro.props as Props;
 ---
 
 <TemplateDropdown />
+<Ad980 />
+
 <header class="header">
   <div class="header-flow">
     <Link href="/" text="">
       <Icon name={theme} />
     </Link>
     <ul class="header-right">
-      <li><p>50% off this week</p></li>
+      <li class="desktop-only"><span>50% off this week</span></li>
       <li><Link href="/" text="Subscribe" classes="button" /></li>
       <li><Link href="/" text="Login" classes="tag" /></li>
 
@@ -51,27 +53,25 @@ const { theme } = Astro.props as Props;
       </li>
     </ul>
   </div>
+  <nav class="navigation">
+    <menu class="top-tasks">
+      <li><a href="#">Investor</a></li>
+      <li class="divider">|</li>
+      <li><a href="#">D2</a></li>
+      <li class="divider">|</li>
+      <li><a href="#">Smak</a></li>
+      <li class="divider">|</li>
+      <li><a href="#">Magasinet</a></li>
+    </menu>
+    <ul class="my-alerts">
+      <li class="divider">|</li>
+      <li>My alerts</li>
+    </ul>
+  </nav>
 </header>
-<nav class="navigation">
-  <ul class="top-tasks">
-    <li><a href="#">Investor</a></li>
-    <li class="divider">|</li>
-    <li><a href="#">D2</a></li>
-    <li class="divider">|</li>
-    <li><a href="#">Smak</a></li>
-    <li class="divider">|</li>
-    <li><a href="#">Magasinet</a></li>
-  </ul>
-  <ul class="my-alerts">
-    <li class="divider">|</li>
-    <li>My alerts</li>
-  </ul>
-</nav>
-<Ad980 />
-
 <style>
   header {
-    background-color: var(--header-background-color);
+    background-color: var(--background-header);
     border-block-end: 1px solid var(--color-neutral-900);
   }
 
@@ -102,6 +102,7 @@ const { theme } = Astro.props as Props;
 
   .header-right {
     display: flex;
+    align-items: center;
   }
 
   .header-right li {
@@ -111,7 +112,6 @@ const { theme } = Astro.props as Props;
   .navigation {
     display: flex;
     align-items: center;
-    background: var(--background-header);
     min-height: 20px;
     border-block-end: var(--color-neutral-900);
     overflow-x: scroll;
@@ -121,7 +121,7 @@ const { theme } = Astro.props as Props;
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
       max-width: var(--page-width);
-      margin: 0 auto;
+      margin-inline: auto;
     }
   }
 
@@ -129,6 +129,7 @@ const { theme } = Astro.props as Props;
     align-items: center;
     padding: 1rem 1rem 1rem 0;
     display: flex;
+    padding-inline-start: var(--row-gap);
 
     inline-size: min(
       var(--page-width, 1280px),
@@ -136,6 +137,9 @@ const { theme } = Astro.props as Props;
     );
     justify-content: flex-start;
     margin-inline: auto;
+    @media only screen and (min-width: 1280px) {
+      padding-inline-start: 0;
+    }
   }
 
   .top-tasks li {
@@ -149,6 +153,7 @@ const { theme } = Astro.props as Props;
     display: flex;
     justify-content: flex-end;
     min-width: 200px;
+    column-gap: 0.5rem;
   }
 
   a {

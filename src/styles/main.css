@@ -33,16 +33,18 @@
 }
 
 :root {
-  --background-header: var(--color-neutral-900);
+  --background-header: #fff;
   --background-navigation: var(--color-brand-utility-200);
   --background-footer: var(--color-neutral-800);
   --background-ads: var(--color-neutral-800);
   --background-footer: var(--color-primary);
-  --background-app: var(--color-neutral-900);
+  --background-app: #fff;
 
   --page-width: 1280px;
   --grid-width: 980px;
   --body-width: 680px;
+
+  --font-family-ui: Inter, sans-serif;
 
   --color-typography: var(--color-typography-inverted);
   --color-typography-secondary: #3e3e3e;
@@ -52,7 +54,7 @@
 
   --header-height: 4rem;
   --logo-height: 1.8rem;
-  --radius: 5px;
+  --radius: 2px;
 
   --site-padding: var(--row-gap);
   --title-size: 1.7rem;
@@ -66,8 +68,8 @@
     --row-gap: var(--spacing-row-gap-max);
     --column-gap: var(--spacing-row-gap-max);
 
-    --header-height: 7rem;
-    --logo-height: 2.5rem;
+    --header-height: 6rem;
+    --logo-height: 2.3rem;
     --title-size: 3rem;
     --copy-size: 1.35rem;
     --lead-size: 1.6rem;

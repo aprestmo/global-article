@@ -32,7 +32,7 @@ const { slug, img, url, title, excerpt, category } = Astro.props as Props;
     display: flex;
     flex-direction: column;
     width: 100%;
-    background: var(--color-neutral-800);
+    background: none;
     border-radius: var(--radius);
     grid-column: span 4;
     overflow: hidden;
@@ -43,6 +43,6 @@ const { slug, img, url, title, excerpt, category } = Astro.props as Props;
   }
 
   .card-info {
-    padding: 0.5rem 1rem 2rem 1rem;
+    padding: 0.5rem 1rem 2rem 0rem;
   }
 </style>

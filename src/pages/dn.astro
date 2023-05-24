@@ -11,15 +11,16 @@ import Footer from "../organisms/Footer.astro";
 import Ad980 from "../molecules/Ad980.astro";
 import Interaction from "../molecules/Interaction.astro";
 import TagGroup from "../molecules/TagGroup.astro";
+import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
-const publication = "DN";
+const publication = "dn";
 ---
 
 <Layout
   title={`Ny konkursbølge under oppseiling: – Nå blir det verre | ${publication}`}
   publication={publication}
 >
-  <Header theme="dn" />
+  <Header theme={publication} />
   <main>
     <Story>
       <StoryHeader />
@@ -54,14 +55,8 @@ const publication = "DN";
           date="16.februar"
           img="../img/musk.jpg"
         />
-        <Card
-          title="Renten settes opp igjen"
-          excerpt="Du ville ikke tro det"
-          date="16.februar"
-          img="../img/musk.jpg"
-        />
       </StreamsGrid>
     </Story>
   </main>
-  <Footer />
+  <Footer theme={publication} />
 </Layout>
