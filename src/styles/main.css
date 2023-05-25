@@ -14,6 +14,14 @@
   --hero-figure: 3;
   --story-meta: 4;
   --figure-width: var(--grid-width);
+  --background-app: var(--colors-brand-900);
+  --color-typography: #fafafa;
+  --color-typography-secondary: #d8d8d8;
+  --background-header:var(--color-brand-800);
+  --color-link: #f9fdb7;
+  --logo-fill-color: var(--colors-brand-50);
+  --color-divider: var(--colors-neutral-700);
+  --background-ads: var(--colors-brand-800);
 }
 
 [data-layout="image-first"] {
@@ -85,7 +93,7 @@
   }
 
   a {
-    color: var(--color-link-default);
+    color: var(--color-link);
     text-decoration: var(--text-decoration-style, underline);
   }
 
