@@ -82,10 +82,10 @@
     unist-util-visit "^4.1.0"
     vfile "^5.3.2"
 
-"@astrojs/mdx@^0.19.2":
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.19.2.tgz#995632d9104e48d05bd5a3887ce05aeb457bb8cb"
-  integrity sha512-xWI2TK2QvCFXhyadjVtidcOj7qHda2Fv3tUilhacFXF28vye/COluMirqgxEESMlUsV+8LI39f8P6ERxXADSmg==
+"@astrojs/mdx@^0.19.4":
+  version "0.19.4"
+  resolved "https://registry.yarnpkg.com/@astrojs/mdx/-/mdx-0.19.4.tgz#a8d307853d60f19a3f53b97cc7f54edae33b3fe4"
+  integrity sha512-+xT4YiUmOXwBqZ2zr74M7lznJ8wg6Q1Be534fJq24ozRxlkwEM6Qj/h9s3oSk6CwV7DuEf6KosRR0ltWE/OxJg==
   dependencies:
     "@astrojs/markdown-remark" "^2.2.1"
     "@astrojs/prism" "^2.1.2"
@@ -4675,10 +4675,10 @@ astro-icon@^0.8.0:
     resolve-pkg "^2.0.0"
     svgo "^2.8.0"
 
-astro@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/astro/-/astro-2.5.1.tgz#c3b265b9871a43f8244ac6dd8c0a033016bdcfb5"
-  integrity sha512-tOVlDWxxE8VBGoolW0AS0kUo7ynAMjfOPKK0XyqprAtcN7pvYZ29gLG6RJTitDhzzP3HDt+Vecg9PuUOtHrITg==
+astro@^2.5.5:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/astro/-/astro-2.5.5.tgz#84ee3cf73fea4c3131f9e6112d154d2ccd882335"
+  integrity sha512-VRwnlfRtPALeOxfE4e7To5Vlu9pGwlTRWN1zkn1QTizwfg0rLirFTm6t2MCG/fUhlu/p3QO9tz8SpAIyDq53/Q==
   dependencies:
     "@astrojs/compiler" "^1.4.0"
     "@astrojs/language-server" "^1.0.0"
@@ -4716,6 +4716,7 @@ astro@^2.5.1:
     magic-string "^0.27.0"
     mime "^3.0.0"
     ora "^6.1.0"
+    p-limit "^4.0.0"
     path-to-regexp "^6.2.1"
     preferred-pm "^3.0.3"
     prompts "^2.4.2"
@@ -12767,14 +12768,9 @@ prettier-plugin-astro@^0.9.0:
     sass-formatter "^0.7.5"
     synckit "^0.8.4"
 
-prettier@^2.2.1, prettier@^2.7.1, prettier@^2.8.3:
+prettier@^2.2.1, prettier@^2.7.1, prettier@^2.8.3, prettier@^2.8.8:
   version "2.8.8"
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz"
-  integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
-
-prettier@^2.8.8:
-  version "2.8.8"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
 pretty-format@^27.5.1:
@@ -15126,10 +15122,10 @@ token-transformer@^0.0.30:
   dependencies:
     yargs "^17.4.1"
 
-token-transformer@^0.0.32:
-  version "0.0.32"
-  resolved "https://registry.npmjs.org/token-transformer/-/token-transformer-0.0.32.tgz"
-  integrity sha512-JRhLcztUCYIi4kHF/o7/askCqXPUef98821CfrVJOQjDmPm09+9vTDJqXDyOYLRa29eBkqLqWg/35H2InnsFpg==
+token-transformer@^0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/token-transformer/-/token-transformer-0.0.33.tgz#c990e86160aa09a2df639a79f4567e5fbbee176b"
+  integrity sha512-0h7Cvo8trUcv6sZPyA+iNHsFEwIhN4FhXtYqgndHQNYub+dTDW8ZCQURBNDNa0PvJ8Xg2wqG1V/5WSwV0l6yOw==
   dependencies:
     yargs "^17.6.2"
 

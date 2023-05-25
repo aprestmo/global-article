@@ -13,9 +13,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.19.2",
+    "@astrojs/mdx": "^0.19.4",
     "@tinacms/cli": "^1.5.14",
-    "astro": "^2.5.1",
+    "astro": "^2.5.5",
     "astro-icon": "^0.8.0",
     "netlify-cli": "^15.1.1",
     "postcss": "^8.4.23",
@@ -23,7 +23,7 @@
     "rome": "^12.1.2",
     "the-new-css-reset": "^1.8.4",
     "tinacms": "^1.5.6",
-    "token-transformer": "^0.0.32"
+    "token-transformer": "^0.0.33"
   },
   "devDependencies": {
     "figma-token-engine": "^0.1.1",
