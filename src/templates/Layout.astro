@@ -5,9 +5,10 @@ export interface Props {
   title: string;
   language?: string;
   publication?: string;
+  theme: string;
 }
 
-const { title, language, publication } = Astro.props as Props;
+const { title, language, publication, theme } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -19,7 +20,7 @@ const { title, language, publication } = Astro.props as Props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     {
-      publication === "DN" && (
+      theme === "dn" && (
         <>
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
@@ -34,7 +35,7 @@ const { title, language, publication } = Astro.props as Props;
     }
 
     {
-      publication !== "DN" && (
+      theme !== "dn" && (
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;700;800&display=swap"
           rel="stylesheet"
@@ -46,20 +47,18 @@ const { title, language, publication } = Astro.props as Props;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- 180×180 -->
     <link rel="manifest" href="/manifest.webmanifest" />
 
+    <link
+      rel="stylesheet"
+      href={`https://dngroup.blob.core.windows.net/design-tokens/${theme}.css`}
+    />
     {
-      publication && (
-        <>
-          <link
-            rel="stylesheet"
-            href={`https://dngroup.blob.core.windows.net/design-tokens/${publication.toLowerCase()}.css`}
-          />
-          <link
-            rel="stylesheet"
-            href={`https://dngroup.blob.core.windows.net/design-tokens/${publication.toLowerCase()}-darkmode.css`}
-            media="(prefers-color-scheme: dark)"
-          />
-        </>
-      )
+      /*
+      <link
+        rel="stylesheet"
+        href={`https://dngroup.blob.core.windows.net/design-tokens/${theme}-darkmode.css`}
+        media="(prefers-color-scheme: dark)"
+      />
+     */
     }
   </head>
   <body>
