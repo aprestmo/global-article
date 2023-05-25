@@ -8,10 +8,11 @@ import Grid from "../atoms/Grid.astro";
 import Article from "../content/white-label/white-label.mdx";
 
 const publication = "White Label";
+const theme = "dngroup";
 ---
 
-<Layout title={publication} {publication}>
-  <Header theme="dngroup" />
+<Layout title={publication} {theme}>
+  <Header {theme} />
   <Story>
     <!-- <StoryHeader /> -->
     <Grid>
