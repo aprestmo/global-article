@@ -1,9 +1,0 @@
-{
-  "tokenFormat": "TokensStudio",
-  "figmaFileId": "",
-  "inputFile": "https://github.com/nhst/dngroup-designtokens/blob/master/tokens/Core/core.json",
-  "outputDir": "./src/styles/tokens/",
-  "platforms": [
-    "css"
-  ]
-}
