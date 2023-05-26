@@ -1,11 +1,17 @@
 ---
 import Layout from "../templates/Layout.astro";
-
 import Header from "../organisms/Header.astro";
 import Story from "../organisms/Story.astro";
 import StoryHeader from "../molecules/StoryHeader.astro";
+import Card from "../molecules/Card.astro";
 import Grid from "../atoms/Grid.astro";
+import StreamsGrid from "../atoms/StreamsGrid.astro";
 import Article from "../content/recharge/recharge.mdx";
+import Footer from "../organisms/Footer.astro";
+import Ad980 from "../molecules/Ad980.astro";
+import Interaction from "../molecules/Interaction.astro";
+import TagGroup from "../molecules/TagGroup.astro";
+import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
 const publication = "Recharge";
 ---
@@ -13,9 +19,12 @@ const publication = "Recharge";
 <Layout title={publication} {publication} language="en">
   <Header theme="recharge" />
   <Story>
-    <!-- <StoryHeader /> -->
+    <StoryHeader />
     <Grid>
       <Article />
+      <Interaction />
+      <TagGroup />
     </Grid>
+    <Ad980 />
   </Story>
 </Layout>
