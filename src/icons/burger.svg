@@ -11,12 +11,12 @@
             width="35.8799"
             height="2.64"
             rx="1.32"
-            fill="#242629"></rect>
+            fill="var(--color-neutral-900)"></rect>
           <rect
             x="0.121094"
             y="0.839996"
             width="35.8799"
             height="2.64"
             rx="1.32"
-            fill="#242629"></rect>
+            fill="var(--color-neutral-900)"></rect>
         </svg>
