@@ -48,7 +48,8 @@
   --grid-width: 980px;
   --body-width: 680px;
 
-  --font-family-ui: Inter, sans-serif;
+  --font-family-utility: var(--typography-utility-test-font-family);
+  --font-family-heading: var(--typography-editorial-titlepiece-min-font-family);
 
   --color-typography: var(--color-typography-default);
   --color-link: var(--color-link-default);
@@ -57,12 +58,12 @@
 
   --header-height: 4rem;
   --logo-height: 1.8rem;
-  --radius: 2px;
+  --radius: 5px;
 
   --site-padding: var(--row-gap);
   --title-size: 1.7rem;
-  --copy-size: 1.2rem;
-  --lead-size: 1.4rem;
+  --copy-size: var(--typography-editorial-body-min-font-size);
+  --lead-size: var(--typography-editorial-ingress-min-font-size);
 
   --row-gap: var(--spacing-row-gap-min);
   --column-gap: var(--spacing-row-gap-min);
@@ -74,8 +75,8 @@
     --header-height: 6rem;
     --logo-height: 2.3rem;
     --title-size: 3rem;
-    --copy-size: 1.35rem;
-    --lead-size: 1.6rem;
+    --copy-size: var(--typography-editorial-body-max-font-size);
+    --lead-size: var(--typography-editorial-ingress-max-font-size);
   }
 }
 
@@ -98,7 +99,9 @@
   }
 
   p {
-    font-size: var(--copy-size);
+    font-family: var(--typography-editorial-body-min-font-family);
+    font-weight: var(--typography-editorial-body-min-font-weight);
+    font-size: var(--font-size);
     line-height: 140%;
   }
 
