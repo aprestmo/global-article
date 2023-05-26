@@ -6,6 +6,7 @@ import { Icon } from "astro-icon";
 import Link from "../atoms/Link.astro";
 import Ad980 from "../molecules/Ad980.astro";
 import TemplateDropdown from "../molecules/TemplateDropdown.astro";
+import Darkmode from "../molecules/Darkmode.astro";
 
 //
 const navigationItems = ["Investor", "D2", "Smak", "Magasinet"];
@@ -27,6 +28,7 @@ const { theme } = Astro.props as Props;
     </Link>
     <ul class="header-right">
       <li class="desktop-only"><span>4 uker for 380,-</span></li>
+      <li><Darkmode /></li>
       <li><Link href="/" text="Abonner" classes="button" /></li>
       <li><Link href="/" text="Login" classes="tag" /></li>
 

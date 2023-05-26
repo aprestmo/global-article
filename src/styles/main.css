@@ -4,13 +4,47 @@
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
 
-
 /*
   TODO: Move to components?
 */
 
-[data-layout="dark-mode"] {
-
+[data-theme="dark"] {
+    --color-brand-utility-0: #e9ebf1;
+  --color-brand-utility-50: #d6dbe6;
+  --color-brand-utility-100: #c4cdde;
+  --color-brand-utility-200: #aebed5;
+  --color-brand-utility-300: #899cc2;
+  --color-brand-utility-400: #768cbc;
+  --color-brand-utility-500: #4a6dba;
+  --color-brand-utility-600: #30549c;
+  --color-brand-utility-700: #183467;
+  --color-brand-utility-800: #151c41;
+  --color-brand-utility-900: #0b0b1e;
+  --color-page-inverted-bg: #434e60;
+  --color-page-bg: #1a1f27;
+  --color-brand-breaking-bg: #232528;
+  --color-brand-breaking-fg: #edfeb2;
+  --color-brand-primary-main: #13264a;
+  --color-brand-primary-main-fg: #ffffff;
+  --color-brand-primary-pink: #2134f0;
+  --color-link-default: #9db9ff;
+  --color-link-hover: #0f0f24;
+  --color-link-active: #9493d2;
+  --color-link-disabled: #ff0000;
+  --color-neutral-0: #232528;
+  --color-neutral-50: #2b2d31;
+  --color-neutral-100: #393b42;
+  --color-neutral-200: #4e535a;
+  --color-neutral-300: #62676f;
+  --color-neutral-400: #8f959d;
+  --color-neutral-500: #b6b8be;
+  --color-neutral-600: #c7c8cc;
+  --color-neutral-700: #d6d8db;
+  --color-neutral-800: #ededed;
+  --color-neutral-900: #fafafa;
+  --color-typography-default: #f2f2f2;
+  --color-typography-secondary: #d6d8db;
+  --color-typography-inverted: #f2f2f2;
 }
 
 [data-layout="text-first"] {
@@ -54,7 +88,7 @@
   --color-typography: var(--color-typography-default);
   --color-link: var(--color-link-default);
   --color-primary: var(--color-brand-primary-main);
-  --color-divider: var(--color-brand-utility-100);
+  --color-divider: var(--color-brand-utility-200);
 
   --header-height: 4rem;
   --logo-height: 1.8rem;
