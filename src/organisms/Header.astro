@@ -8,7 +8,7 @@ import Ad980 from "../molecules/Ad980.astro";
 import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
 //
-const navigationItems = ['Investor', 'D2', 'Smak', 'Magasinet'];
+const navigationItems = ["Investor", "D2", "Smak", "Magasinet"];
 
 export interface Props {
   theme: string;
@@ -63,7 +63,7 @@ const { theme } = Astro.props as Props;
 <style>
   header {
     background-color: var(--background-header);
-    font-family: var(--font-inter);
+    font-family: var(--font-family-utility);
   }
 
   a {
@@ -145,6 +145,10 @@ const { theme } = Astro.props as Props;
     justify-content: flex-end;
     min-width: 200px;
     column-gap: 0.5rem;
+    margin-right: 1rem;
+    @media only screen and (min-width: 1280px) {
+      margin-right: 0rem;
+    }
   }
 
   a {
