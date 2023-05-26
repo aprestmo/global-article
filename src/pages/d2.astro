@@ -7,11 +7,12 @@ import StoryHeader from "../molecules/StoryHeader.astro";
 import Grid from "../atoms/Grid.astro";
 import Article from "../content/d2/d2.mdx";
 
-const publication = "d2";
+const publication = "D2";
+const theme = "d2";
 ---
 
-<Layout title={publication} {publication}>
-  <Header theme="d2" />
+<Layout title={`Tittel på sak | ${publication}`} {theme}>
+  <Header {theme} />
   <Story>
     <!-- <StoryHeader /> -->
     <Grid>

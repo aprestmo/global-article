@@ -22,8 +22,7 @@
     "postcss-preset-env": "^8.4.1",
     "rome": "^12.1.2",
     "the-new-css-reset": "^1.8.4",
-    "tinacms": "^1.5.6",
-    "token-transformer": "^0.0.33"
+    "tinacms": "^1.5.6"
   },
   "devDependencies": {
     "figma-token-engine": "^0.1.1",

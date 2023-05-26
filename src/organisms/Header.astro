@@ -7,6 +7,9 @@ import Link from "../atoms/Link.astro";
 import Ad980 from "../molecules/Ad980.astro";
 import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
+//
+const navigationItems = ['Investor', 'D2', 'Smak', 'Magasinet'];
+
 export interface Props {
   theme: string;
 }
@@ -28,33 +31,22 @@ const { theme } = Astro.props as Props;
       <li><Link href="/" text="Login" classes="tag" /></li>
 
       <li>
-        <svg
-          width="36"
-          height="14"
-          viewBox="0 0 36 14"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            x="0.121094"
-            y="10.52"
-            width="35.8799"
-            height="2.64"
-            rx="1.32"
-            fill="#242629"></rect>
-          <rect
-            x="0.121094"
-            y="0.839996"
-            width="35.8799"
-            height="2.64"
-            rx="1.32"
-            fill="#242629"></rect>
-        </svg>
+        <button>
+          <Icon name="burger" width="36" />
+        </button>
       </li>
     </ul>
   </div>
   <nav class="navigation">
-    <menu class="top-tasks">
+    <ul class="top-tasks">
+      <!-- {
+        navigationItems.map((item) =>
+          <li>
+            <Link href="#" text={item} />
+          </li>
+        )
+      } -->
+
       <li><a href="#">Investor</a></li>
       <li class="divider">|</li>
       <li><a href="#">D2</a></li>
@@ -62,7 +54,7 @@ const { theme } = Astro.props as Props;
       <li><a href="#">Smak</a></li>
       <li class="divider">|</li>
       <li><a href="#">Magasinet</a></li>
-    </menu>
+    </ul>
     <ul class="my-alerts">
       <li>Mine sider</li>
     </ul>

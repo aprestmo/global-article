@@ -14,10 +14,11 @@ import TagGroup from "../molecules/TagGroup.astro";
 import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 
 const publication = "Recharge";
+const theme = "recharge";
 ---
 
-<Layout title={publication} {publication} language="en">
-  <Header theme="recharge" />
+<Layout title={`Tittel på sak | ${publication}`} {theme} language="en">
+  <Header {theme} />
   <Story>
     <StoryHeader />
     <Grid>

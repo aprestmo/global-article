@@ -19,8 +19,6 @@
   --hero-figure: 3;
   --story-meta: 4;
   --figure-width: var(--grid-width);
-  
-
 }
 
 [data-layout="image-first"] {
@@ -125,14 +123,14 @@
   .flow > * + * {
     margin-block-start: var(--row-gap);
   }
-  .divider{
+  .divider {
     color: var(--color-divider);
   }
 
-  .desktop-only{
+  .desktop-only {
     display: none;
-        @media only screen and (min-width: 768px) {
-          display: block;
+    @media only screen and (min-width: 768px) {
+      display: block;
     }
   }
 }

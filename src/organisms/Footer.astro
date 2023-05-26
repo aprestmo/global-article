@@ -13,7 +13,9 @@ const { theme } = Astro.props as Props;
 ---
 
 <footer>
-  <div><Icon name={theme} /></div>
+  <Link href="/" text="">
+    <Icon name={theme} width="4rem" />
+  </Link>
 </footer>
 
 <style>
@@ -27,10 +29,11 @@ const { theme } = Astro.props as Props;
     min-height: 10rem;
   }
 
-  footer svg {
-    max-width: 4rem;
-    padding: 2rem 0;
+  /* Will be svg in prod, but here it is a helper package for icons */
+  [astro-icon] {
+    padding-block: 2rem;
   }
+
   div {
     margin-inline: auto;
     display: flex;
@@ -40,9 +43,10 @@ const { theme } = Astro.props as Props;
     justify-content: space-between;
     row-gap: 6px;
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
+
     @media only screen and (min-width: 768px) {
-      flex-direction: row;
       align-items: center;
+      flex-direction: row;
     }
   }
 </style>
