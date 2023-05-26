@@ -3,25 +3,22 @@
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
-@import url("./tokens/tokens.css") layer(tokens);
+
 
 /*
   TODO: Move to components?
 */
+
+[data-layout="dark-mode"] {
+
+}
+
 [data-layout="text-first"] {
   --hero-text: 1;
   --lead-text: 2;
   --hero-figure: 3;
   --story-meta: 4;
   --figure-width: var(--grid-width);
-  --background-app: var(--colors-brand-900);
-  --color-typography: #fafafa;
-  --color-typography-secondary: #d8d8d8;
-  --background-header: var(--color-brand-800);
-  --color-link: #f9fdb7;
-  --logo-fill-color: var(--colors-brand-50);
-  --color-divider: var(--colors-neutral-700);
-  --background-ads: var(--colors-brand-800);
 }
 
 [data-layout="image-first"] {
@@ -41,12 +38,11 @@
 }
 
 :root {
-  --background-header: #fff;
+  --background-header: var(--color-brand-utility-80);
   --background-navigation: var(--color-brand-utility-200);
-  --background-footer: var(--color-neutral-800);
-  --background-ads: var(--color-neutral-800);
-  --background-footer: var(--color-primary);
-  --background-app: #fff;
+  --background-footer: var(--color-brand-utility-800);
+  --background-ads: var(--color-neutral-50);
+  --background-app: var(--color-page-bg);
 
   --page-width: 1280px;
   --grid-width: 980px;
@@ -54,11 +50,10 @@
 
   --font-family-ui: Inter, sans-serif;
 
-  --color-typography: var(--color-typography-inverted);
-  --color-typography-secondary: #3e3e3e;
+  --color-typography: var(--color-typography-default);
   --color-link: var(--color-link-default);
   --color-primary: var(--color-brand-primary-main);
-  --color-divider: var(--color-neutral-700);
+  --color-divider: var(--color-brand-utility-100);
 
   --header-height: 4rem;
   --logo-height: 1.8rem;
@@ -90,6 +85,7 @@
     -webkit-font-smoothing: antialiased;
     background-color: var(--background-app);
     color: var(--color-typography);
+    font-family: var(--)
   }
 
   a {
@@ -108,7 +104,7 @@
 
   h1 {
     font-size: var(--title-size);
-    font-family: var(--font-sharp-smbold);
+    font-family: var(--typography-editorial-titlepiece-max-font-family)
   }
 
   h2 {

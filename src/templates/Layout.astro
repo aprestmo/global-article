@@ -52,13 +52,14 @@ const { title, language, publication, theme } = Astro.props as Props;
       href={`https://dngroup.blob.core.windows.net/design-tokens/${theme}.css`}
     />
     {
-      /*
-      <link
-        rel="stylesheet"
-        href={`https://dngroup.blob.core.windows.net/design-tokens/${theme}-darkmode.css`}
-        media="(prefers-color-scheme: dark)"
-      />
-     */
+      publication && (
+        <>
+          <link
+            rel="stylesheet"
+            href={`https://dngroup.blob.core.windows.net/design-tokens/${publication.toLowerCase()}.css`}
+          />
+        </>
+      )
     }
   </head>
   <body>

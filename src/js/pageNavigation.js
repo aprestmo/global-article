@@ -5,7 +5,6 @@ document.addEventListener('change', (event) => {
 });
 
 const brands = document.querySelector('#brands');
-console.log(brands);
 brands.addEventListener('change', (event) => {
   console.log(event.target);
   // brands.value.setAttribute('selected', 'true');
