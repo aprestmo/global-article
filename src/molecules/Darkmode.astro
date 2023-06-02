@@ -1,5 +1,9 @@
 ---
-import Link from "../atoms/Link.astro";
+interface Props {
+  publication: string;
+}
+
+const { publication } = Astro.props as Props;
 ---
 
 <div class="theme-switch-wrapper">
@@ -130,7 +134,7 @@ import Link from "../atoms/Link.astro";
   }
 </style>
 
-<script>
+<script define:vars={{ publication }}>
   // Get the theme toggle input
   const themeToggle = document.querySelector(
     '.theme-switch input[type="checkbox"]'
@@ -147,21 +151,27 @@ import Link from "../atoms/Link.astro";
     // If the current theme is dark, check the theme toggle
     if (currentTheme === "dark") {
       themeToggle.checked = true;
+      toDark();
     }
   }
 
   //Swtiching css file
   function toDark() {
-    var link = document.getElementById("stylesheet");
-    const href = link.getAttribute("href").slice(0, -4);
-    link.setAttribute("href", href + "-darkmode.css");
+    var stylesheet = document.getElementById("stylesheet");
+    var darkHref =
+      "https://dngroup.blob.core.windows.net/design-tokens/" +
+      publication +
+      "-darkmode.css";
+    stylesheet.setAttribute("href", darkHref);
   }
 
   function toLight() {
-    var link = document.getElementById("stylesheet");
-
-    const href = link.getAttribute("href").slice(0, -13);
-    link.setAttribute("href", href + "-darkmode.css");
+    var stylesheet = document.getElementById("stylesheet");
+    var lightHref =
+      "https://dngroup.blob.core.windows.net/design-tokens/" +
+      publication +
+      ".css";
+    stylesheet.setAttribute("href", lightHref);
   }
 
   // Function that will switch the theme based on the if the theme toggle is checked or not
@@ -169,9 +179,11 @@ import Link from "../atoms/Link.astro";
     if (e.target.checked) {
       document.documentElement.setAttribute("data-theme", "dark");
       localStorage.setItem("theme", "dark");
+      toDark();
     } else {
       document.documentElement.setAttribute("data-theme", "light");
       localStorage.setItem("theme", "light");
+      toLight();
     }
   }
 

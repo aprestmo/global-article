@@ -147,39 +147,30 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdx"] },
 },
-"hydrogen-insight": {
-"hydrogen-insight.mdx": {
-  id: "hydrogen-insight.mdx",
-  slug: "hydrogen-insight",
+"hydrogen": {
+"hydrogen.mdx": {
+  id: "hydrogen.mdx",
+  slug: "hydrogen",
   body: string,
-  collection: "hydrogen-insight",
+  collection: "hydrogen",
   data: any
 } & { render(): Render[".mdx"] },
 },
-"intrafish-eng": {
-"intrafish-eng.mdx": {
-  id: "intrafish-eng.mdx",
-  slug: "intrafish-eng",
+"intrafish": {
+"intrafish.mdx": {
+  id: "intrafish.mdx",
+  slug: "intrafish",
   body: string,
-  collection: "intrafish-eng",
+  collection: "intrafish",
   data: any
 } & { render(): Render[".mdx"] },
 },
-"intrafish-no": {
-"intrafish-no.mdx": {
-  id: "intrafish-no.mdx",
-  slug: "intrafish-no",
+"kystens": {
+"kystens.mdx": {
+  id: "kystens.mdx",
+  slug: "kystens",
   body: string,
-  collection: "intrafish-no",
-  data: any
-} & { render(): Render[".mdx"] },
-},
-"kystens-naeringsliv": {
-"kystens-naeringsliv.mdx": {
-  id: "kystens-naeringsliv.mdx",
-  slug: "kystens-naeringsliv",
-  body: string,
-  collection: "kystens-naeringsliv",
+  collection: "kystens",
   data: any
 } & { render(): Render[".mdx"] },
 },
@@ -207,15 +198,6 @@ declare module 'astro:content' {
   slug: "upstream",
   body: string,
   collection: "upstream",
-  data: any
-} & { render(): Render[".mdx"] },
-},
-"white-label": {
-"white-label.mdx": {
-  id: "white-label.mdx",
-  slug: "white-label",
-  body: string,
-  collection: "white-label",
   data: any
 } & { render(): Render[".mdx"] },
 },

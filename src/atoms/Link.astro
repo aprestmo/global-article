@@ -12,16 +12,24 @@ const { text, href, classes } = Astro.props as Props;
 
 <style>
   a {
+    color: var(--color-link-default);
     font-family: var(--font-family-utility), sans-serif;
     font-weight: bold;
     font-size: 1rem;
     text-underline-offset: 0.4rem;
-    color: var(--color-link);
+    text-decoration: none !important;
+
+    &:hover {
+      color: var(--color-link-hover);
+    }
+
+    &:active {
+      color: var(--color-link-active);
+    }
   }
 
   .tag {
     /* border: 1px solid currentColor; */
-    border: 1px solid var(--color-brand-utility-100);
     border-radius: var(--radius);
     display: inline-flex;
     font-size: 0.75rem;
@@ -32,7 +40,7 @@ const { text, href, classes } = Astro.props as Props;
     padding-inline: 20px;
     transition: background-color 200ms ease-in-out;
     text-decoration: none !important;
-    background-color: var(--color-brand-utility-0);
+    background-color: var(--color-brand-utility-100);
     color: var(--color-brand-utility-900) !important;
 
     &:focus-visible,
@@ -43,7 +51,6 @@ const { text, href, classes } = Astro.props as Props;
 
   .button {
     /* border: 1px solid currentColor; */
-    border: 1px solid var(--color-brand-utility-200);
     background-color: var(--color-brand-utility-700);
     color: var(--color-brand-utility-100) !important;
     border-radius: var(--radius);

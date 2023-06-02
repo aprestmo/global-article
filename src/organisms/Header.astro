@@ -23,13 +23,15 @@ const { theme } = Astro.props as Props;
 
 <header class="header">
   <div class="header-flow">
-    <Link href="/" text="">
+    <Link href="/" text="" classes="logo">
       <Icon name={theme} />
     </Link>
     <ul class="header-right">
-      <li class="desktop-only"><span>4 uker for 380,-</span></li>
-      <li><Darkmode /></li>
-      <li><Link href="/" text="Abonner" classes="button" /></li>
+      <!--     <li class="desktop-only"><span>4 uker for 380,-</span></li> -->
+      <li><Darkmode publication={theme} /></li>
+      <li class="desktop-only">
+        <Link href="/" text="Abonner" classes="button" />
+      </li>
       <li><Link href="/" text="Login" classes="tag" /></li>
 
       <li>
@@ -58,27 +60,24 @@ const { theme } = Astro.props as Props;
       <li><a href="#">Magasinet</a></li>
     </ul>
     <ul class="my-alerts">
-      <li>Mine sider</li>
+      <li><a href="#">Mine sider</a></li>
     </ul>
   </nav>
 </header>
 <style>
   header {
-    background-color: var(--background-header);
-    font-family: var(--font-family-utility);
+    background-color: var(--color-header-top-bg);
+    font-family: var(--typography-utility-m-font-family);
   }
 
   a {
-    color: var(--color-typography) !important;
     font-size: 1.1rem;
     text-underline-offset: 0.4rem;
-    color: var(--color-link);
-    text-decoration: none !important;
   }
 
   .header-flow {
     align-items: center;
-    block-size: var(--header-height, 3.5rem);
+    block-size: var(--header-height);
     display: flex;
     inline-size: min(
       var(--page-width, 1280px),
@@ -86,11 +85,6 @@ const { theme } = Astro.props as Props;
     );
     justify-content: space-between;
     margin-inline: auto;
-
-    @media (--medium) {
-      --header-height: 6rem;
-      --logo-height: 2rem;
-    }
   }
 
   .header-right {
@@ -111,6 +105,7 @@ const { theme } = Astro.props as Props;
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: var(--color-divider);
+
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
       max-width: var(--page-width);
@@ -125,9 +120,10 @@ const { theme } = Astro.props as Props;
     padding-inline-start: var(--row-gap);
 
     inline-size: min(
-      var(--page-width, 1280px),
+      var(--page-width),
       100vw - calc(var(--site-padding, 1rem) * 2)
     );
+
     justify-content: flex-start;
     margin-inline: auto;
     @media only screen and (min-width: 1280px) {
@@ -153,12 +149,14 @@ const { theme } = Astro.props as Props;
     }
   }
 
-  a {
-    color: var(--logo-color, hsl(219 59% 18%));
+  a.logo {
+    block-size: var(--logo-height);
+    max-width: 300px;
   }
 
   svg {
-    block-size: var(--logo-height, 1.4688rem);
+    block-size: var(--logo-height);
+    max-width: 200px;
   }
 
   /* Demo purposes */
@@ -166,4 +164,27 @@ const { theme } = Astro.props as Props;
     column-gap: 1rem;
     display: flex;
   }
+
+  .navigation.on-scroll {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-neutral-0);
+    top: 0;
+    z-index: 99;
+  }
 </style>
+
+<script>
+  // Theme by default loads a jQuery as dependency of the main script.
+  // Let's include it using ES6 modules import.
+
+  var mainHeader = document.querySelector(".navigation");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= 500) {
+      mainHeader.classList.add("on-scroll");
+    } else if (window.scrollY <= 500) {
+      mainHeader.classList.remove("on-scroll");
+    }
+  });
+</script>

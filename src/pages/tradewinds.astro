@@ -1,22 +1,32 @@
 ---
-import Layout from "../templates/Layout.astro";
-
-import Header from "../organisms/Header.astro";
+import Layout from "../layouts/Layout.astro";
 import Story from "../organisms/Story.astro";
 import StoryHeader from "../molecules/StoryHeader.astro";
 import Grid from "../atoms/Grid.astro";
+
+const theme = "tradewinds";
+
 import Article from "../content/tradewinds/tradewinds.mdx";
 
-const publication = "TradeWinds";
-const theme = "tradewinds";
+let article = await Astro.glob("../content/tradewinds/tradewinds.mdx");
 ---
 
-<Layout title={`Tittel på sak | ${publication}`} {theme}>
-  <Header {theme} />
-  <Story>
-    <!-- <StoryHeader /> -->
-    <Grid>
-      <Article />
-    </Grid>
-  </Story>
-</Layout>
+{
+  article.map((item) => (
+    <Layout title={`${item.frontmatter.title}|`} theme={theme} language="en">
+      <main>
+        <Story>
+          <StoryHeader
+            title={item.frontmatter.title}
+            lead={item.frontmatter.lead}
+            img={item.frontmatter.hero}
+            figcaption={item.frontmatter.caption}
+          />
+          <Grid>
+            <Article />
+          </Grid>
+        </Story>
+      </main>
+    </Layout>
+  ))
+}
