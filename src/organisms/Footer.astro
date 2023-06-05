@@ -12,15 +12,16 @@ export interface Props {
 const { theme } = Astro.props as Props;
 ---
 
-<footer>
-  <Link href="/" text="">
-    <Icon name={theme} width="4rem" />
-  </Link>
+<footer theme={theme}>
+  <div class="centered">
+    <Link href="/" text="">
+      <Icon name={theme} width="4rem" />
+    </Link>
+  </div>
 </footer>
 
 <style>
   footer {
-    --logo-fill-color: white;
     position: relative;
     display: flex;
     justify-content: center;

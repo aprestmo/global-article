@@ -1,4 +1,15 @@
 ---
+import Header from "../organisms/Header.astro";
+
+import Card from "../molecules/Card.astro";
+import Grid from "../atoms/Grid.astro";
+import StreamsGrid from "../atoms/StreamsGrid.astro";
+import Footer from "../organisms/Footer.astro";
+import Ad980 from "../molecules/Ad980.astro";
+import Interaction from "../molecules/Interaction.astro";
+import TagGroup from "../molecules/TagGroup.astro";
+import TimeStamp from "../molecules/TimeStamp.astro";
+
 import "../styles/main.css";
 
 export interface Props {
@@ -6,10 +17,9 @@ export interface Props {
   language?: string;
   publication?: string;
   theme: string;
-  dataTheme: string;
 }
 
-const { title, language, publication, theme, dataTheme } = Astro.props as Props;
+const { title, language, publication, theme } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -50,24 +60,43 @@ const { title, language, publication, theme, dataTheme } = Astro.props as Props;
 
     <link
       rel="stylesheet"
-      data-theme="light"
       href={`https://dngroup.blob.core.windows.net/design-tokens/${theme}.css`}
       id="stylesheet"
     />
-
-    {
-      publication && (
-        <>
-          <link
-            rel="stylesheet"
-            href={`https://dngroup.blob.core.windows.net/design-tokens/${publication.toLowerCase()}.css`}
-            id="stylesheet"
-          />
-        </>
-      )
-    }
   </head>
   <body>
-    <slot />
+    <Header theme={theme} />
+    <main>
+      <slot />
+      <Grid>
+        <Interaction />
+        <TagGroup />
+        <TimeStamp />
+      </Grid>
+      <Ad980 />
+      <StreamsGrid>
+        <Card
+          title="Elon Musk to buy Twitter"
+          img="../img/musk.jpg"
+          category="news"
+        />
+        <Card
+          title="America Hangarship visiting Oslo"
+          img="../img/skip.jpg"
+          category="shipping"
+        />
+        <Card
+          title="Economists prepares for the worst"
+          img="../img/finans.jpg"
+          category="finans"
+        />
+        <Card
+          title="The staggering grid connection backlog of US clean energy projects"
+          img="../img/energy.jpg"
+          category="energy"
+        />
+      </StreamsGrid>
+      <Footer theme={theme} />
+    </main>
   </body>
 </html>

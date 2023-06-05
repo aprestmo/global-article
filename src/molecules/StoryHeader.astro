@@ -1,16 +1,23 @@
 ---
 import StoryImage from "../molecules/StoryImage.astro";
 import StoryMeta from "../molecules/StoryMeta.astro";
+
+interface Props {
+  title: string;
+  img: string;
+  lead: string;
+  figcaption: string;
+}
+
+const { img, title, lead, figcaption } = Astro.props as Props;
 ---
 
 <header class="flow article-top">
-  <h1>Folkehelseviter og Sveits-utflyttet influenser arver milliarder</h1>
+  <h1>{title}</h1>
   <p class="lead">
-    Konkurstallene stiger mot nye høyder. Så langt i år er antall konkurser
-    innen detaljhandel og hotell/restaurant blitt mer enn doblet sammenlignet
-    med i fjor.
+    {lead}
   </p>
-  <StoryImage src="../img/topimage.jpg" title="This is a title" />
+  <StoryImage src={img} figcaption={figcaption} />
   <StoryMeta />
 </header>
 
@@ -51,9 +58,14 @@ import StoryMeta from "../molecules/StoryMeta.astro";
   /* Innress */
   p.lead {
     order: var(--lead-text);
-    font-size: var(--lead-size) !important;
+    font-size: var(--typography-editorial-lead-min-font-size) !important;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: var(--typography-editorial-lead-min-line-height);
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
+    @media only screen and (min-width: 768px) {
+      font-size: var(--typography-editorial-lead-max-font-size) !important;
+
+      line-height: var(--typography-editorial-lead-max-line-height);
+    }
   }
 </style>

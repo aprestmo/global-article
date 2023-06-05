@@ -2,9 +2,10 @@
 interface Props {
   alt: string;
   src: string;
+  figcaption: string;
 }
 
-const { src, alt } = Astro.props as Props;
+const { src, alt, figcaption } = Astro.props as Props;
 ---
 
 <figure>
@@ -12,9 +13,7 @@ const { src, alt } = Astro.props as Props;
     <img src={src} alt={alt} />
   </picture>
   <figcaption>
-    Analytiker Brit Elise Melhus i Dun & Bradstreet blir ikke overrasket dersom
-    antall konkurser i år vil havne på samme nivå som i rekordårene 2018 og
-    2019. Da gikk rundt 5000 selskaper konkurs hvert år. (Foto: Javad Parsa)
+    {figcaption}
   </figcaption>
 </figure>
 

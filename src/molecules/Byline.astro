@@ -49,7 +49,7 @@ import Link from "../atoms/Link.astro";
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid;
-    border-color: var(--color-divider);
+    border-color: var(--color-divider-default);
     width: 50px;
   }
 
@@ -59,20 +59,20 @@ import Link from "../atoms/Link.astro";
 
   a {
     color: var(--link-color);
-    font-family: var(--font-family-utility), sans-serif;
+    font-size: var(--typography-utility-m-font-size);
+    font-family: var(--typography-utility-m-font-family);
     font-weight: bold;
-    font-size: 1rem;
     text-underline-offset: 0.4rem;
     line-height: 1;
     text-decoration: none;
 
     @media (--medium) {
-      font-size: 1rem;
+      font-size: var(--typography-utility-m-font-size);
     }
   }
   span {
     color: var(--color-typography-secondary);
-    font-family: var(--font-family-utility), sans-serif;
-    font-size: 0.75rem;
+    font-size: var(--typography-utility-s-font-size);
+    font-family: var(--typography-utility-s-font-family);
   }
 </style>

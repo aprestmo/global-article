@@ -3,49 +3,9 @@
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 
-
 /*
   TODO: Move to components?
 */
-
-[data-theme="dark"] {
-    --color-brand-utility-0: #e9ebf1;
-  --color-brand-utility-50: #d6dbe6;
-  --color-brand-utility-100: #c4cdde;
-  --color-brand-utility-200: #aebed5;
-  --color-brand-utility-300: #899cc2;
-  --color-brand-utility-400: #768cbc;
-  --color-brand-utility-500: #4a6dba;
-  --color-brand-utility-600: #30549c;
-  --color-brand-utility-700: #183467;
-  --color-brand-utility-800: #151c41;
-  --color-brand-utility-900: #0b0b1e;
-  --color-page-inverted-bg: #434e60;
-  --color-page-bg: #1a1f27;
-  --color-brand-breaking-bg: #232528;
-  --color-brand-breaking-fg: #edfeb2;
-  --color-brand-primary-main: #13264a;
-  --color-brand-primary-main-fg: #ffffff;
-  --color-brand-primary-pink: #2134f0;
-  --color-link-default: #9db9ff;
-  --color-link-hover: #0f0f24;
-  --color-link-active: #9493d2;
-  --color-link-disabled: #ff0000;
-  --color-neutral-0: #232528;
-  --color-neutral-50: #2b2d31;
-  --color-neutral-100: #393b42;
-  --color-neutral-200: #4e535a;
-  --color-neutral-300: #62676f;
-  --color-neutral-400: #8f959d;
-  --color-neutral-500: #b6b8be;
-  --color-neutral-600: #c7c8cc;
-  --color-neutral-700: #d6d8db;
-  --color-neutral-800: #ededed;
-  --color-neutral-900: #fafafa;
-  --color-typography-default: #f2f2f2;
-  --color-typography-secondary: #d6d8db;
-  --color-typography-inverted: #f2f2f2;
-}
 
 [data-layout="text-first"] {
   --hero-text: 1;
@@ -74,8 +34,8 @@
 :root {
   --background-header: var(--color-brand-utility-80);
   --background-navigation: var(--color-brand-utility-200);
-  --background-footer: var(--color-brand-utility-800);
-  --background-ads: var(--color-neutral-50);
+  --background-footer: var(--color-header-top-bg);
+  --background-ads: var(--color-advertising-banner-bg);
   --background-app: var(--color-page-bg);
 
   --page-width: 1280px;
@@ -86,16 +46,15 @@
   --font-family-heading: var(--typography-editorial-titlepiece-min-font-family);
 
   --color-typography: var(--color-typography-default);
-  --color-link: var(--color-link-default);
   --color-primary: var(--color-brand-primary-main);
-  --color-divider: var(--color-brand-utility-200);
+  --color-divider: var(--color-divider-default);
 
   --header-height: 4rem;
   --logo-height: 1.8rem;
   --radius: 5px;
 
   --site-padding: var(--row-gap);
-  --title-size: 1.7rem;
+  --title-size: var(--typography-editorial-titlepiece-min-font-size);
   --copy-size: var(--typography-editorial-body-min-font-size);
   --lead-size: var(--typography-editorial-ingress-min-font-size);
 
@@ -107,8 +66,8 @@
     --column-gap: var(--spacing-row-gap-max);
 
     --header-height: 6rem;
-    --logo-height: 2.3rem;
-    --title-size: 3rem;
+    --logo-height: 3rem;
+    --title-size: var(--typography-editorial-titlepiece-max-font-size);
     --copy-size: var(--typography-editorial-body-max-font-size);
     --lead-size: var(--typography-editorial-ingress-max-font-size);
   }
@@ -124,18 +83,27 @@
   }
 
   a {
-    color: var(--color-link);
+    color: var(--color-link-default);
     text-decoration: var(--text-decoration-style, underline);
+
+    &:hover {
+      color: var(--color-link-hover);
+    }
+
+    &:active {
+      color: var(--color-link-active);
+    }
   }
 
   img {
     width: 100%;
+    content-visibility: auto;
   }
 
   p {
     font-family: var(--typography-editorial-body-min-font-family);
     font-weight: var(--typography-editorial-body-min-font-weight);
-    font-size: var(--font-size);
+    font-size: var(--copy-size);
     line-height: 140%;
   }
 
@@ -159,6 +127,18 @@
 @layer utilities {
   .flow > * + * {
     margin-block-start: var(--row-gap);
+  }
+
+  .centered{
+    max-width: var(--grid-width);
+    width: 100%;
+    margin-inline: auto;
+    margin-top: var(--row-gap);
+    margin-bottom: var(--row-gap);
+    padding: 0 1rem;
+        @media only screen and (min-width: 768px) {
+          padding:  0;
+    }
   }
   .divider {
     color: var(--color-divider);
