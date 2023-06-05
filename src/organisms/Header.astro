@@ -22,24 +22,28 @@ const { theme } = Astro.props as Props;
 <Ad980 />
 
 <header class="header">
-  <div class="header-flow">
-    <Link href="/" text="" classes="logo">
-      <Icon name={theme} />
-    </Link>
-    <ul class="header-right">
-      <!--     <li class="desktop-only"><span>4 uker for 380,-</span></li> -->
-      <li><Darkmode publication={theme} /></li>
-      <li class="desktop-only">
-        <Link href="/" text="Abonner" classes="button" />
-      </li>
-      <li><Link href="/" text="Login" classes="tag" /></li>
+  <div class="header-upper">
+    <div class="header-upper-inner">
+      <Link href="/" text="" classes="logo">
+        <Icon name={theme} />
+      </Link>
+      <ul class="header-right">
+        <!--     <li class="desktop-only"><span>4 uker for 380,-</span></li> -->
+        <li><Darkmode publication={theme} /></li>
+        <li class="desktop-only">
+          <Link href="/" text="Abonner" classes="button" />
+        </li>
+        <li class="desktop-only">
+          <Link href="/" text="Login" classes="tag" />
+        </li>
 
-      <li>
-        <button>
-          <Icon name="burger" width="36" />
-        </button>
-      </li>
-    </ul>
+        <li>
+          <button>
+            <Icon name="burger" width="36" />
+          </button>
+        </li>
+      </ul>
+    </div>
   </div>
   <nav class="navigation">
     <div class="navigation-inner">
@@ -60,10 +64,7 @@ const { theme } = Astro.props as Props;
 </header>
 <style>
   header {
-    position: relative;
     background-color: var(--color-header-top-bg);
-    font-family: var(--typography-utility-m-font-family);
-    height: auto;
   }
 
   a {
@@ -72,7 +73,8 @@ const { theme } = Astro.props as Props;
     color: var(--color-header-navigation-fg) !important;
   }
 
-  .header-flow {
+  .header-upper {
+    position: relative;
     align-items: center;
     block-size: var(--header-height);
     display: flex;
@@ -82,6 +84,22 @@ const { theme } = Astro.props as Props;
     );
     justify-content: space-between;
     margin-inline: auto;
+    background-color: var(--color-header-top-bg);
+    transition: border 0.3s ease;
+  }
+
+  .header-upper-inner {
+    display: flex;
+    inline-size: min(
+      var(--page-width, 1280px),
+      100vw - calc(var(--site-padding, 1rem) * 2)
+    );
+    justify-content: space-between;
+    margin-inline: auto;
+    inline-size: min(
+      var(--page-width, 1280px),
+      100vw - calc(var(--site-padding, 1rem) * 2)
+    );
   }
 
   .header-right {
@@ -94,12 +112,8 @@ const { theme } = Astro.props as Props;
   }
 
   .navigation {
-    display: flex;
-    align-items: center;
-    min-height: 20px;
     overflow-x: scroll;
     background-color: var(--color-header-navigation-bg);
-
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
       margin-inline: auto;
@@ -118,6 +132,7 @@ const { theme } = Astro.props as Props;
     border-top: 1px solid;
     border-bottom: 1px solid;
     border-color: var(--color-header-navigation-divider);
+
     @media only screen and (min-width: 1280px) {
       padding-inline-start: 0;
       max-width: var(--page-width);
@@ -127,8 +142,8 @@ const { theme } = Astro.props as Props;
   .top-tasks {
     padding: 1rem 1rem 1rem 0;
     display: flex;
-
     justify-content: flex-start;
+    align-items: center;
     @media only screen and (min-width: 1280px) {
       padding-inline-start: 0;
       max-width: var(--grid-width);
@@ -137,8 +152,11 @@ const { theme } = Astro.props as Props;
 
   .top-tasks li {
     margin-right: var(--row-gap);
+    font-size: var(--typography-utility-s-font-size);
+    font-family: var(--typography-utility-s-font-family);
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
+      font-size: var(--typography-utility-m-font-size);
     }
   }
 
@@ -148,6 +166,8 @@ const { theme } = Astro.props as Props;
     min-width: 200px;
     column-gap: 0.5rem;
     margin-right: 1rem;
+    font-size: var(--typography-utility-s-font-size);
+    font-family: var(--typography-utility-s-font-family);
     @media only screen and (min-width: 1280px) {
       margin-right: 0rem;
     }
@@ -161,20 +181,14 @@ const { theme } = Astro.props as Props;
   svg {
     block-size: var(--logo-height);
     max-width: 200px;
-    fill: var(--color-header-logo-primary) !important;
-    transition: widht 0.3s ease;
-  }
-
-  /* Demo purposes */
-  nav {
-    column-gap: 1rem;
-    display: flex;
+    transition: width 0.3s ease;
   }
 
   .on-scroll {
     position: fixed;
     width: 100%;
-    background-color: var(--color-header-top-bg);
+    /*  background-color: var(--color-header-top-bg); */
+    border-bottom: 1px solid var(--color-neutral-100);
     top: 0;
     z-index: 99;
     --logo-height: 1.8rem;
@@ -193,11 +207,10 @@ const { theme } = Astro.props as Props;
 
   var select = document.querySelector(".select");
   var ad = document.querySelector(".ad");
-  var mainHeader = document.querySelector(".header");
+  var mainHeader = document.querySelector(".header-upper");
   var body = document.querySelector("body");
 
-  var offsetHeight =
-    mainHeader.offsetHeight + select.offsetHeight + ad.offsetHeight;
+  var offsetHeight = select.offsetHeight + ad.offsetHeight;
 
   window.addEventListener("scroll", function () {
     if (window.scrollY >= offsetHeight) {
