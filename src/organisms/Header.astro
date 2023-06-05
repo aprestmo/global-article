@@ -42,8 +42,9 @@ const { theme } = Astro.props as Props;
     </ul>
   </div>
   <nav class="navigation">
-    <ul class="top-tasks">
-      <!-- {
+    <div class="navigation-inner">
+      <ul class="top-tasks">
+        <!-- {
         navigationItems.map((item) =>
           <li>
             <Link href="#" text={item} />
@@ -51,17 +52,18 @@ const { theme } = Astro.props as Props;
         )
       } -->
 
-      <li><a href="#">Investor</a></li>
-      <li class="divider">|</li>
-      <li><a href="#">D2</a></li>
-      <li class="divider">|</li>
-      <li><a href="#">Smak</a></li>
-      <li class="divider">|</li>
-      <li><a href="#">Magasinet</a></li>
-    </ul>
-    <ul class="my-alerts">
-      <li><a href="#">Mine sider</a></li>
-    </ul>
+        <li><a href="#">Investor</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">D2</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">Smak</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">Magasinet</a></li>
+      </ul>
+      <ul class="my-alerts">
+        <li><a href="#">Mine sider</a></li>
+      </ul>
+    </div>
   </nav>
 </header>
 <style>
@@ -73,6 +75,7 @@ const { theme } = Astro.props as Props;
   a {
     font-size: 1.1rem;
     text-underline-offset: 0.4rem;
+    color: var(--color-header-navigation-fg) !important;
   }
 
   .header-flow {
@@ -100,34 +103,41 @@ const { theme } = Astro.props as Props;
     display: flex;
     align-items: center;
     min-height: 20px;
-    border-block-end: var(--color-neutral-900);
     overflow-x: scroll;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-color: var(--color-divider);
+    background-color: var(--color-header-navigation-bg);
 
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
-      max-width: var(--page-width);
       margin-inline: auto;
     }
   }
 
-  .top-tasks {
-    align-items: center;
-    padding: 1rem 1rem 1rem 0;
+  .navigation-inner {
     display: flex;
-    padding-inline-start: var(--row-gap);
-
+    align-items: center;
+    justify-content: space-between;
     inline-size: min(
       var(--page-width),
       100vw - calc(var(--site-padding, 1rem) * 2)
     );
-
-    justify-content: flex-start;
-    margin-inline: auto;
+    margin: 0 auto;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--color-header-navigation-divider);
     @media only screen and (min-width: 1280px) {
       padding-inline-start: 0;
+      max-width: var(--page-width);
+    }
+  }
+
+  .top-tasks {
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+
+    justify-content: flex-start;
+    @media only screen and (min-width: 1280px) {
+      padding-inline-start: 0;
+      max-width: var(--grid-width);
     }
   }
 
@@ -157,6 +167,7 @@ const { theme } = Astro.props as Props;
   svg {
     block-size: var(--logo-height);
     max-width: 200px;
+    fill: var(--color-header-logo-primary) !important;
   }
 
   /* Demo purposes */

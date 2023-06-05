@@ -8,6 +8,7 @@ import Footer from "../organisms/Footer.astro";
 import Ad980 from "../molecules/Ad980.astro";
 import Interaction from "../molecules/Interaction.astro";
 import TagGroup from "../molecules/TagGroup.astro";
+import TimeStamp from "../molecules/TimeStamp.astro";
 
 import "../styles/main.css";
 
@@ -68,7 +69,9 @@ const { title, language, publication, theme } = Astro.props as Props;
     <main>
       <slot />
       <Grid>
-        <Interaction /><TagGroup />
+        <Interaction />
+        <TagGroup />
+        <TimeStamp />
       </Grid>
       <Ad980 />
       <StreamsGrid>
