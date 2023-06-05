@@ -8,16 +8,10 @@ import Interaction from "../molecules/Interaction.astro";
   <Byline />
   <div>
     <ul role="list" class="info">
+      <li>Publisert 17. juni 2023, i <a href="#">Finans</a></li>
       <li>
-        <li>Oppdatert 17:03</li>
-        <li class="divider">|</li>
-        <li>Publisert i <a href="#">Finans</a></li>
-        <li class="divider">|</li>
-        <li>
-          <Link href="#" text="Lagre" classes="tag" icon="../img/heart.svg" />
-        </li>
+        <Link href="#" text="Lagre" classes="tag" icon="../img/heart.svg" />
       </li>
-      <li class="divider">|</li>
       <li>
         <Link href="#" text="Gi bort" classes="tag" icon="../img/gift.svg" />
       </li>
@@ -33,7 +27,7 @@ import Interaction from "../molecules/Interaction.astro";
       align-items: flex-start;
       order: var(--story-meta);
       justify-content: space-between;
-      row-gap: 6px;
+      row-gap: 24px;
       inline-size: min(
         var(--grid-width),
         100vw - calc(var(--site-padding) * 2)
@@ -53,7 +47,7 @@ import Interaction from "../molecules/Interaction.astro";
       color: var(--color-typography-secondary);
       font-size: var(--typography-utility-m-font-size) !important;
       font-family: var(--typography-utility-m-font-family) !important;
-      column-gap: 0.3rem;
+      column-gap: 0.5rem;
       font-size: 0.7rem;
 
       &.divider {
@@ -61,9 +55,9 @@ import Interaction from "../molecules/Interaction.astro";
       }
 
       @media only screen and (min-width: 768px) {
-        column-gap: 0.6rem;
+        column-gap: 1rem;
         font-size: 0.9rem;
-        flex-direction: row-reverse;
+        flex-direction: row;
       }
     }
   </style>
