@@ -14,19 +14,17 @@ let article = await Astro.glob("../content/d2/d2.mdx");
 {
   article.map((item) => (
     <Layout title={`${item.frontmatter.title}|`} theme={theme} language="no">
-      <main>
-        <Story>
-          <StoryHeader
-            title={item.frontmatter.title}
-            lead={item.frontmatter.lead}
-            img={item.frontmatter.hero}
-            figcaption={item.frontmatter.caption}
-          />
-          <Grid>
-            <Article />
-          </Grid>
-        </Story>
-      </main>
+      <Story>
+        <StoryHeader
+          title={item.frontmatter.title}
+          lead={item.frontmatter.lead}
+          img={item.frontmatter.hero}
+          figcaption={item.frontmatter.caption}
+        />
+        <Grid>
+          <Article />
+        </Grid>
+      </Story>
     </Layout>
   ))
 }
