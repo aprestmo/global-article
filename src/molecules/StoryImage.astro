@@ -25,6 +25,7 @@ const { src, alt, figcaption } = Astro.props as Props;
       var(--figure-width),
       100vw - calc(var(--site-padding) * 0)
     );
+    text-align: var(--text-align);
 
     @media only screen and (min-width: 768px) {
       inline-size: min(

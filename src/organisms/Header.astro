@@ -44,14 +44,6 @@ const { theme } = Astro.props as Props;
   <nav class="navigation">
     <div class="navigation-inner">
       <ul class="top-tasks">
-        <!-- {
-        navigationItems.map((item) =>
-          <li>
-            <Link href="#" text={item} />
-          </li>
-        )
-      } -->
-
         <li><a href="#">Investor</a></li>
         <li class="divider">|</li>
         <li><a href="#">D2</a></li>
@@ -68,8 +60,10 @@ const { theme } = Astro.props as Props;
 </header>
 <style>
   header {
+    position: relative;
     background-color: var(--color-header-top-bg);
     font-family: var(--typography-utility-m-font-family);
+    height: auto;
   }
 
   a {
@@ -168,6 +162,7 @@ const { theme } = Astro.props as Props;
     block-size: var(--logo-height);
     max-width: 200px;
     fill: var(--color-header-logo-primary) !important;
+    transition: widht 0.3s ease;
   }
 
   /* Demo purposes */
@@ -176,12 +171,17 @@ const { theme } = Astro.props as Props;
     display: flex;
   }
 
-  .navigation.on-scroll {
+  .on-scroll {
     position: fixed;
     width: 100%;
-    background-color: var(--color-neutral-0);
+    background-color: var(--color-header-top-bg);
     top: 0;
     z-index: 99;
+    --logo-height: 1.8rem;
+
+    .navigation {
+      display: none;
+    }
   }
 </style>
 
@@ -189,13 +189,23 @@ const { theme } = Astro.props as Props;
   // Theme by default loads a jQuery as dependency of the main script.
   // Let's include it using ES6 modules import.
 
-  var mainHeader = document.querySelector(".navigation");
+  import type { ModalBody } from "tinacms";
+
+  var select = document.querySelector(".select");
+  var ad = document.querySelector(".ad");
+  var mainHeader = document.querySelector(".header");
+  var body = document.querySelector("body");
+
+  var offsetHeight =
+    mainHeader.offsetHeight + select.offsetHeight + ad.offsetHeight;
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= offsetHeight) {
       mainHeader.classList.add("on-scroll");
-    } else if (window.scrollY <= 500) {
+      body.classList.add("on-scroll");
+    } else if (window.scrollY <= offsetHeight) {
       mainHeader.classList.remove("on-scroll");
+      body.classList.remove("on-scroll");
     }
   });
 </script>
