@@ -8,8 +8,8 @@ import Ad980 from "../molecules/Ad980.astro";
 import TemplateDropdown from "../molecules/TemplateDropdown.astro";
 import Darkmode from "../molecules/Darkmode.astro";
 
-//
-const navigationItems = ["Investor", "D2", "Smak", "Magasinet"];
+import navData from "../data/navData";
+import Dn from "../pages/dn.astro";
 
 export interface Props {
   theme: string;
@@ -48,13 +48,13 @@ const { theme } = Astro.props as Props;
   <nav class="navigation">
     <div class="navigation-inner">
       <ul class="top-tasks">
-        <li><a href="#">Investor</a></li>
-        <li class="divider">|</li>
-        <li><a href="#">D2</a></li>
-        <li class="divider">|</li>
-        <li><a href="#">Smak</a></li>
-        <li class="divider">|</li>
-        <li><a href="#">Magasinet</a></li>
+        {
+          navData.map((item) => (
+            <li>
+              <a href={item.path}>{item.menu}</a>
+            </li>
+          ))
+        }
       </ul>
       <ul class="my-alerts">
         <li><a href="#">Mine sider</a></li>
@@ -199,12 +199,7 @@ const { theme } = Astro.props as Props;
   }
 </style>
 
-<script>
-  // Theme by default loads a jQuery as dependency of the main script.
-  // Let's include it using ES6 modules import.
-
-  import type { ModalBody } from "tinacms";
-
+<script define:vars={{ navData, theme }}>
   var select = document.querySelector(".select");
   var ad = document.querySelector(".ad");
   var mainHeader = document.querySelector(".header-upper");
@@ -221,4 +216,9 @@ const { theme } = Astro.props as Props;
       body.classList.remove("on-scroll");
     }
   });
+
+  //navData.map((item) => console.log(item));
+
+  const data = navData.filter(theme);
+  console.log(data);
 </script>

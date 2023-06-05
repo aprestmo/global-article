@@ -2,70 +2,86 @@ const navData = [
 	{
 		publication: "Choose publication",
 		path: "/",
+		menu: [""],
 	},
 	{
 		publication: "Recharge",
 		path: "/recharge/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/recharge-cover-855x1024.png",
+		menu: ["News", "Analysis", "In-Depth", "Interviews", "Opinion", "Careers"],
 	},
 	{
 		publication: "DN",
 		path: "/dn/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/DN-cover-855x1024.png",
+		menu: ["Investor", "D2", "Smak", "Magasinet"],
 	},
 	{
 		publication: "Europower",
 		path: "/europower/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/europower-cover-855x1024.png",
+		menu: [
+			"Stillinger",
+			"Partnere",
+			"Teknologioptimistene",
+			"Produkter og tjenester",
+			"Arrangementer",
+		],
 	},
 	{
 		publication: "Fiskeribladet",
 		path: "/fiskeribladet/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/fiskerbladet-cover-855x1024.png",
+		menu: ["Meninger", "Nyhetstudio", "Avisen"],
 	},
 	{
 		publication: "TradeWinds",
 		path: "/tradewinds/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/TradeWinds-cover-855x1024.png",
+		menu: [
+			"Latest News",
+			"Tankers",
+			"Bulkers",
+			"Containerships",
+			"Gas",
+			"ESG",
+			"E-paper",
+		],
 	},
 	{
 		publication: "Upstream",
 		path: "/upstream/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/upstream-cover-855x1024.png",
+		menu: [
+			"Latest News",
+			"Exclusive",
+			"Regions",
+			"Field Development",
+			"LNG",
+			"Energy Transition",
+		],
 	},
 	{
 		publication: "IntraFish",
 		path: "/intrafish/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/intrafish-cover-855x1024.png",
+		menu: ["Kommentarer", "Arbeidsliv", "Finans", "Fiskeribladet"],
 	},
-	// {
-	//   publication: "IntraFish (eng)",
-	//   path: "/intrafish-eng/",
-	//   background:
-	//     "https://www.dngroup.com/wp-content/uploads/2023/02/intrafish-cover-.com_-855x1024.png",
-	// },
 	{
 		publication: "Hydrogen Insight",
-		path: "/hydrogen-insight/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/Hydrogeninsight-cover-855x1024.png",
+		path: "/hydrogen/",
+		menu: [
+			"Production",
+			"Transport",
+			"Industrial",
+			"Power",
+			"Innovation",
+			"Policy",
+			"Analysis",
+		],
 	},
 	{
 		publication: "Kystens Næringsliv",
 		path: "/kystens/",
-		background:
-			"https://www.dngroup.com/wp-content/uploads/2023/02/Kystens-cover-855x1024.png",
+		menu: ["Økonomi", "Energi", "Industri", "Meninger"],
 	},
 	{
 		publication: "D2",
 		path: "/d2/",
+		menu: ["Smak", "Magasinet"],
 	},
 ];
 
