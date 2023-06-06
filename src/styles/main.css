@@ -46,7 +46,7 @@
 :root {
   --background-header: var(--color-brand-utility-80);
   --background-navigation: var(--color-brand-utility-200);
-  --background-footer: var(--color-header-top-bg);
+  --background-footer: var(--color-brand-utility-900);
   --background-ads: var(--color-advertising-banner-bg);
   --background-app: var(--color-page-bg);
 

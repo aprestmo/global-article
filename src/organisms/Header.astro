@@ -48,13 +48,13 @@ const { theme } = Astro.props as Props;
   <nav class="navigation">
     <div class="navigation-inner">
       <ul class="top-tasks">
-        {
-          navData.map((item) => (
-            <li>
-              <a href={item.path}>{item.menu}</a>
-            </li>
-          ))
-        }
+        <li><a href="#">Investor</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">D2</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">Smak</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">Magasinet</a></li>
       </ul>
       <ul class="my-alerts">
         <li><a href="#">Mine sider</a></li>
