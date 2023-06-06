@@ -22,10 +22,11 @@ const { slug, img, url, title, excerpt, category, date, size } =
       <img src={img} />
     </picture>
   </figure>
-  <div class="card-info">
-    <h3 class="title">
+      <h3 class="title">
       {title}
     </h3>
+  <div class="card-info">
+
     <span class="category">{category}</span>
   </div>
 </div>
@@ -34,27 +35,24 @@ const { slug, img, url, title, excerpt, category, date, size } =
   .card {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    background: none;
     grid-column: span 4;
     overflow: hidden;
     font-family: var(--font-family-heading);
     border-radius: var(--radius);
-
-    &:first-child {
-      grid-column: span 12;
-    }
+    margin-bottom: var(--row-gap);
   }
 
   .card-info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 2rem 0rem;
+    justify-content: flex-end;
+    padding: 0.5rem 0rem 0rem 0rem;
   }
 
   .category {
-    margin-top: 2rem;
+    margin-top: 1rem;
     font-size: var(--typography-utility-m-font-size);
     font-family: var(--typography-utility-m-font-family);
   }

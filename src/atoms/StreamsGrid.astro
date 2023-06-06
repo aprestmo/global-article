@@ -5,13 +5,19 @@
 <style>
   .grid {
     display: grid;
+    grid-template-columns: repeat(12, 1fr);
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
     margin-inline: auto;
     padding-block: var(--row-gap);
     padding-inline: 0;
-    grid-template-columns: repeat(var(--_grid-cols ,12), 1fr);;
     column-gap: var(--row-gap);
-    row-gap: var(--row-gap)
+    row-gap: var(--row-gap);
+
+  }
+
+
+  .grid :global(.card:nth-child(1)){
+      grid-column: span 12;
   }
 
 </style>
