@@ -124,18 +124,24 @@
 
   h1 {
     font-size: var(--title-size);
-    font-family: var(--typography-editorial-titlepiece-max-font-family)
+    font-family: var(--typography-editorial-titlepiece-max-font-family);
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: var(--typography-editorial-subhead-min-font-size);
+    font-family: var(--typography-editorial-subhead-min-font-family);
     @media only screen and (min-width: 768px) {
-      font-size: 2rem;
+      font-size: var(--typography-editorial-subhead-max-font-size);
+      font-family: var(--typography-editorial-subhead-max-font-family);
     }
   }
   h3 {
-    font-size: 1.65rem;
-    font-weight: bold;
+    font-size: var(--typography-editorial-subhead-min-font-size);
+    font-family: var(--typography-editorial-subhead-min-font-family);
+    @media only screen and (min-width: 768px) {
+      font-size: var(--typography-editorial-subhead-max-font-size);
+      font-family: var(--typography-editorial-subhead-max-font-family);
+    }
   }
 }
 
@@ -165,11 +171,17 @@
       display: block;
     }
   }
-  .dobile-only {
+  .mobile-only {
     display: block;
     @media only screen and (min-width: 768px) {
       display: none;
     }
+  }
+
+  .factbox{
+    background: var(--color-neutral-50);
+    border-radius: var(--radius);
+    padding: var(--row-gap);
   }
 }
 

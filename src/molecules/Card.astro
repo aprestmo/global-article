@@ -17,6 +17,7 @@ const { slug, img, url, title, excerpt, category, date, size } =
 ---
 
 <div class="card">
+<div>
   <figure>
     <picture>
       <img src={img} />
@@ -25,6 +26,7 @@ const { slug, img, url, title, excerpt, category, date, size } =
       <h3 class="title">
       {title}
     </h3>
+    </div>
   <div class="card-info">
 
     <span class="category">{category}</span>
@@ -55,5 +57,10 @@ const { slug, img, url, title, excerpt, category, date, size } =
     margin-top: 1rem;
     font-size: var(--typography-utility-m-font-size);
     font-family: var(--typography-utility-m-font-family);
+  }
+
+  h3{
+    margin-top: 8px;
+    font-size: 1.4rem !important;
   }
 </style>
