@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Story from "../organisms/Story.astro";
+import StoryHeader from "../molecules/StoryHeader.astro";
+import Grid from "../atoms/Grid.astro";
+
+const theme = "hydrogen";
+
+import Article from "../content/hydrogen/hydrogen.mdx";
+
+let article = await Astro.glob("../content/hydrogen/hydrogen.mdx");
+---
+
+{
+  article.map((item) => (
+    <Layout title={`${item.frontmatter.title}|`} theme={theme} language="en">
+      <main>
+        <Story>
+          <StoryHeader
+            title={item.frontmatter.title}
+            lead={item.frontmatter.lead}
+            img={item.frontmatter.hero}
+            figcaption={item.frontmatter.caption}
+          />
+          <Grid>
+            <Article />
+          </Grid>
+        </Story>
+      </main>
+    </Layout>
+  ))
+}
