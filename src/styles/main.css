@@ -40,7 +40,8 @@
   --hero-figure: 2;
   --story-meta: 5;
   --figure-width: 1800px ;
-    --text-align: center;
+  --title-position: relative;
+  --text-align: center;
 }
 
 :root {
@@ -143,6 +144,12 @@
       font-family: var(--typography-editorial-subhead-max-font-family);
     }
   }
+
+  ::selection {
+    color: var(--color-brand-highlight-fg);
+    background-color: var(--color-brand-highlight);
+}
+
 }
 
 @layer utilities {
@@ -179,11 +186,28 @@
   }
 
   .factbox{
-    background: var(--color-neutral-50);
+    background: var(--color-brand-utility-900);
     border-radius: var(--radius);
     padding: var(--row-gap);
+    color: var(--color-typography-inverted);
+  }
+
+  .read-more{
+    background: var(--color-brand-utility-700);
+    border-radius: var(--radius);
+    padding: var(--row-gap);
+    color: var(--color-typography-inverted);
+  }
+
+  .read-more ul li{
+      margin-top: 10px;
+  }
+
+    .read-more a{
+          color: var(--color-typography-inverted);
   }
 }
 
 @layer tokens {
 }
+

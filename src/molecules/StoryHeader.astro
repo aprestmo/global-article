@@ -23,13 +23,6 @@ const { img, title, lead, figcaption } = Astro.props as Props;
 
 <style>
   header {
-    /* background: linear-gradient(
-      180deg,
-      var(--color-links-default) 0%,
-      var(--color-links-default) 42%,
-      rgba(8, 34, 137, 0) 42%,
-      rgba(0, 212, 255, 0) 100%
-    ); */
     align-items: flex-start;
     color: var(--color-text-typo, currentColor);
     display: flex;
@@ -46,6 +39,7 @@ const { img, title, lead, figcaption } = Astro.props as Props;
   /* Title */
 
   h1 {
+    position: var(--title-position);
     order: var(--hero-text);
     font-family: var(--hero-font, "SmBold23", sans-serif);
     font-weight: 700;

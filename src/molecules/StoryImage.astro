@@ -8,7 +8,7 @@ interface Props {
 const { src, alt, figcaption } = Astro.props as Props;
 ---
 
-<figure>
+<figure class="article-top-image">
   <picture>
     <img src={src} alt={alt} />
   </picture>
@@ -18,7 +18,7 @@ const { src, alt, figcaption } = Astro.props as Props;
 </figure>
 
 <style>
-  figure {
+  .article-top-image {
     order: var(--hero-figure);
     margin-inline: auto;
     inline-size: min(
@@ -26,6 +26,7 @@ const { src, alt, figcaption } = Astro.props as Props;
       100vw - calc(var(--site-padding) * 0)
     );
     text-align: var(--text-align);
+    max-width: 100%;
 
     @media only screen and (min-width: 768px) {
       inline-size: min(
@@ -42,6 +43,8 @@ const { src, alt, figcaption } = Astro.props as Props;
 
   img {
     inline-size: var(--figure-width);
+    max-inline-size: 100%;
+    block-size: auto;
   }
 
   figcaption {

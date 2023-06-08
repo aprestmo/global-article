@@ -1,5 +1,5 @@
 <div class="grid">
-  <slot/>
+  <slot />
 </div>
 
 <style>
@@ -12,12 +12,12 @@
     padding-inline: 0;
     column-gap: var(--row-gap);
     row-gap: var(--row-gap);
-
   }
 
-
-  .grid :global(.card:nth-child(1)){
+  .grid :global(.card:nth-child(1)) {
+    grid-column: span 12;
+    @media only screen and (min-width: 768px) {
       grid-column: span 8;
+    }
   }
-
 </style>
