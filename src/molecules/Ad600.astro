@@ -1,0 +1,37 @@
+<figure class="ad">
+  <span>Annonsørinnhold:</span>
+  <picture>
+    <a href="https://nor-shipping.com/" target="_blank">
+      <img src="../img/600.png" alt="600ad" />
+    </a>
+  </picture>
+</figure>
+
+<style>
+  figure {
+    background-color: var(--background-ads);
+    padding: 0 var(--row-gap) var(--row-gap) var(--row-gap);
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: var(--font-family-utility);
+  }
+
+  span {
+    display: block;
+    margin: calc(var(--row-gap) / 2) 0;
+    font-size: 0.9rem;
+  }
+
+  picture {
+    width: auto;
+    max-width: 600px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  img {
+    inline-size: min(var(--hero-img-width), 100vw);
+  }
+</style>

@@ -225,15 +225,6 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdx"] };
 };
-"fiskeribladet": {
-"fiskeribladet.mdx": {
-	id: "fiskeribladet.mdx";
-  slug: "fiskeribladet";
-  body: string;
-  collection: "fiskeribladet";
-  data: any
-} & { render(): Render[".mdx"] };
-};
 "hydrogen": {
 "hydrogen.mdx": {
 	id: "hydrogen.mdx";
@@ -249,24 +240,6 @@ declare module 'astro:content' {
   slug: "intrafish";
   body: string;
   collection: "intrafish";
-  data: any
-} & { render(): Render[".mdx"] };
-};
-"kystens": {
-"kystens.mdx": {
-	id: "kystens.mdx";
-  slug: "kystens";
-  body: string;
-  collection: "kystens";
-  data: any
-} & { render(): Render[".mdx"] };
-};
-"recharge": {
-"recharge.mdx": {
-	id: "recharge.mdx";
-  slug: "recharge";
-  body: string;
-  collection: "recharge";
   data: any
 } & { render(): Render[".mdx"] };
 };
@@ -292,7 +265,13 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		
+		"fiskeribladet": {
+};
+"kystens": {
+};
+"recharge": {
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

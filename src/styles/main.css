@@ -50,6 +50,8 @@
   --background-footer: var(--color-brand-utility-900);
   --background-ads: var(--color-advertising-banner-bg);
   --background-app: var(--color-page-bg);
+  --background-skeleton: #f3f3f3;
+  --background-skeleten-: #fafafa;
 
   --page-width: 1280px;
   --grid-width: 980px;
@@ -119,13 +121,23 @@
   p {
     font-family: var(--typography-editorial-body-min-font-family);
     font-weight: var(--typography-editorial-body-min-font-weight);
-    font-size: var(--copy-size);
-    line-height: 140%;
+    font-size: var(--typography-editorial-body-min-font-size);
+    line-height: var(--typography-editorial-body-min-line-height);
+            @media only screen and (min-width: 768px) {
+    font-family: var(--typography-editorial-body-max-font-family);
+    font-weight: var(--typography-editorial-body-max-font-weight);
+    font-size: var(--typography-editorial-body-max-font-size);
+    line-height: var(--typography-editorial-body-max-line-height);
+    }
   }
 
   h1 {
-    font-size: var(--title-size);
+    font-size: var(--typography-editorial-titlepiece-min-font-size);
+    font-family: var(--typography-editorial-titlepiece-min-font-family);
+        @media only screen and (min-width: 768px) {
+    font-size: var(--typography-editorial-titlepiece-max-font-size);
     font-family: var(--typography-editorial-titlepiece-max-font-family);
+    }
   }
 
   h2 {
@@ -187,14 +199,14 @@
 
   .factbox{
     background: var(--color-brand-utility-900);
-    border-radius: var(--radius);
+    border-radius: var(--border-radius-s);
     padding: var(--row-gap);
     color: var(--color-typography-inverted);
   }
 
   .read-more{
     background: var(--color-brand-utility-700);
-    border-radius: var(--radius);
+    border-radius: var(--border-radius-s);
     padding: var(--row-gap);
     color: var(--color-typography-inverted);
   }
