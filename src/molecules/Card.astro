@@ -10,47 +10,77 @@ interface Props {
   slug: string;
   date: string;
   size: string;
+  classes?: string;
 }
 
-const { slug, img, url, title, excerpt, category, date, size } =
+const { slug, img, url, title, excerpt, category, date, size, classes } =
   Astro.props as Props;
 ---
 
-<div class="card">
-<div>
-  <figure>
-    <picture>
-      <img src={img} />
-    </picture>
-  </figure>
-      <h3 class="title">
+<div class:list={[classes]}>
+  <div>
+    <figure>
+      <picture>
+        <img src={img} />
+      </picture>
+    </figure>
+  </div>
+  <div class="teaser-info">
+    <h3 class="title">
       {title}
     </h3>
-    </div>
-  <div class="card-info">
-
     <span class="category">{category}</span>
   </div>
 </div>
 
 <style>
-  .card {
+  .teaser {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
-    grid-column: span 4;
+    grid-column: span 12;
     overflow: hidden;
     font-family: var(--font-family-heading);
-    border-radius: var(--radius);
     margin-bottom: var(--row-gap);
-  }
 
-  .card-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0.5rem 0rem 0rem 0rem;
+    @media only screen and (min-width: 768px) {
+      grid-column: span 3;
+    }
+
+    &.row {
+      flex-direction: row;
+    }
+
+    &.standard {
+      background-color: var(--color-teaser-standard-bg);
+      color: var(--color-teaser-standard-fg);
+      border-bottom: 1px solid var(--color-teaser-standard-divider);
+    }
+
+    &.brand {
+      background-color: var(--color-teaser-brand-bg);
+      color: var(--color-teaser-brand-fg);
+      border-radius: var(--border-radius-s);
+    }
+
+    &.highlight {
+      background-color: var(--color-teaser-highlight-bg);
+      color: var(--color-teaser-highlight-fg);
+      border-radius: var(--border-radius-s);
+    }
+
+    &.inverted {
+      background-color: var(--color-teaser-inverted-bg);
+      color: var(--color-teaser-inverted-fg);
+      border-radius: var(--border-radius-s);
+    }
+
+    &.opinion {
+      background-color: var(--color-teaser-opinion-bg);
+      color: var(--color-teaser-opinion-fg);
+      border-radius: var(--border-radius-s);
+    }
   }
 
   .category {
@@ -59,7 +89,45 @@ const { slug, img, url, title, excerpt, category, date, size } =
     font-family: var(--typography-utility-m-font-family);
   }
 
-  h3{
+  .standard .category {
+    color: var(--color-teaser-standard-subtle-fg);
+  }
+
+  .brand .category {
+    color: var(--color-teaser-brand-subtle-fg);
+  }
+
+  .highlight .category {
+    color: var(--color-teaser-hightlight-subtle-fg);
+  }
+
+  .inverted .category {
+    color: var(--color-teaser-inverted-subtle-fg);
+  }
+
+  .opinion .category {
+    color: var(--color-teaser-opinion-subtle-fg);
+  }
+
+  .teaser-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0rem 0rem 1rem 0rem;
+    width: 100%;
+    height: 100%;
+    .category {
+    }
+  }
+
+  .brand .teaser-info,
+  .highlight .teaser-info,
+  .inverted .teaser-info,
+  .opinion .teaser-info {
+    padding: 0rem 0.5rem 1rem 1rem;
+  }
+
+  .teaser-info h3 {
     margin-top: 8px;
     font-size: 1.4rem !important;
   }

@@ -13,6 +13,7 @@ import Dn from "../pages/dn.astro";
 
 export interface Props {
   theme: string;
+  feature: string;
 }
 
 const { theme } = Astro.props as Props;
@@ -36,7 +37,7 @@ const { theme } = Astro.props as Props;
         <li class="desktop-only">
           <Link href="/" text="Login" classes="tag" />
         </li>
-        <li>
+        <li class="desktop-only">
           <Link
             href="#"
             text="My Page"
@@ -71,7 +72,22 @@ const { theme } = Astro.props as Props;
   </nav>
 </header>
 <style>
+  /*   body[data-layout="feature"] header,
+  body[data-layout="feature"] .header-upper {
+    background-color: transparent;
+  }
+
+  body[data-layout="feature"] .navigation {
+    display: none;
+  }
+
+  body[data-layout="feature"] header {
+    position: absolute;
+    width: 100%;
+  }
+ */
   header {
+    position: var(--header-position);
     background-color: var(--color-header-top-bg);
   }
 

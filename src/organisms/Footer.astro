@@ -13,11 +13,11 @@ const { theme } = Astro.props as Props;
 ---
 
 <footer theme={theme}>
-<div>
+  <div>
     <Link href="/" text="">
       <Icon name={theme} width="100%" />
     </Link>
-</div>
+  </div>
 </footer>
 
 <style>
@@ -28,9 +28,10 @@ const { theme } = Astro.props as Props;
     width: 100%;
     background-color: var(--background-footer);
     min-height: 10rem;
+    grid-column: full;
   }
 
-  div{
+  div {
     inline-size: min(var(--page-width), 100vw - calc(var(--site-padding) * 2));
   }
 
@@ -39,9 +40,9 @@ const { theme } = Astro.props as Props;
     padding-block: 2rem;
   }
 
-  svg{
+  svg {
     width: 100px;
-     --color-header-logo-primary: white;
+    --color-header-logo-primary: white;
     --color-header-logo-secondary: white;
   }
 

@@ -37,17 +37,19 @@ const { text, href, classes, icon } = Astro.props as Props;
     max-width: 20px;
   }
 
+  .text {
+    padding: 12px 0px;
+  }
+
   .tag {
     display: flex;
     align-items: center;
-    /* border: 1px solid currentColor; */
-    border-radius: var(--radius);
+    border-radius: var(--border-radius-s);
     font-size: var(--typography-utility-s-font-size);
     font-family: var(--typography-utility-s-font-family);
     inline-size: max-content;
     letter-spacing: 0.04em;
     line-height: 1;
-    padding-block: 9px 10px;
     padding-inline: 20px;
     transition: background-color 200ms ease-in-out;
     background-color: var(--color-brand-utility-50);
@@ -67,13 +69,12 @@ const { text, href, classes, icon } = Astro.props as Props;
     /* border: 1px solid currentColor; */
     background-color: var(--color-brand-utility-700);
     color: var(--color-brand-utility-100) !important;
-    border-radius: var(--radius);
+    border-radius: var(--border-radius-s);
     font-size: var(--typography-utility-s-font-size);
     font-family: var(--typography-utility-s-font-family);
     inline-size: max-content;
     letter-spacing: 0.04em;
     line-height: 1;
-    padding-block: 9px 10px;
     padding-inline: 20px;
     transition: background-color 200ms ease-in-out;
 

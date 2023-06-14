@@ -2,9 +2,8 @@
 import Header from "../organisms/Header.astro";
 
 import Card from "../molecules/Card.astro";
-import Accordion from "../molecules/Accordion.astro";
 import Grid from "../atoms/Grid.astro";
-import StreamsGrid from "../atoms/StreamsGrid.astro";
+import FrontGrid from "../atoms/FrontGrid.astro";
 import Footer from "../organisms/Footer.astro";
 import Ad980 from "../molecules/Ad980.astro";
 import Interaction from "../molecules/Interaction.astro";
@@ -69,31 +68,24 @@ const { title, language, publication, theme } = Astro.props as Props;
     <Header theme={theme} />
     <main>
       <slot />
-
-      <Grid>
-        <Interaction />
-        <TagGroup />
-        <TimeStamp />
-      </Grid>
-      <Ad980 />
-      <StreamsGrid>
+      <FrontGrid>
         <Card
           title="Elon Musk to buy Twitter"
           img="../img/musk.jpg"
           category="News"
-          classes="teaser opinion"
+          classes="teaser inverted row"
         />
         <Card
           title="American Hangarship visiting Oslo"
           img="../img/skip.jpg"
           category="Shipping"
-          classes="teaser brand"
+          classes="teaser standard"
         />
         <Card
           title="Economists prepares for the worst"
           img="../img/finans.jpg"
           category="Finans"
-          classes="teaser inverted"
+          classes="teaser standard"
         />
         <Card
           title="Economists prepares for the worst"
@@ -120,9 +112,9 @@ const { title, language, publication, theme } = Astro.props as Props;
           category="Energy"
           classes="teaser standard"
         />
-      </StreamsGrid>
+      </FrontGrid>
       <Ad980 />
-      <StreamsGrid>
+      <FrontGrid>
         <Card
           title="American Hangarship visiting Oslo"
           img="../img/skip.jpg"
@@ -133,7 +125,7 @@ const { title, language, publication, theme } = Astro.props as Props;
           title="The staggering grid connection backlog of US clean energy projects"
           img="../img/energy.jpg"
           category="Energy"
-          classes="teaser breaking"
+          classes="teaser highlight"
         />
         <Card
           title="Economists prepares for the worst"
@@ -165,7 +157,7 @@ const { title, language, publication, theme } = Astro.props as Props;
           category="Shipping"
           classes="teaser brand"
         />
-      </StreamsGrid>
+      </FrontGrid>
 
       <Footer theme={theme} />
     </main>
