@@ -1,0 +1,43 @@
+---
+import Link from "../atoms/Link.astro";
+
+interface Props {
+  title: string;
+  content: string;
+  isOpen: boolean;
+}
+
+const { title, content, isOpen } = Astro.props as Props;
+---
+
+<div class="accordion">
+  <h1>{title}</h1>
+  <Link href="#" text="Åpne" classes="toggle tag" icon="../img/heart.svg" />
+  <div class="content" open={isOpen}>
+    <p>{content}</p>
+  </div>
+</div>
+
+<style>
+  div {
+    background-color: var(--color-neutral-100);
+    border-radius: var(--border-radius);
+  }
+</style>
+
+<script define:vars={{ isOpen }}>
+  // Get the theme toggle input
+  const content = document.querySelector(".content");
+  const open = content.getAttribute("open");
+  const toggleButton = document.querySelector(".toggle");
+
+  function toggle() {
+    if (open === false) {
+      isOpen === true;
+    } else {
+      isOpen === false;
+    }
+  }
+
+  toggleButton.addEventListener("click", () => toggle());
+</script>
