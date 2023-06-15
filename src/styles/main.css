@@ -2,6 +2,7 @@
 
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
+@import url("fonts.css") layer(base);
 
 /*
   TODO: Move to components?
@@ -215,7 +216,7 @@
       margin-top: 10px;
   }
 
-    .read-more a{
+  .read-more a{
           color: var(--color-typography-inverted);
   }
 }

@@ -4,6 +4,7 @@ import Header from "../organisms/Header.astro";
 import Card from "../molecules/Card.astro";
 import Accordion from "../molecules/Accordion.astro";
 import Grid from "../atoms/Grid.astro";
+import SectionTitle from "../atoms/SectionTitle.astro";
 import StreamsGrid from "../atoms/StreamsGrid.astro";
 import Footer from "../organisms/Footer.astro";
 import Ad980 from "../molecules/Ad980.astro";
@@ -76,47 +77,59 @@ const { title, language, publication, theme } = Astro.props as Props;
         <TimeStamp />
       </Grid>
       <Ad980 />
+      <SectionTitle>
+        <h3>Les også:</h3>
+      </SectionTitle>
+
       <StreamsGrid>
         <Card
-          title="Elon Musk to buy Twitter"
+          title="Vellykket SpaceX-oppskyting – disse fire skal tilbringe seks måneder i bane rundt jorden"
           img="../img/musk.jpg"
-          category="News"
-          classes="teaser opinion"
+          classes="teaser inverted"
+          align="center"
         />
         <Card
-          title="American Hangarship visiting Oslo"
+          title="Hangarskipet speiler en ny sikkerhetspolitisk situasjon i nord"
           img="../img/skip.jpg"
           category="Shipping"
-          classes="teaser brand"
+          classes="teaser  opinion"
         />
         <Card
-          title="Economists prepares for the worst"
+          title="Nedgang på Oslo Børs før kveldens rentebeskjed fra USA"
+          img="../img/stocks.jpg"
+          classes="teaser"
+        />
+        <Card
+          title="Oljeindustrien satser: Store investeringer til tross for svak etterspørselsvekst"
+          img="../img/oil.jpg"
+          classes="teaser standard"
+        />
+        <Card
+          title="Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer"
+          img="../img/corporate.jpg"
+          classes="teaser standard"
+        />
+
+        <Card
+          title="Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»"
           img="../img/finans.jpg"
-          category="Finans"
-          classes="teaser inverted"
+          classes="teaser standard"
         />
+
         <Card
-          title="Economists prepares for the worst"
-          img="../img/finans.jpg"
-          category="Finans"
-          classes="teaser inverted"
-        />
-        <Card
-          title="The staggering grid connection backlog of US clean energy projects"
-          img="../img/energy.jpg"
-          category="Energy"
-          classes="teaser highlight"
+          title="Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer"
+          img="../img/corporate.jpg"
+          classes="teaser standard"
         />
 
         <Card
           title="Economists prepares for the worst"
           img="../img/finans.jpg"
-          category="Finans"
-          classes="teaser inverted"
+          classes="teaser standard"
         />
         <Card
-          title="The staggering grid connection backlog of US clean energy projects"
-          img="../img/energy.jpg"
+          title="Thomas Wilhelmsen slår tilbake: «Aggressivitet» og «grove beskyldninger»"
+          img="../img/dude.jpg"
           category="Energy"
           classes="teaser standard"
         />
@@ -124,46 +137,54 @@ const { title, language, publication, theme } = Astro.props as Props;
       <Ad980 />
       <StreamsGrid>
         <Card
-          title="American Hangarship visiting Oslo"
+          title="Vellykket SpaceX-oppskyting – disse fire skal tilbringe seks måneder i bane rundt jorden"
+          img="../img/musk.jpg"
+          classes="teaser standard"
+        />
+        <Card
+          title="Hangarskipet speiler en ny sikkerhetspolitisk situasjon i nord"
           img="../img/skip.jpg"
           category="Shipping"
           classes="teaser standard"
         />
         <Card
-          title="The staggering grid connection backlog of US clean energy projects"
-          img="../img/energy.jpg"
-          category="Energy"
-          classes="teaser breaking"
+          title="Nedgang på Oslo Børs før kveldens rentebeskjed fra USA"
+          img="../img/stocks.jpg"
+          classes="teaser opinion"
         />
+        <Card
+          title="Oljeindustrien satser: Store investeringer til tross for svak etterspørselsvekst"
+          img="../img/oil.jpg"
+          classes="teaser standard"
+        />
+        <Card
+          title="Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer"
+          img="../img/corporate.jpg"
+          classes="teaser standard"
+        />
+
+        <Card
+          title="Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»"
+          img="../img/finans.jpg"
+          classes="teaser inverted"
+        />
+
+        <Card
+          title="Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer"
+          img="../img/corporate.jpg"
+          classes="teaser standard"
+        />
+
         <Card
           title="Economists prepares for the worst"
           img="../img/finans.jpg"
-          category="Finans"
           classes="teaser standard"
         />
         <Card
-          title="American Hangarship visiting Oslo"
-          img="../img/skip.jpg"
-          category="Shipping"
-          classes="teaser brand"
-        />
-        <Card
-          title="The staggering grid connection backlog of US clean energy projects"
-          img="../img/energy.jpg"
+          title="Thomas Wilhelmsen slår tilbake: «Aggressivitet» og «grove beskyldninger»"
+          img="../img/dude.jpg"
           category="Energy"
           classes="teaser standard"
-        />
-        <Card
-          title="The staggering grid connection backlog of US clean energy projects"
-          img="../img/energy.jpg"
-          category="Energy"
-          classes="teaser standard"
-        />
-        <Card
-          title="American Hangarship visiting Oslo"
-          img="../img/skip.jpg"
-          category="Shipping"
-          classes="teaser brand"
         />
       </StreamsGrid>
 
