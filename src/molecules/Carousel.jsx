@@ -28,18 +28,18 @@ export default () => {
     >
 
 <SwiperSlide>
-  <div class="teaser">
-    <figure class="teaser-image">
+  <div className="teaser">
+    <figure className="teaser-image">
       <picture>
         <img src="../img/stocks.jpg" />
       </picture>
     </figure>
 
-    <div class="teaser-info">
-      <h3 class="title" >
+    <div className="teaser-info">
+      <h3 className="title" >
         Nedgang på Oslo Børs før kveldens rentebeskjed fra USA
       </h3>
-      <ul class="category" >
+      <ul className="category" >
         <li>Finans</li>
         <li>|</li>
         <li>Abonnent</li>
@@ -50,18 +50,18 @@ export default () => {
 
 
 <SwiperSlide>
-  <div class="teaser">
-    <figure class="teaser-image">
+  <div className="teaser">
+    <figure className="teaser-image">
       <picture>
         <img src="../img/oil.jpg" />
       </picture>
     </figure>
 
-    <div class="teaser-info">
-      <h3 class="title" >
+    <div className="teaser-info">
+      <h3 className="title" >
         Oljeindustrien satser: Store investeringer til tross for svak etterspørselsvekst
       </h3>
-      <ul class="category" >
+      <ul className="category" >
         <li>Finans</li>
         <li>|</li>
         <li>Abonnent</li>
@@ -71,18 +71,18 @@ export default () => {
 </SwiperSlide>
 
 <SwiperSlide>
-  <div class="teaser">
-    <figure class="teaser-image">
+  <div className="teaser">
+    <figure className="teaser-image">
       <picture>
         <img src="../img/dude.jpg" />
       </picture>
     </figure>
 
-    <div class="teaser-info">
-      <h3 class="title" >
+    <div className="teaser-info">
+      <h3 className="title" >
         Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer
       </h3>
-      <ul class="category" >
+      <ul className="category" >
         <li>Finans</li>
         <li>|</li>
         <li>Abonnent</li>
@@ -92,18 +92,18 @@ export default () => {
 </SwiperSlide>
 
 <SwiperSlide>
-  <div class="teaser">
-    <figure class="teaser-image">
+  <div className="teaser">
+    <figure className="teaser-image">
       <picture>
         <img src="../img/finans.jpg" />
       </picture>
     </figure>
 
-    <div class="teaser-info">
-      <h3 class="title" >
+    <div className="teaser-info">
+      <h3 className="title" >
         Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»
       </h3>
-      <ul class="category" >
+      <ul className="category" >
         <li>Finans</li>
         <li>|</li>
         <li>Abonnent</li>
@@ -113,18 +113,18 @@ export default () => {
 </SwiperSlide>
 
 <SwiperSlide>
-  <div class="teaser">
-    <figure class="teaser-image">
+  <div className="teaser">
+    <figure className="teaser-image">
       <picture>
         <img src="../img/corporate.jpg" />
       </picture>
     </figure>
 
-    <div class="teaser-info">
-      <h3 class="title" >
+    <div className="teaser-info">
+      <h3 className="title" >
         Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»
       </h3>
-      <ul class="category" >
+      <ul className="category" >
         <li>Finans</li>
         <li>|</li>
         <li>Abonnent</li>
