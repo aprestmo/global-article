@@ -4,17 +4,21 @@ import Link from "../atoms/Link.astro";
 
 <div class="byline">
   <ul>
-    <figure>
-      <picture>
-        <img src="../img/erikstad.png" alt="Byline-img" />
-      </picture>
-    </figure>
+    <li>
+      <figure>
+        <picture>
+          <img src="../img/erikstad.png" alt="Byline-img" />
+        </picture>
+      </figure>
+    </li>
 
     <li class="author">
       <p><a href="mailto:harald.berglihn@dn.no">Terje Erikstad</a></p>
       <span>Journalist | Oslo</span>
     </li>
-    <!-- <li><Link href="/" text="Follow" classes="tag" /></li> -->
+    <li>
+      <Link href="#" text="Følg meg" classes="tag" />
+    </li>
   </ul>
 </div>
 
@@ -38,6 +42,7 @@ import Link from "../atoms/Link.astro";
 
   li {
     list-style: none;
+    display: flex;
   }
 
   .author {
