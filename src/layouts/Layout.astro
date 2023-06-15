@@ -2,7 +2,7 @@
 import Header from "../organisms/Header.astro";
 
 import Card from "../molecules/Card.astro";
-import Accordion from "../molecules/Accordion.astro";
+import Carousel from "../molecules/Carousel.jsx";
 import Grid from "../atoms/Grid.astro";
 import SectionTitle from "../atoms/SectionTitle.astro";
 import StreamsGrid from "../atoms/StreamsGrid.astro";
@@ -77,9 +77,10 @@ const { title, language, publication, theme } = Astro.props as Props;
         <TimeStamp />
       </Grid>
       <Ad980 />
-      <SectionTitle>
-        <h3>Les også:</h3>
-      </SectionTitle>
+      <SectionTitle title="Fikk du med deg disse?" />
+
+      <Carousel client:load="react" />
+      <SectionTitle title="Les også" />
 
       <StreamsGrid>
         <Card
@@ -134,7 +135,9 @@ const { title, language, publication, theme } = Astro.props as Props;
           classes="teaser standard"
         />
       </StreamsGrid>
+
       <Ad980 />
+
       <StreamsGrid>
         <Card
           title="Vellykket SpaceX-oppskyting – disse fire skal tilbringe seks måneder i bane rundt jorden"

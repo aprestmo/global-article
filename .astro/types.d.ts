@@ -198,12 +198,84 @@ declare module 'astro:content' {
 	>;
 
 	type ContentEntryMap = {
-		"intrafish": {
+		"d2": {
+"d2.mdx": {
+	id: "d2.mdx";
+  slug: "d2";
+  body: string;
+  collection: "d2";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"dn": {
+"dn.mdx": {
+	id: "dn.mdx";
+  slug: "dn";
+  body: string;
+  collection: "dn";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"europower": {
+"europower.mdx": {
+	id: "europower.mdx";
+  slug: "europower";
+  body: string;
+  collection: "europower";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"fiskeribladet": {
+"fiskeribladet.mdx": {
+	id: "fiskeribladet.mdx";
+  slug: "fiskeribladet";
+  body: string;
+  collection: "fiskeribladet";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"hydrogen": {
+"hydrogen.mdx": {
+	id: "hydrogen.mdx";
+  slug: "hydrogen";
+  body: string;
+  collection: "hydrogen";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"intrafish": {
 "intrafish.mdx": {
 	id: "intrafish.mdx";
   slug: "intrafish";
   body: string;
   collection: "intrafish";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"kystens": {
+"kystens.mdx": {
+	id: "kystens.mdx";
+  slug: "kystens";
+  body: string;
+  collection: "kystens";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"recharge": {
+"recharge.mdx": {
+	id: "recharge.mdx";
+  slug: "recharge";
+  body: string;
+  collection: "recharge";
+  data: any
+} & { render(): Render[".mdx"] };
+};
+"tradewinds": {
+"tradewinds.mdx": {
+	id: "tradewinds.mdx";
+  slug: "tradewinds";
+  body: string;
+  collection: "tradewinds";
   data: any
 } & { render(): Render[".mdx"] };
 };
@@ -220,23 +292,7 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		"d2": {
-};
-"dn": {
-};
-"europower": {
-};
-"fiskeribladet": {
-};
-"hydrogen": {
-};
-"kystens": {
-};
-"recharge": {
-};
-"tradewinds": {
-};
-
+		
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
