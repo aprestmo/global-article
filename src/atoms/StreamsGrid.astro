@@ -14,28 +14,29 @@
     row-gap: var(--row-gap);
   }
 
-  .grid :global(.teaser:nth-child(1)) {
+  .grid :global(.teaser:nth-child(1)),
+  .grid :global(.teaser:nth-child(2)) {
     grid-column: span 12;
     @media only screen and (min-width: 768px) {
       grid-column: span 6;
     }
   }
 
-    .grid :global(.teaser:nth-child(8)) {
+  .grid :global(.teaser:nth-child(7)) {
     grid-column: span 12;
     @media only screen and (min-width: 768px) {
       grid-column: span 4;
     }
   }
 
-    .grid :global(.teaser:nth-child(9)) {
+  .grid :global(.teaser:nth-child(8)) {
     grid-column: span 12;
     @media only screen and (min-width: 768px) {
       grid-column: span 4;
     }
   }
 
-    .grid :global(.teaser:nth-child(10)) {
+  .grid :global(.teaser:nth-child(9)) {
     grid-column: span 12;
     @media only screen and (min-width: 768px) {
       grid-column: span 4;

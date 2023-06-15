@@ -11,48 +11,53 @@ interface Props {
   date: string;
   size: string;
   classes?: string;
+  textalign: string;
 }
 
-const { slug, img, paid, url, title, excerpt, category = "Finans", date, size, classes } =
-  Astro.props as Props;
+const {
+  slug,
+  img,
+  paid,
+  url,
+  title,
+  excerpt,
+  category = "Finans",
+  date,
+  size,
+  align = "left",
+  classes,
+} = Astro.props as Props;
 ---
 
 <div class:list={[classes]}>
-
-    <figure class="teaser-image">
-      <picture>
-        <img src={img} />
-      </picture>
-    </figure>
+  <figure class="teaser-image">
+    <picture>
+      <img src={img} />
+    </picture>
+  </figure>
 
   <div class="teaser-info">
-    <h3 class="title">
+    <h3 class="title" style={`text-align: ${align}`}>
       {title}
     </h3>
-    <ul class="category">
-
-    <li>{category}</li>
-    <li>|</li>
-
-    <li>Abonnent</li>
+    <ul class="category" style={`justify-content: ${align}`}>
+      <li>{category}</li>
+      <li>|</li>
+      <li>Abonnent</li>
     </ul>
   </div>
 </div>
 
 <style>
+  .teaser-info .title {
+    font-size: clamp(1.3rem, 6cqw, 4rem) !important;
+  }
 
-    .teaser-info .title{
-      font-size: clamp(1.3rem, 6cqw, 4rem) !important
-    }
-
-
-/*      @container teaser (min-width: 500px) {
+  /*      @container teaser (min-width: 500px) {
       .teaser-info .title{
           font-size: clamp(1.3rem, 12cqw, 3rem) !important
     }
     }*/
-
-
 
   .teaser {
     display: flex;
@@ -107,7 +112,7 @@ const { slug, img, paid, url, title, excerpt, category = "Finans", date, size, c
 
   .category {
     display: flex;
-    column-gap: .5rem;
+    column-gap: 0.5rem;
     margin-top: 1rem;
     font-size: var(--typography-utility-s-font-size);
     font-family: var(--typography-utility-s-font-family);
@@ -146,9 +151,8 @@ const { slug, img, paid, url, title, excerpt, category = "Finans", date, size, c
   .highlight .teaser-info,
   .inverted .teaser-info,
   .opinion .teaser-info {
-    padding: 0rem 0.5rem 1rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
   }
-
 
   .teaser-info h3 {
     margin-top: 8px;
