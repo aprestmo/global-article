@@ -112,6 +112,27 @@ export default () => {
   </div>
 </SwiperSlide>
 
+<SwiperSlide>
+  <div class="teaser">
+    <figure class="teaser-image">
+      <picture>
+        <img src="../img/corporate.jpg" />
+      </picture>
+    </figure>
+
+    <div class="teaser-info">
+      <h3 class="title" >
+        Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»
+      </h3>
+      <ul class="category" >
+        <li>Finans</li>
+        <li>|</li>
+        <li>Abonnent</li>
+      </ul>
+    </div>
+  </div>
+</SwiperSlide>
+
 
     </Swiper>
     </>
