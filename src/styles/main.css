@@ -243,6 +243,7 @@
             margin: 8px 0px 0px 15px;
             width: 30px;
             height: 30px;
+            overflow: hidden;
             color:  var(--color-link-default);
           }
 
