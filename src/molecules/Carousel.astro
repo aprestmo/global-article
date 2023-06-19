@@ -1,0 +1,85 @@
+---
+import Card from "../molecules/Card.astro";
+interface Props {
+
+}
+
+const {
+
+} = Astro.props as Props;
+
+
+
+---
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+        <slot>
+    </div>
+  </div>
+</div>
+
+<style>
+  .swiper{
+        max-width: var(--page-width);
+        display: grid;
+  }
+
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 30%;
+            background-color: var(--color-neutral-100);
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+          }
+          .swiper-pagination-bullet{
+            background-color: var(--color-link-default);
+          }
+          .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 20px;
+            margin: 8px 0px 0px 15px;
+            width: 30px;
+            height: 30px;
+            overflow: hidden;
+            color:  var(--color-link-default);
+          }
+
+</style>
+
+<script>
+
+import Swiper, { Keyboard, Mousewheel, Pagination, Navigation, SwiperSlide } from 'swiper'
+import 'swiper/css'
+
+  const swiper = new Swiper('.swiper', {
+    modules: [Keyboard, Mousewheel, Navigation, Pagination],
+    slidesPerView: 4,
+    spaceBetween: 24,
+    grabCursor: true,
+    loop: false,
+    direction: 'horizontal',
+      controller: {
+    inverse: true,
+  },
+    pagination: {
+      enabled: true,
+      clickable: true,
+    },
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+      enabled: true,
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    a11y: {
+      prevSlideMessage: 'Forrige bilde',
+      nextSlideMessage: 'Neste bilde',
+    },
+  })
+</script>
+
+

@@ -2,7 +2,7 @@
 import Header from "../organisms/Header.astro";
 
 import Card from "../molecules/Card.astro";
-import Carousel from "../molecules/Carousel.jsx";
+import Carousel from "../molecules/Carousel.astro";
 import Grid from "../atoms/Grid.astro";
 import SectionTitle from "../atoms/SectionTitle.astro";
 import StreamsGrid from "../atoms/StreamsGrid.astro";
@@ -79,7 +79,30 @@ const { title, language, publication, theme } = Astro.props as Props;
       <Ad980 />
       <SectionTitle title="Fikk du med deg disse?" />
 
-      <Carousel client:load="react" />
+      <Carousel>
+        <Card
+          title="Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer"
+          img="../img/corporate.jpg"
+          classes="teaser highlight swiper-slide"
+        />
+
+        <Card
+          title="Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»"
+          img="../img/finans.jpg"
+          classes="teaser inverted swiper-slide"
+        />
+        <Card
+          title="Economists prepares for the worst"
+          img="../img/finans.jpg"
+          classes="teaser standard swiper-slide"
+        />
+        <Card
+          title="Thomas Wilhelmsen slår tilbake: «Aggressivitet» og «grove beskyldninger»"
+          img="../img/dude.jpg"
+          category="Energy"
+          classes="teaser standard swiper-slide"
+        />
+        </Carousel>
       <SectionTitle title="Les også" />
 
       <StreamsGrid>
@@ -94,11 +117,13 @@ const { title, language, publication, theme } = Astro.props as Props;
           img="../img/skip.jpg"
           category="Shipping"
           classes="teaser opinion"
+
         />
         <Card
           title="Nedgang på Oslo Børs før kveldens rentebeskjed fra USA"
           img="../img/stocks.jpg"
           classes="teaser standard"
+
         />
         <Card
           title="Oljeindustrien satser: Store investeringer til tross for svak etterspørselsvekst"
