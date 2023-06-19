@@ -3,7 +3,6 @@
 /* This is just a reset for testing purposes */
 @import url("../../node_modules/the-new-css-reset/css/reset.css") layer(reset);
 @import url("fonts.css") layer(base);
-@import url("swiper.css") layer(base);
 
 /*
   TODO: Move to components?
@@ -102,7 +101,8 @@
         padding-top: var(--header-height);
     }
 
-  a {
+     a:not(.teaser){
+
     color: var(--color-link-default);
     text-decoration: var(--text-decoration-style, underline);
 

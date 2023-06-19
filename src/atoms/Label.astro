@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  icon?: string;
+
+}
+
+const { title, icon } = Astro.props as Props;
+
+const icon = {icon}
+---
+
+<div>
+  {icon && <img class="icon" src={icon} />}
+  <span class="text">{title}</span><slot />
+  <slot />
+</div>
+
+<style define:vars={{ icon }}>
+
+--icon: {icon}
+  div {
+
+    display: flex;
+    padding: .4rem;
+    background: tomato;
+    margin: var(--row-gap);
+    padding: 0.5rem 0;
+    margin-inline: auto;
+    &:after{
+      position: absolute;
+      content: "hei";
+      background: var(--icon)
+    }
+  }
+</style>

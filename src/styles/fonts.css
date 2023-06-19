@@ -11,25 +11,25 @@
   src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/SharpGroteskBook-21.woff2") format("woff2"); }
 
 @font-face {
-  font-family: "Sharp Grotesk Medium";
+  font-family: "Sharp Grotesk Medium disabled";
   font-style: normal;
   font-display: swap;
   src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/SharpGroteskMedium-21.woff2") format("woff2"); }
 
 @font-face {
-  font-family: "Sharp Grotesk Medium Test";
+  font-family: "Sharp Grotesk Medium";
   font-style: normal;
   font-display: swap;
   src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/SharpGroteskMedium-22.woff2") format("woff2"); }
 
 @font-face {
-  font-family: "Sharp Grotesk Medium Test";
+  font-family: "Sharp Grotesk Medium disabled";
   font-style: normal;
   font-display: swap;
   src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/SharpGroteskMedium-23.woff2") format("woff2"); }
 
 @font-face {
-  font-family: "SmBold23Sharp Grotesk Bold";
+  font-family: "Sharp Grotesk SmBold";
   font-style: normal;
   font-display: swap;
   src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/SharpGroteskSmBold-23.woff2") format("woff2"); }
@@ -48,7 +48,7 @@
    src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/IvarHeadline-Medium.woff2") format("woff2"); }
 
 @font-face {
-  font-family: "Ivar Text Regular";
+  font-family: "Ivar Headline";
   font-style: normal;
   font-display: swap;
    src: url("https://static1.dn.no/dn/static/assets/webfonts/nhstfonts/IvarHeadline-Regular.woff2") format("woff2"); }

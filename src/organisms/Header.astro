@@ -34,17 +34,14 @@ const { theme } = Astro.props as Props;
         <li class="desktop-only">
           <Link href="/" text="Abonner" classes="button" />
         </li>
-        <li class="desktop-only">
-          <Link href="/" text="Login" classes="tag" />
-        </li>
-        <li class="desktop-only">
+<!--         <li class="desktop-only">
           <Link
             href="#"
-            text="My Page"
+            text="Min side"
             classes="tag"
             icon="../img/profile.svg"
           />
-        </li>
+        </li> -->
 
         <li>
           <button>
@@ -65,27 +62,11 @@ const { theme } = Astro.props as Props;
         <li class="divider">|</li>
         <li><a href="#">Magasinet</a></li>
       </ul>
-      <ul class="my-alerts">
-        <li><a href="#">Mine sider</a></li>
-      </ul>
     </div>
   </nav>
 </header>
 <style>
-  /*   body[data-layout="feature"] header,
-  body[data-layout="feature"] .header-upper {
-    background-color: transparent;
-  }
 
-  body[data-layout="feature"] .navigation {
-    display: none;
-  }
-
-  body[data-layout="feature"] header {
-    position: absolute;
-    width: 100%;
-  }
- */
   header {
     position: var(--header-position);
     background-color: var(--color-header-top-bg);
@@ -138,11 +119,15 @@ const { theme } = Astro.props as Props;
   .navigation {
     overflow-x: scroll;
     background-color: var(--color-header-navigation-bg);
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-color: var(--color-header-navigation-divider);
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
       margin-inline: auto;
     }
   }
+
 
   .navigation-inner {
     display: flex;
@@ -153,9 +138,7 @@ const { theme } = Astro.props as Props;
       100vw - calc(var(--site-padding, 1rem) * 2)
     );
     margin: 0 auto;
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-    border-color: var(--color-header-navigation-divider);
+
 
     @media only screen and (min-width: 1280px) {
       padding-inline-start: 0;
@@ -184,6 +167,10 @@ const { theme } = Astro.props as Props;
     }
   }
 
+  .top-tasks li.divider{
+    color: var(--color-header-navigation-divider) !important;
+  }
+
   .my-alerts {
     display: flex;
     justify-content: flex-end;
@@ -197,14 +184,9 @@ const { theme } = Astro.props as Props;
     }
   }
 
-  a.logo {
-    block-size: var(--logo-height);
-    max-width: 300px;
-  }
-
   svg {
-    block-size: var(--logo-height);
-    max-width: 200px;
+    block-size: 40px;
+    max-height: var(--sizing-header-height-max);
     transition: width 0.3s ease;
   }
 
