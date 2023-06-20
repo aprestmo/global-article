@@ -11,6 +11,7 @@ import Ad980 from "../molecules/Ad980.astro";
 import Interaction from "../molecules/Interaction.astro";
 import TagGroup from "../molecules/TagGroup.astro";
 import TimeStamp from "../molecules/TimeStamp.astro";
+import Link from "../atoms/Link.astro";
 
 import "../styles/main.css";
 
@@ -77,19 +78,21 @@ const { title, language, publication, theme } = Astro.props as Props;
         <TimeStamp />
       </Grid>
       <Ad980 />
-      <SectionTitle title="Mer om finans" />
+      <SectionTitle title="Relatert" >
+      <Link href="/" text="Se mer" classes="tag" icon="../img/keyboard_arrow_right.svg" />
+</SectionTitle>
 
       <Carousel>
         <Card
           title="Svak økonomisk utvikling i Kina: Sentralbanken kutter renten – millionærflukt akselererer"
           img="../img/corporate.jpg"
-          classes="teaser highlight swiper-slide"
+          classes="teaser standard swiper-slide"
         />
 
         <Card
           title="Derfor boikotter de Schjødt: «Ikke forenlig med Blystad-gruppens verdier»"
           img="../img/finans.jpg"
-          classes="teaser inverted swiper-slide"
+          classes="teaser standard swiper-slide"
         />
         <Card
           title="Economists prepares for the worst"
