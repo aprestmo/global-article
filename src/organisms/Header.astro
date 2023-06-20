@@ -81,12 +81,8 @@ const { theme } = Astro.props as Props;
   .header-upper {
     position: relative;
     align-items: center;
-    block-size: var(--header-height);
+    block-size:  var(--sizing-header-height-max);
     display: flex;
-    inline-size: min(
-      var(--page-width, 1280px),
-      100vw - calc(var(--site-padding, 1rem) * 2)
-    );
     justify-content: space-between;
     margin-inline: auto;
     background-color: var(--color-header-top-bg);
@@ -95,10 +91,7 @@ const { theme } = Astro.props as Props;
 
   .header-upper-inner {
     display: flex;
-    inline-size: min(
-      var(--page-width, 1280px),
-      100vw - calc(var(--site-padding, 1rem) * 2)
-    );
+
     justify-content: space-between;
     margin-inline: auto;
     inline-size: min(
@@ -138,7 +131,6 @@ const { theme } = Astro.props as Props;
       100vw - calc(var(--site-padding, 1rem) * 2)
     );
     margin: 0 auto;
-
 
     @media only screen and (min-width: 1280px) {
       padding-inline-start: 0;
@@ -185,8 +177,7 @@ const { theme } = Astro.props as Props;
   }
 
   svg {
-    block-size: 40px;
-    max-height: var(--sizing-header-height-max);
+    block-size: 30px;
     transition: width 0.3s ease;
   }
 
