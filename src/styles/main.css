@@ -136,7 +136,7 @@
   h1 {
     font-size: var(--typography-editorial-titlepiece-min-font-size);
     font-family: var(--typography-editorial-titlepiece-min-font-family);
-    font-weight: var(--typography-editorial-titlepiece-max-font-weight);
+    font-weight: var(--typography-editorial-titlepiece-min-font-weight);
         @media only screen and (min-width: 768px) {
     font-size: var(--typography-editorial-titlepiece-max-font-size);
     font-family: var(--typography-editorial-titlepiece-max-font-family);
