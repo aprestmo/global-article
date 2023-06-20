@@ -1,0 +1,216 @@
+---
+// library imports
+import { Icon } from "astro-icon";
+
+// component imports
+import Link from "../atoms/Link.astro";
+import Ad980 from "../molecules/Ad980.astro";
+import TemplateDropdown from "../molecules/TemplateDropdown.astro";
+import Darkmode from "../molecules/Darkmode.astro";
+
+import navData from "../data/navData";
+import Dn from "../pages/dn.astro";
+
+export interface Props {
+  theme: string;
+  feature: string;
+}
+
+const { theme } = Astro.props as Props;
+---
+
+<TemplateDropdown />
+<Ad980 />
+
+<header class="header">
+  <div class="header-upper">
+    <div class="header-upper-inner">
+      <Link href="/" text="" classes="logo">
+        <Icon name={theme} />
+      </Link>
+      <ul class="header-right">
+        <!--     <li class="desktop-only"><span>4 uker for 380,-</span></li> -->
+        <li><Darkmode publication={theme} /></li>
+        <li class="desktop-only">
+          <Link href="/" text="Abonner" classes="button" />
+        </li>
+<!--         <li class="desktop-only">
+          <Link
+            href="#"
+            text="Min side"
+            classes="tag"
+            icon="../img/profile.svg"
+          />
+        </li> -->
+
+        <li>
+          <button>
+            <Icon name="burger" width="36" />
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <nav class="navigation">
+    <div class="navigation-inner">
+      <ul class="top-tasks">
+        <li><a href="#">Investor</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">D2</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">Smak</a></li>
+        <li class="divider">|</li>
+        <li><a href="#">Magasinet</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<style>
+
+  header {
+    position: var(--header-position);
+    background-color: var(--color-header-top-bg);
+  }
+
+  a {
+    font-size: 1.1rem;
+    text-underline-offset: 0.4rem;
+    color: var(--color-header-navigation-fg) !important;
+  }
+
+  .header-upper {
+    position: relative;
+    align-items: center;
+    block-size:  var(--sizing-header-height-max);
+    display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    background-color: var(--color-header-top-bg);
+    transition: border 0.3s ease;
+  }
+
+  .header-upper-inner {
+    display: flex;
+
+    justify-content: space-between;
+    margin-inline: auto;
+    inline-size: min(
+      var(--page-width, 1280px),
+      100vw - calc(var(--site-padding, 1rem) * 2)
+    );
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-right li {
+    margin-left: var(--row-gap);
+  }
+
+  .navigation {
+    overflow-x: scroll;
+    background-color: var(--color-header-navigation-bg);
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    border-color: var(--color-header-navigation-divider);
+    @media only screen and (min-width: 768px) {
+      overflow-x: hidden;
+      margin-inline: auto;
+    }
+  }
+
+
+  .navigation-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    inline-size: min(
+      var(--page-width),
+      100vw - calc(var(--site-padding, 1rem) * 2)
+    );
+    margin: 0 auto;
+
+    @media only screen and (min-width: 1280px) {
+      padding-inline-start: 0;
+      max-width: var(--page-width);
+    }
+  }
+
+  .top-tasks {
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @media only screen and (min-width: 1280px) {
+      padding-inline-start: 0;
+      max-width: var(--grid-width);
+    }
+  }
+
+  .top-tasks li {
+    margin-right: var(--row-gap);
+    font-size: var(--typography-utility-s-font-size);
+    font-family: var(--typography-utility-s-font-family);
+    @media only screen and (min-width: 768px) {
+      overflow-x: hidden;
+      font-size: var(--typography-utility-m-font-size);
+    }
+  }
+
+  .top-tasks li.divider{
+    color: var(--color-header-navigation-divider) !important;
+  }
+
+  .my-alerts {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
+    column-gap: 0.5rem;
+    margin-right: 1rem;
+    font-size: var(--typography-utility-s-font-size);
+    font-family: var(--typography-utility-s-font-family);
+    @media only screen and (min-width: 1280px) {
+      margin-right: 0rem;
+    }
+  }
+
+  svg {
+    block-size: 30px;
+    transition: width 0.3s ease;
+  }
+
+  .on-scroll {
+    position: fixed;
+    width: 100%;
+    /*  background-color: var(--color-header-top-bg); */
+    border-bottom: 1px solid var(--color-neutral-100);
+    top: 0;
+    z-index: 99;
+    --logo-height: 1.8rem;
+
+    .navigation {
+      display: none;
+    }
+  }
+</style>
+
+<script define:vars={{ navData, theme }}>
+  var select = document.querySelector(".select");
+  var ad = document.querySelector(".ad");
+  var mainHeader = document.querySelector(".header-upper");
+  var body = document.querySelector("body");
+
+  var offsetHeight = select.offsetHeight + ad.offsetHeight;
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= offsetHeight) {
+      mainHeader.classList.add("on-scroll");
+      body.classList.add("on-scroll");
+    } else if (window.scrollY <= offsetHeight) {
+      mainHeader.classList.remove("on-scroll");
+      body.classList.remove("on-scroll");
+    }
+  });
+</script>
