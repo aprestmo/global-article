@@ -15,6 +15,21 @@
   --story-meta: 4;
   --figure-width: var(--grid-width);
   --text-align: left;
+  --spacing-top: calc(var(--row-gap) * 2);
+  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+}
+
+[data-layout="breaking"] {
+  --hero-text: 1;
+  --lead-text: 2;
+  --hero-figure: 3;
+  --story-meta: 4;
+  --figure-width: var(--grid-width);
+  --text-align: left;
+  --spacing-top: calc(var(--row-gap) * 2);
+  --article-top-bg: var(--color-teaser-inverted-bg);
+  --titlepiece-color: var(--color-teaser-highlight-bg);
+  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
 }
 
 [data-layout="image-first"] {
@@ -24,6 +39,8 @@
   --story-meta: 4;
   --figure-width: var(--grid-width);
   --text-align: left;
+  --spacing-top: var(--row-gap);
+  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
 }
 
 [data-layout="wide"] {
@@ -33,6 +50,25 @@
   --story-meta: 5;
   --figure-width: 1280px;
   --text-align: left;
+  --spacing-top: var(--row-gap);
+  --background-article-top: var(--color-teaser-inverted-bg);
+  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+}
+
+[data-layout="opinion"] {
+  --hero-text: 1;
+  --lead-text: 2;
+  --hero-figure: 4;
+  --story-meta: 3;
+  --figure-width: var(--grid-width);
+  --text-align: left;
+  --spacing-top: calc(var(--row-gap) * 2);
+  --article-top-bg: var(--color-teaser-opinion-bg);
+  --article-top-font-family: var(--typography-editorial-titlepiece-stylized-min-font-family);
+}
+
+[data-theme="dark"] [data-layout="opinion"] {
+   --article-top-bg: var(--color-brand-utility-900);
 }
 
 [data-layout="feature"] {
@@ -40,9 +76,13 @@
   --lead-text: 3;
   --hero-figure: 2;
   --story-meta: 5;
-  --figure-width: 1800px ;
+  --figure-width: 1600px ;
   --title-position: relative;
   --text-align: center;
+  --spacing-top: var(--row-gap);
+  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family)
+
+
 }
 
 :root {
@@ -52,11 +92,14 @@
   --background-ads: var(--color-advertising-banner-bg);
   --background-app: var(--color-page-bg);
   --background-skeleton: #f3f3f3;
-  --background-skeleten-: #fafafa;
+  --background-skeleton-: #fafafa;
+  --background-article-top: var(--color-page-bg);
 
   --page-width: 1280px;
   --grid-width: 980px;
   --body-width: 680px;
+
+
 
   --font-family-utility: var(--typography-utility-test-font-family);
   --font-family-heading: var(--typography-editorial-titlepiece-min-font-family);
@@ -133,15 +176,7 @@
     }
   }
 
-  h1 {
-    font-size: var(--typography-editorial-titlepiece-min-font-size);
-    font-family: var(--typography-editorial-titlepiece-min-font-family);
-    font-weight: var(--typography-editorial-titlepiece-min-font-weight);
-        @media only screen and (min-width: 768px) {
-    font-size: var(--typography-editorial-titlepiece-max-font-size);
-    font-family: var(--typography-editorial-titlepiece-max-font-family);
-    }
-  }
+
 
   h2 {
     font-size: var(--typography-editorial-subhead-min-font-size);
