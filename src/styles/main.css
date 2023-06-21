@@ -29,6 +29,7 @@
   --spacing-top: calc(var(--row-gap) * 2);
   --article-top-bg: var(--color-teaser-inverted-bg);
   --titlepiece-color: var(--color-teaser-highlight-bg);
+  --lead-color: var(--color-teaser-inverted-fg);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
 }
 

@@ -51,6 +51,7 @@ const { img, title, lead, figcaption } = Astro.props as Props;
   h1 {
     position: var(--title-position);
     order: var(--hero-text);
+
     margin-top: var(--spacing-top);
     line-height: 1.3;
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
@@ -75,7 +76,7 @@ const { img, title, lead, figcaption } = Astro.props as Props;
     line-height: var(--typography-editorial-lead-min-line-height);
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
     text-align: var(--text-align);
-
+    color: var(--lead-color);
     @media only screen and (min-width: 768px) {
       font-size: var(--typography-editorial-lead-max-font-size) !important;
 
