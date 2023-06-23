@@ -1,13 +1,16 @@
 ---
 import Link from "../atoms/Link.astro";
+import Heart from "../icons/heart.svg"
+import Gift from "../icons/gift.svg"
+import Copy from "../icons/content_copy.svg"
 ---
 
 <div class="interaction">
-  <Link href="#" text="Kopier Lenke" classes="pill" icon="../img/content_copy.svg" />
+  <Link href="#" text="Kopier Lenke" classes="pill" icon={Copy} />
 
-  <Link href="#" text="Lagre" classes="pill" icon="../img/heart.svg" />
+  <Link href="#" text="Lagre" classes="pill" icon={Heart} />
 
-  <Link href="#" text="Gi bort" classes="pill" icon="../img/gift.svg" />
+  <Link href="#" text="Gi bort" classes="pill" icon={Gift} />
 
   <style>
     .interaction {
