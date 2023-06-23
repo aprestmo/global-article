@@ -6,25 +6,19 @@ import Interaction from "../molecules/Interaction.astro";
 
 <div class="flex-row">
   <Byline />
-<!--   <ul role="list" class="info">
+  <ul role="list" class="info">
     <li class="mobile-only">
       Publisert 17. juni 2023, i <a href="#">Finans</a>
     </li>
   </ul>
-  <div> -->
+  <div>
     <ul role="list" class="info">
-      <li>
+      <li class="desktop-only">
         Publisert 17. juni 2023, i <a href="#">Finans</a>
       </li>
 <!--       <li>
         <Link href="#" text="Lagre" classes="tag" icon="../img/heart.svg" />
       </li> -->
-      <li>
-        <Link href="#" text="Gi bort" classes="pill"/>
-      </li>
-      <li>
-        <Link href="#" text="Les i app" classes="pill"/>
-      </li>
     </ul>
   </div>
 
@@ -37,11 +31,15 @@ import Interaction from "../molecules/Interaction.astro";
       align-items: flex-start;
       order: var(--story-meta);
       justify-content: space-between;
-      row-gap: 24px;
+      row-gap: var(--row-gap);
       inline-size: min(
         var(--grid-width),
         100vw - calc(var(--site-padding) * 2)
       );
+
+      border-bottom: 1px solid;
+      border-color: var(--color-page-divider);
+      padding-bottom: var(--row-gap);
 
       @media only screen and (min-width: 768px) {
         flex-direction: row;

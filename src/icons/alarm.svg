@@ -1,2 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="icon" height="12" width="12" viewBox="0 0 12 12"><title>alarm</title><g stroke-width="1" fill="currentColor" stroke="currentColor" class="nc-icon-wrapper"><path d="M4.592,10.5a1.491,1.491,0,0,0,2.816,0" fill="none" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></path> <line x1="0.5" y1="8.5" x2="11.5" y2="8.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></line> <path d="M11.5,8.5a2.151,2.151,0,0,1-2-2V4A3.5,3.5,0,0,0,6,.5H6A3.5,3.5,0,0,0,2.5,4V6.5a2.151,2.151,0,0,1-2,2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-
+<svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.0918 11C5.19362 11.2923 5.38387 11.5456 5.63617 11.7249C5.88846 11.9042 6.1903 12.0005 6.4998 12.0005C6.8093 12.0005 7.11113 11.9042 7.36342 11.7249C7.61572 11.5456 7.80597 11.2923 7.9078 11" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1 9H12" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 9C11.4812 8.9647 10.9927 8.74265 10.6251 8.37495C10.2574 8.00725 10.0353 7.5188 10 7V4.5C10 3.57174 9.63125 2.6815 8.97487 2.02513C8.3185 1.36875 7.42826 1 6.5 1C5.57174 1 4.6815 1.36875 4.02513 2.02513C3.36875 2.6815 3 3.57174 3 4.5V7C2.9647 7.5188 2.74265 8.00725 2.37495 8.37495C2.00725 8.74265 1.5188 8.9647 1 9" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

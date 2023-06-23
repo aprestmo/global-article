@@ -44,20 +44,10 @@ const { text, href, classes, icon } = Astro.props as Props;
     padding: 12px 0px;
   }
 
-  .text{
-        color: var(--color-typography-default);
-  }
 
-   .icon path {
-  stroke: var(--text-color);
-}
 
-svg path {
-  fill: currentColor;
-}
-svg path:not(stroke="none") {
-  stroke: currentColor;
-}
+
+
 
 
  .round{
@@ -151,7 +141,7 @@ svg path:not(stroke="none") {
     white-space: nowrap;
     /* border: 1px solid currentColor; */
     background-color: var(--color-brand-utility-700);
-    color: var(--color-brand-utility-100) !important;
+    color: var(--color-brand-utility-0) !important;
     border-radius: var(--border-radius-s);
     font-size: var(--typography-utility-s-font-size);
     font-family: var(--typography-utility-s-font-family);
@@ -167,8 +157,5 @@ svg path:not(stroke="none") {
     }
   }
 
-  .button.icon a svg {
-    stroke: yellow !important;
-    fill: ;
-  }
+
 </style>
