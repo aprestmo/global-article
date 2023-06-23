@@ -81,17 +81,22 @@ const { theme } = Astro.props as Props;
   .header-upper {
     position: relative;
     align-items: center;
-    block-size:  var(--sizing-header-height-max);
+    block-size:  var(--sizing-header-height-min);
     display: flex;
     justify-content: space-between;
     margin-inline: auto;
     background-color: var(--color-header-top-bg);
     transition: border 0.3s ease;
+    border-bottom: 1px solid;
+    border-color: var(--color-header-navigation-divider);
+
+    @media only screen and (min-width: 768px) {
+      block-size:  var(--sizing-header-height-max);
+    }
   }
 
   .header-upper-inner {
     display: flex;
-
     justify-content: space-between;
     margin-inline: auto;
     inline-size: min(
@@ -113,7 +118,6 @@ const { theme } = Astro.props as Props;
     overflow-x: scroll;
     background-color: var(--color-header-navigation-bg);
     border-bottom: 1px solid;
-    border-top: 1px solid;
     border-color: var(--color-header-navigation-divider);
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
@@ -143,19 +147,28 @@ const { theme } = Astro.props as Props;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    width: 100%;
     @media only screen and (min-width: 1280px) {
       padding-inline-start: 0;
       max-width: var(--grid-width);
     }
   }
 
+/*   .navigation.on-scroll .top-tasks{
+    justify-content: center;
+  } */
+
   .top-tasks li {
     margin-right: var(--row-gap);
-    font-size: var(--typography-utility-s-font-size);
-    font-family: var(--typography-utility-s-font-family);
+
+  }
+
+  .top-tasks a{
+    font-size: var(--typography-utility-m-font-size);
+    font-family: var(--typography-utility-m-font-family);
     @media only screen and (min-width: 768px) {
       overflow-x: hidden;
-      font-size: var(--typography-utility-m-font-size);
+      font-size: var(--typography-utility-l-font-size);
     }
   }
 
@@ -163,7 +176,7 @@ const { theme } = Astro.props as Props;
     color: var(--color-header-navigation-divider) !important;
   }
 
-  .my-alerts {
+/*   .my-alerts {
     display: flex;
     justify-content: flex-end;
     min-width: 200px;
@@ -174,7 +187,7 @@ const { theme } = Astro.props as Props;
     @media only screen and (min-width: 1280px) {
       margin-right: 0rem;
     }
-  }
+  } */
 
   svg {
     block-size: 30px;
@@ -200,17 +213,22 @@ const { theme } = Astro.props as Props;
   var select = document.querySelector(".select");
   var ad = document.querySelector(".ad");
   var mainHeader = document.querySelector(".header-upper");
+  var navigation = document.querySelector(".navigation");
   var body = document.querySelector("body");
+  var header = document.querySelector(".header");
 
-  var offsetHeight = select.offsetHeight + ad.offsetHeight;
+  var heightToTop = select.clientHeight + ad.clientHeight + mainHeader.clientHeight + navigation.clientHeight ;
 
   window.addEventListener("scroll", function () {
-    if (window.scrollY >= offsetHeight) {
-      mainHeader.classList.add("on-scroll");
+    if (window.scrollY >= heightToTop) {
+      navigation.classList.add("on-scroll");
       body.classList.add("on-scroll");
-    } else if (window.scrollY <= offsetHeight) {
-      mainHeader.classList.remove("on-scroll");
+      body.style.paddingTop = mainHeader.clientHeight;
+
+    } else if (window.scrollY <= heightToTop ) {
+      navigation.classList.remove("on-scroll");
       body.classList.remove("on-scroll");
+      body.style.paddingTop = "0";
     }
   });
 </script>

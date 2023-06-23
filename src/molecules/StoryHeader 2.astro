@@ -22,8 +22,6 @@ const { img, title, lead, figcaption } = Astro.props as Props;
 </header>
 
 <style>
-
-
   header {
     align-items: flex-start;
     color: var(--color-text-typo, currentColor);
@@ -36,13 +34,6 @@ const { img, title, lead, figcaption } = Astro.props as Props;
     margin-inline: auto;
     padding-bottom: var(--row-gap);
     margin-bottom: var(--row-gap);
-
-    background: linear-gradient(
-      to bottom,
-      var(--article-top-bg),
-      var(--article-top-bg) calc(100% - 18rem),
-      var( --color-page-bg) calc(100% - 18rem)
-    );
   }
 
 
@@ -52,19 +43,18 @@ const { img, title, lead, figcaption } = Astro.props as Props;
     position: var(--title-position);
     order: var(--hero-text);
 
-    margin-top: var(--spacing-top);
+    margin-top: var(--row-gap);
     line-height: 1.3;
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
     text-align: var(--text-align);
-    color: var(--titlepiece-color);
 
     font-size: var(--typography-editorial-titlepiece-min-font-size);
-    font-family: var(--article-top-font-family);
+    font-family: var(--typography-editorial-titlepiece-min-font-family);
     font-weight: var(--typography-editorial-titlepiece-min-font-weight);
     line-height: var(--typography-editorial-titlepiece-max-line-height);
         @media only screen and (min-width: 768px) {
     font-size: var(--typography-editorial-titlepiece-max-font-size);
-     font-family: var(--article-top-font-family);
+    font-family: var(--typography-editorial-titlepiece-max-font-family);
     }
   }
 
@@ -76,7 +66,6 @@ const { img, title, lead, figcaption } = Astro.props as Props;
     line-height: var(--typography-editorial-lead-min-line-height);
     inline-size: min(var(--grid-width), 100vw - calc(var(--site-padding) * 2));
     text-align: var(--text-align);
-    color: var(--lead-color);
     @media only screen and (min-width: 768px) {
       font-size: var(--typography-editorial-lead-max-font-size) !important;
 
