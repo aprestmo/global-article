@@ -1,6 +1,8 @@
 ---
 import Link from "../atoms/Link.astro";
 import Alarm from "../icons/alarm.svg"
+import Gift from "../icons/gift.svg"
+import Mobile from "../icons/open_in_new.svg"
 ---
 
 <div class="byline">
@@ -15,17 +17,17 @@ import Alarm from "../icons/alarm.svg"
 
     <li class="author">
       <p><a href="mailto:harald.berglihn@dn.no">Sara Sofie Tallaksen</a></p>
-      <span>Journalist | Oslo</span>
+      <span>Journalist – OSLO</span>
     </li>
     <li>
       <Link href="#"  classes="round"  icon={Alarm} />
     </li>
     <li class="buttons">
       <li>
-        <Link href="#" text="Gi bort" classes="pill"/>
+        <Link href="#" text="Gi bort" classes="pill" icon={Gift}/>
       </li>
       <li>
-        <Link href="#" text="Les i app" classes="pill"/>
+        <Link href="#" text="Les i app" classes="pill" icon={Mobile}/>
       </li>
     </li>
   </ul>
@@ -89,9 +91,10 @@ import Alarm from "../icons/alarm.svg"
   a {
     color: var(--link-color);
     font-size: var(--typography-utility-m-font-size);
-    font-family: var(--typography-utility-m-font-family);
-    font-weight: bold;
+    font-family: Sharp Grotesk Book21;
+
     text-underline-offset: 0.4rem;
+    text-decoration: none !important;
     line-height: 1;
 
     @media (--medium) {

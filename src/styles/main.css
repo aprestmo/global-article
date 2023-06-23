@@ -258,18 +258,19 @@
     }
   }
 
-  .factbox{
-    background: var(--color-neutral-100);
+  .factbox, .read-more{
+    background: var( --color-teaser-opinion-bg);
     border-radius: var(--border-radius-s);
-    padding: var(--row-gap);
-    color: var(--color-typography-default);
-  }
+    padding: 24px 30px 40px 30px;
+    color: var(--color-teaser-opinion-fg);
+    p{
+      font-size: var(--typography-utility-m-font-size)
+    }
 
-  .read-more{
-    background: var(--color-neutral-100);
-    border-radius: var(--border-radius-s);
-    padding: var(--row-gap);
-    color: var(--color-typography-default);
+    h3{
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
   }
 
   .read-more ul li{
@@ -277,7 +278,7 @@
   }
 
   .read-more a{
-      color: var(--color-typography-default);
+      color: var(--color-teaser-opinion-fg);
   }
 }
 
