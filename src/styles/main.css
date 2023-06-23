@@ -122,6 +122,8 @@
   --grid-width: 980px;
   --body-width: 680px;
 
+  --icon-fill: var(--color-neutral-50);
+
 
 
   --font-family-utility: var(--typography-utility-test-font-family);
