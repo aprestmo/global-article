@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Story from "../organisms/Story.astro";
+import StoryHeader from "../molecules/StoryHeader.astro";
+import Grid from "../atoms/Grid.astro";
+
+const theme = "dn";
+
+import Article from "../content/dn/dn.mdx";
+
+let article = await Astro.glob("../content/dn/dn.mdx");
+---
+
+{
+  article.map((item) => (
+    <Layout title={`${item.frontmatter.title}|`} theme={theme} language="no">
+      <Story>
+        <StoryHeader
+          title={item.frontmatter.title}
+          lead={item.frontmatter.lead}
+          img={item.frontmatter.hero}
+          figcaption={item.frontmatter.caption}
+        />
+        <Grid>
+          <div>
+            <>
+              <script
+                type="text/javascript"
+                defer
+                src="https://datawrapper.dwcdn.net/GviRO/embed.js?v=3"
+                charset="utf-8"
+              />
+              <noscript>
+                <img
+                  src="https://datawrapper.dwcdn.net/GviRO/full.png"
+                  alt=""
+                />
+              </noscript>
+            </>
+          </div>
+
+          <Article />
+        </Grid>
+      </Story>
+    </Layout>
+  ))
+}

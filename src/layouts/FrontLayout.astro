@@ -1,0 +1,165 @@
+---
+import Header from "../organisms/Header.astro";
+
+import Card from "../molecules/Card.astro";
+import Grid from "../atoms/Grid.astro";
+import FrontGrid from "../atoms/FrontGrid.astro";
+import Footer from "../organisms/Footer.astro";
+import Ad980 from "../molecules/Ad980.astro";
+import Interaction from "../molecules/Interaction.astro";
+import TagGroup from "../molecules/TagGroup.astro";
+import TimeStamp from "../molecules/TimeStamp.astro";
+
+import "../styles/main.css";
+
+export interface Props {
+  title: string;
+  language?: string;
+  publication?: string;
+  theme: string;
+}
+
+const { title, language, publication, theme } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang={language ? language : "nb-NO"}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    {
+      theme === "dn" && (
+        <>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            rel="stylesheet"
+            href="https://static1.dn.no/dn/static/assets/css/nhstfonts.css"
+          />
+        </>
+      )
+    }
+
+    {
+      theme !== "dn" && (
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;700;800&display=swap"
+          rel="stylesheet"
+        />
+      )
+    }
+    <link rel="icon" href="/favicon.ico" sizes="any" /><!-- 32×32 -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" /><!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <link
+      rel="stylesheet"
+      href={`https://dngroup.blob.core.windows.net/design-tokens/${theme}.css`}
+      id="stylesheet"
+    />
+  </head>
+  <body>
+    <Header theme={theme} />
+    <main>
+      <slot />
+      <FrontGrid>
+        <Card
+          title="Elon Musk to buy Twitter"
+          img="../img/musk.jpg"
+          category="News"
+          classes="teaser inverted row"
+        />
+        <Card
+          title="American Hangarship visiting Oslo"
+          img="../img/skip.jpg"
+          category="Shipping"
+          classes="teaser standard"
+        />
+        <Card
+          title="Economists prepares for the worst"
+          img="../img/finans.jpg"
+          category="Finans"
+          classes="teaser standard"
+        />
+        <Card
+          title="Economists prepares for the worst"
+          img="../img/finans.jpg"
+          category="Finans"
+          classes="teaser inverted"
+        />
+        <Card
+          title="The staggering grid connection backlog of US clean energy projects"
+          img="../img/energy.jpg"
+          category="Energy"
+          classes="teaser highlight"
+        />
+
+        <Card
+          title="Economists prepares for the worst"
+          img="../img/finans.jpg"
+          category="Finans"
+          classes="teaser inverted"
+        />
+        <Card
+          title="The staggering grid connection backlog of US clean energy projects"
+          img="../img/energy.jpg"
+          category="Energy"
+          classes="teaser standard"
+        />
+      </FrontGrid>
+      <Ad980 />
+      <FrontGrid>
+        <Card
+          title="American Hangarship visiting Oslo"
+          img="../img/skip.jpg"
+          category="Shipping"
+          classes="teaser standard"
+        />
+        <Card
+          title="The staggering grid connection backlog of US clean energy projects"
+          img="../img/energy.jpg"
+          category="Energy"
+          classes="teaser highlight"
+        />
+        <Card
+          title="Economists prepares for the worst"
+          img="../img/finans.jpg"
+          category="Finans"
+          classes="teaser standard"
+        />
+        <Card
+          title="American Hangarship visiting Oslo"
+          img="../img/skip.jpg"
+          category="Shipping"
+          classes="teaser brand"
+        />
+        <Card
+          title="The staggering grid connection backlog of US clean energy projects"
+          img="../img/energy.jpg"
+          category="Energy"
+          classes="teaser standard"
+        />
+        <Card
+          title="The staggering grid connection backlog of US clean energy projects"
+          img="../img/energy.jpg"
+          category="Energy"
+          classes="teaser standard"
+        />
+        <Card
+          title="American Hangarship visiting Oslo"
+          img="../img/skip.jpg"
+          category="Shipping"
+          classes="teaser brand"
+        />
+      </FrontGrid>
+
+      <Footer theme={theme} />
+    </main>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+import FrontLayout from "../layouts/FrontLayout.astro";
+import Story from "../organisms/Story.astro";
+import StoryHeader from "../molecules/StoryHeader.astro";
+import Grid from "../atoms/Grid.astro";
+
+const theme = "dn";
+
+import Article from "../content/dn/dn.mdx";
+
+let article = await Astro.glob("../content/dn/dn.mdx");
+---
+
+{
+  article.map((item) => (
+    <FrontLayout
+      title={`${item.frontmatter.title}|`}
+      theme={theme}
+      language="no"
+    />
+  ))
+}

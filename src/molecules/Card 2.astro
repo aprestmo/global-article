@@ -1,0 +1,203 @@
+---
+import Link from "../atoms/Link.astro";
+import Label from "../atoms/Label.astro";
+import { Icon } from "astro-icon";
+
+
+interface Props {
+  title: string;
+  excerpt: string;
+  url: string;
+  category: object;
+  img: string;
+  slug: string;
+  date: string;
+  size: string;
+  classes?: string;
+  textalign: string;
+  external?: string;
+}
+
+const {
+  slug,
+  img,
+  paid,
+  url,
+  title,
+  excerpt,
+  category = "Finans",
+  date,
+  size,
+  align = "left",
+  classes,
+  external
+} = Astro.props as Props;
+
+
+---
+<a href="#" class:list={[classes]}>
+
+  <figure class="teaser-image">
+    <picture>
+      <img src={img} />
+    </picture>
+  { external? <div class="teaser-icon"><Icon name={external} />  </div> : <></> }
+
+  </figure>
+
+  <div class="teaser-info">
+    <h3 class="title" style={`text-align: ${align}`}>
+      {title}
+    </h3>
+    <ul class="category" style={`justify-content: ${align}`}>
+      <li>{category}</li>
+      <li>|</li>
+      <li>Abonnent</li>
+    </ul>
+  </div>
+</a>
+
+<style  is:global >
+
+  .teaser-icon svg{
+    position: absolute;
+    display: inline;
+    block-size: fit-content;
+    margin-inline: auto;
+    background: var(--color-brand-utility-50);
+    min-height: 25px;
+    max-height: 40px;
+    right: 1rem;
+    margin-top: -3rem;
+    padding: .2rem 0.5rem;
+    border-radius: var(--border-radius-none);
+    max-height: 20px;
+    z-index: 99;
+
+
+  }
+
+
+
+  .teaser-info .title {
+    font-size: clamp(1.3rem, 6cqw, 4rem) !important;
+  }
+
+  /*      @container teaser (min-width: 500px) {
+      .teaser-info .title{
+          font-size: clamp(1.3rem, 12cqw, 3rem) !important
+    }
+    }*/
+
+
+  .teaser {
+    --color-link-default: var(--color-typography-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    container-type: inline-size;
+    container-name: teaser;
+    width: 100%;
+    grid-column: span 12;
+    overflow: hidden;
+    font-family: var(--font-family-heading);
+    margin-bottom: var(--row-gap);
+    border-radius: var(--border-radius-s) var(--border-radius-s) 0 0;
+    background-color: var(--color-teaser-standard-bg);
+    transition: all 0.3s ease;
+
+
+
+
+    @media only screen and (min-width: 768px) {
+      grid-column: span 3;
+    }
+
+    &.row {
+      flex-direction: row;
+    }
+
+/*      &.brand, &.highlight, &.inverted, &.opinion {
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1 );
+    } */
+
+    &.standard {
+      background-color: var(--color-teaser-standard-bg);
+      color: var(--color-teaser-standard-fg);
+      border-bottom: 1px solid var(--color-teaser-standard-divider);
+    }
+
+    &.brand {
+      background-color: var(--color-teaser-brand-bg);
+      color: var(--color-teaser-brand-fg);
+      border-radius: var(--border-radius-s);
+    }
+
+    &.highlight {
+      background-color: var(--color-teaser-highlight-bg);
+      color: var(--color-teaser-highlight-fg);
+      border-radius: var(--border-radius-s);
+    }
+
+    &.inverted {
+      background-color: var(--color-teaser-inverted-bg);
+      color: var(--color-teaser-inverted-fg);
+      border-radius: var(--border-radius-s);
+    }
+
+    &.opinion {
+      background-color: var(--color-teaser-opinion-bg);
+      color: var(--color-teaser-opinion-fg);
+      border-radius: var(--border-radius-s);
+    }
+  }
+
+  .category {
+    display: flex;
+    column-gap: 0.5rem;
+    margin-top: 1rem;
+    font-size: var(--typography-utility-s-font-size);
+    font-family: var(--typography-utility-s-font-family);
+  }
+
+  .standard .category {
+    color: var(--color-teaser-standard-subtle-fg);
+  }
+
+  .brand .category {
+    color: var(--color-teaser-brand-subtle-fg);
+  }
+
+  .highlight .category {
+    color: var(--color-teaser-hightlight-subtle-fg);
+  }
+
+  .inverted .category {
+    color: var(--color-teaser-inverted-subtle-fg);
+  }
+
+  .opinion .category {
+    color: var(--color-teaser-opinion-subtle-fg);
+  }
+
+  .teaser-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0rem 0rem 1rem 0rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  .brand .teaser-info,
+  .highlight .teaser-info,
+  .inverted .teaser-info,
+  .opinion .teaser-info {
+    padding: 0rem 1rem 1rem 1rem;
+  }
+
+  .teaser-info h3 {
+    margin-top: 8px;
+  }
+
+</style>
