@@ -12,7 +12,7 @@ import Interaction from "../molecules/Interaction.astro";
 import TagGroup from "../molecules/TagGroup.astro";
 import TimeStamp from "../molecules/TimeStamp.astro";
 import Link from "../atoms/Link.astro";
-import StoryImage from "../molecules/StoryImage.astro"
+import StoryImage from "../molecules/StoryImage.astro";
 
 import "../styles/main.css";
 
@@ -52,7 +52,7 @@ const { title, language, publication, theme } = Astro.props as Props;
     {
       theme !== "dn" && (
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@400;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&Noto+Serif+Display:wght@400;700&family=Inter:wght@400;700;800&display=swap"
           rel="stylesheet"
         />
       )
@@ -79,9 +79,14 @@ const { title, language, publication, theme } = Astro.props as Props;
         <TimeStamp />
       </Grid>
 
-      <SectionTitle title="Relatert" >
-      <Link href="/" text="Se mer" classes="tag" icon="../img/keyboard_arrow_right.svg" />
-</SectionTitle>
+      <SectionTitle title="Relatert">
+        <Link
+          href="/"
+          text="Se mer"
+          classes="tag"
+          icon="../img/keyboard_arrow_right.svg"
+        />
+      </SectionTitle>
 
       <Carousel>
         <Card
@@ -106,7 +111,7 @@ const { title, language, publication, theme } = Astro.props as Props;
           category="Energy"
           classes="teaser standard swiper-slide"
         />
-        </Carousel>
+      </Carousel>
       <SectionTitle title="Les også" />
       <StreamsGrid>
         <Card
@@ -120,13 +125,11 @@ const { title, language, publication, theme } = Astro.props as Props;
           img="../img/skip.jpg"
           category="Shipping"
           classes="teaser opinion"
-
         />
         <Card
           title="Nedgang på Oslo Børs før kveldens rentebeskjed fra USA"
           img="../img/stocks.jpg"
           classes="teaser standard"
-
         />
         <Card
           title="Oljeindustrien satser: Store investeringer til tross for svak etterspørselsvekst"
