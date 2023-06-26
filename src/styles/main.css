@@ -259,17 +259,20 @@
   }
 
   .factbox, .read-more{
-    background: var( --color-teaser-opinion-bg);
+    background: var( --color-neutral-50);
     border-radius: var(--border-radius-s);
     padding: 24px 30px 40px 30px;
-    color: var(--color-teaser-opinion-fg);
+    color: var(--color-typography-default);
     p{
-      font-size: var(--typography-utility-m-font-size)
+      font-size: var(--typography-utility-l-font-size)
     }
 
     h3{
       font-size: 20px;
       margin-bottom: 10px;
+    }
+    a{
+          color: var(--color-link-default) !important;
     }
   }
 
