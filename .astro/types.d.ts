@@ -207,15 +207,6 @@ declare module 'astro:content' {
   data: any
 } & { render(): Render[".mdx"] };
 };
-"dn": {
-"dn.mdx": {
-	id: "dn.mdx";
-  slug: "dn";
-  body: string;
-  collection: "dn";
-  data: any
-} & { render(): Render[".mdx"] };
-};
 "europower": {
 "europower.mdx": {
 	id: "europower.mdx";
@@ -292,7 +283,9 @@ declare module 'astro:content' {
 	};
 
 	type DataEntryMap = {
-		
+		"dn": {
+};
+
 	};
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;

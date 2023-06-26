@@ -7,15 +7,16 @@ import Link from "../atoms/Link.astro";
   <Link href="/" text="Renter" classes="tag" />
   <Link href="/" text="Finans" classes="tag" />
   <Link href="/" text="Stortinget" classes="tag" />
+  <Link href="/" text="Følg tema" classes="pill" icon="../img/keyboard_arrow_right.svg" />
 </div>
 
 <style>
   div {
     display: flex;
     flex-direction: row;
-    margin-block-end: 2.5rem;
+    margin-block-end: var(--row-gap);
     column-gap: var(--row-gap);
-    row-gap: var(--row-gap);
+        row-gap: var(--row-gap);
     flex-wrap: wrap;
   }
 </style>
