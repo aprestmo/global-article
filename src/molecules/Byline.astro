@@ -91,7 +91,8 @@ import Mobile from "../icons/open_in_new.svg"
   a {
     color: var(--link-color);
     font-size: var(--typography-utility-m-font-size);
-    font-family: Sharp Grotesk Book21;
+    font-family: var(--typography-utility-m-font-family);
+    letter-spacing: var(--typography-utility-m-letter-spacing);
 
     text-underline-offset: 0.4rem;
     text-decoration: none !important;
@@ -99,6 +100,7 @@ import Mobile from "../icons/open_in_new.svg"
 
     @media (--medium) {
       font-size: var(--typography-utility-m-font-size);
+      letter-spacing: var(--typography-utility-m-letter-spacing);
     }
   }
   span {
