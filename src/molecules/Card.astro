@@ -114,7 +114,8 @@ const {
     &.row {
       flex-direction: row;
       align-items: center;
-          flex-wrap: rap;
+      justify-content: space-between;
+      flex-wrap: rap;
       border: none !important;
       background: var(--color-neutral-50) !important;
       color: var(--color-neutral-900)  !important;
@@ -128,10 +129,17 @@ const {
       .teaser-info h3{
         font-weight: bold;
         margin-top: 0px;
+        align-self: center;
       }
 
       .teaser-info{
         padding: 0;
+      }
+
+      .small-text{
+        font-size: var(--typography-utility-s-font-size);
+        font-family: var(--typography-utility-s-font-family);
+        letter-spacing: var(--typography-utility-s-letter-spacing);
       }
     }
 
@@ -171,6 +179,7 @@ const {
       border-radius: var(--border-radius-s);
     }
   }
+
 
   .category {
     display: flex;

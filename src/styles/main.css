@@ -17,6 +17,8 @@
   --text-align: left;
   --spacing-top: calc(var(--row-gap) * 2);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
 }
 
 [data-layout="breaking-inverted"] {
@@ -31,6 +33,8 @@
   --titlepiece-color: var(--color-teaser-highlight-bg);
   --lead-color: var(--color-teaser-inverted-fg);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
 }
 
 [data-layout="breaking-highlight"] {
@@ -45,6 +49,8 @@
   --titlepiece-color: var(--color-teaser-highlight-fg);
   --lead-color: var(--color-teaser-highlight-fg);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
 }
 
 [data-layout="image-first"] {
@@ -56,6 +62,8 @@
   --text-align: left;
   --spacing-top: var(--row-gap);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
 }
 
 [data-layout="wide"] {
@@ -68,6 +76,8 @@
   --spacing-top: var(--row-gap);
   --background-article-top: var(--color-teaser-inverted-bg);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
 }
 
 [data-layout="opinion"] {
@@ -86,6 +96,8 @@
   /* Setting the font size for Opinion  */
   --typography-editorial-titlepiece-min-font-size: var(--typography-editorial-titlepiece-stylized-min-font-size);
   --typography-editorial-titlepiece-max-font-size: var(--typography-editorial-titlepiece-stylized-max-font-size);
+  --byline-img-width: 70px;
+  --byline-img-filter: grayscale(1);
 }
 
 [data-theme="dark"] [data-layout="opinion"] {
@@ -104,8 +116,8 @@
   --text-align: center;
   --spacing-top: var(--row-gap);
   --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family)
-
-
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
 }
 
 :root {
