@@ -80,6 +80,20 @@
   --byline-img-filter: grayscale(0.5);
 }
 
+[data-layout="feature"] {
+  --hero-text: 3;
+  --lead-text: 3;
+  --hero-figure: 2;
+  --story-meta: 5;
+  --figure-width: 1600px ;
+  --title-position: relative;
+  --text-align: center;
+  --spacing-top: var(--row-gap);
+  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family);
+  --byline-img-width: 50px;
+  --byline-img-filter: grayscale(0.5);
+}
+
 [data-layout="opinion"] {
   --hero-text: 1;
   --lead-text: 2;
@@ -106,19 +120,7 @@
   --lead-color: var(--color-teaser-opinion-bg);
 }
 
-[data-layout="feature"] {
-  --hero-text: 3;
-  --lead-text: 3;
-  --hero-figure: 2;
-  --story-meta: 5;
-  --figure-width: 1600px ;
-  --title-position: relative;
-  --text-align: center;
-  --spacing-top: var(--row-gap);
-  --article-top-font-family: var(--typography-editorial-titlepiece-min-font-family)
-  --byline-img-width: 50px;
-  --byline-img-filter: grayscale(0.5);
-}
+
 
 :root {
   --background-header: var(--color-brand-utility-80);
