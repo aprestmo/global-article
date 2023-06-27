@@ -10,7 +10,7 @@ import Mobile from "../icons/open_in_new.svg"
     <li>
       <figure>
         <picture>
-          <img src="../img/Sara-Sofie-Tallaksen.png" alt="Byline-img" />
+          <img src="https://www.dn.no/bylines/byline.png" alt="Byline-img" />
         </picture>
       </figure>
     </li>
@@ -39,6 +39,7 @@ import Mobile from "../icons/open_in_new.svg"
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+
 
     @media only screen and (min-width: 768px) {
       flex-direction: row;
@@ -76,11 +77,11 @@ import Mobile from "../icons/open_in_new.svg"
   }
 
   figure {
-    border-radius: 50%;
+    border-radius: 200px;
     overflow: hidden;
     border: 1px solid;
     border-color: var(--color-page-divider);
-    width: var(--byline-img-width);
+    max-width: var(--byline-img-width);
   }
 
   picture img {
